@@ -16,6 +16,6 @@ Consumer Complaints, Machine Learning, Generative AI, Natural Language Processin
 
 ---
 
-> **📖 Single Source of Truth**: This document serves as the high-level summary of the Consumer Complaints ML + GenAI System. For technical details, refer to `05_technical.md`.
+> **📖 Single Source of Truth**: This document serves as the high-level summary of the Consumer Complaints ML + GenAI System. For additional details, see [docs/reports/03_project-summary.md](reports/03_project-summary.md).
 
 ---

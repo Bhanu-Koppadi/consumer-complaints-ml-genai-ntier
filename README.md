@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/License-MIT-purple)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Complete-success)](https://github.com/Srivari-Hema-SSPL-2026/consumer-complaints-ml-genai-ntier)
-[![Architecture](https://img.shields.io/badge/Architecture-N--Tier-FF6B35)](docs/06_architecture_plan.md)
+[![Architecture](https://img.shields.io/badge/Architecture-N--Tier-FF6B35)](#system-architecture)
 [![Python](https://img.shields.io/badge/Python-3.12%2B-ABCDEF?logo=python&logoColor=white)](https://www.python.org/)
 [![Scikit-Learn](https://img.shields.io/badge/sklearn-1.3%2B-orange?logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
 [![Flask](https://img.shields.io/badge/Flask-3.x-green?logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
@@ -21,7 +21,6 @@ An intelligent `N-Tier enterprise application` that automatically classifies con
 - [Key Features](#key-features)
 - [System Architecture](#system-architecture)
 - [Technology Stack](#technology-stack)
-- [Attribution & License](#attribution--license)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 

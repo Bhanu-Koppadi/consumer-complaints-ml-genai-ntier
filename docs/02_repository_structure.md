@@ -14,9 +14,16 @@ This document describes the repository organization for the **consumer-complaint
 
 ```text
 consumer-complaints-ml-genai-ntier/
+├── .gitignore
 ├── LICENSE
+├── LICENSE copy
 ├── README.md
 ├── .python-version
+├── src/
+│   ├── backend/
+│   │   └── .gitkeep
+│   └── frontend/
+│       └── .gitkeep
 └── docs/
     ├── 01_abstract.md
     ├── 02_repository_structure.md
@@ -35,9 +42,18 @@ consumer-complaints-ml-genai-ntier/
 
 ### Root
 
+- **.gitignore**: Git ignore rules
 - **LICENSE**: Project licensing
+- **LICENSE copy**: Duplicate copy of the license file (candidate for removal)
 - **README.md**: Overview and entry point
 - **.python-version**: Local Python version pin
+
+### src/
+
+Application code placeholders:
+
+- **backend/**: Backend placeholder folder
+- **frontend/**: Frontend placeholder folder
 
 ### docs/
 
@@ -53,6 +69,6 @@ Project documentation and supporting materials:
 
 ## Notes
 
-At this stage, the repository contains documentation and reports only. Source code, infrastructure, and datasets are not present in this workspace.
+At this stage, the repository contains documentation and reports plus placeholder source folders (currently only `.gitkeep` files). Application code, infrastructure, and datasets are not yet present.
 
 ---
