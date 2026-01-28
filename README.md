@@ -22,6 +22,8 @@ An intelligent `N-Tier enterprise application` that automatically classifies con
 - [System Architecture](#system-architecture)
 - [Technology Stack](#technology-stack)
 - [Attribution & License](#attribution--license)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
 
 ---
 
@@ -146,9 +148,11 @@ This project is intended for **academic and educational use**.
 
 ## 🙌 Acknowledgements
 
-- **Pandas & RapidFuzz** - For data processing and fuzzy matching capabilities
-- **Flask & React Communities** - For excellent open-source frameworks
-- **PostgreSQL** - For robust database capabilities
+- **Python** - Core language and ecosystem
+- **Scikit-learn** - Traditional ML modeling and evaluation
+- **Flask** - Lightweight web framework for the API layer
+- **PostgreSQL** - Relational database for persistence (deployment-dependent)
+- **Google Gemini API** - Generative explanations for predictions
 - **Open Source Contributors** - For the tools and libraries that made this possible
 
 **⭐ If you find this architecture useful, please star the repository!**
