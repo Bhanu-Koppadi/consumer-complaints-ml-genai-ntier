@@ -21,9 +21,6 @@ An intelligent `N-Tier enterprise application` that automatically classifies con
 - [Key Features](#key-features)
 - [System Architecture](#system-architecture)
 - [Technology Stack](#technology-stack)
-- [Contributing](#contributing)
-- [Organization](#organization)
-- [About & Community](#about--community)
 - [Attribution & License](#attribution--license)
 
 ---
@@ -87,6 +84,39 @@ This project solves this by combining **deterministic ML classification** for sp
 
 ![System Architecture](docs/diagrams/system-architecture.png)
 
+### ASCII Diagram
+
+```text
+┌───────────────────────────┐
+│      Presentation Layer   │
+│   REST Clients / UI Apps  │
+└──────────────┬────────────┘
+         │
+┌──────────────▼────────────┐
+│      Application Layer    │
+│        Flask API          │
+│  Routing • Validation     │
+└───────┬──────────┬────────┘
+  │          │
+┌───────▼───────┐  │  ┌───────────────────┐
+│   ML Layer    │  │  │   GenAI Layer     │
+│ Preprocess →  │  │  │ Explanation       │
+│ TF-IDF →      │  │  │ (Gemini API)      │
+│ Classifier    │  │  └───────────────────┘
+└───────┬───────┘  │
+  │          │
+┌───────▼──────────▼────────┐
+│       Data Access Layer   │
+│   Parameterized SQL (DB)  │
+└──────────────┬────────────┘
+         │
+┌──────────────▼────────────┐
+│         Data Layer        │
+│ PostgreSQL / MySQL        │
+│ complaints • results      │
+└───────────────────────────┘
+```
+
 ---
 
 ## 🧰 Technology Stack
@@ -102,29 +132,23 @@ This project solves this by combining **deterministic ML classification** for sp
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md).
+---
 
 ---
 
-## 🏢 Organization
+## 📜 License
 
-This project is part of the **[Srivari-Hema-SSPL-2026](https://github.com/Srivari-Hema-SSPL-2026)** ecosystem.
+This project is licensed under the [MIT License](LICENSE). See the [LICENSE](LICENSE) file for details.
 
----
-
-## 📞 About & Community
-
-### [Swamy's Tech Skills Academy](https://www.linkedin.com/company/swamy-s-tech-skills-academy) & [ShyvnTech](https://www.linkedin.com/company/shyvntech)
-
-This repository is maintained by **Viswanatha Swamy P K**. It serves as a reference architecture for integrating Predictive ML and Generative AI in enterprise systems.
+This project is intended for **academic and educational use**.
 
 ---
 
-## 📝 Attribution & License
+## 🙌 Acknowledgements
 
-Licensed under the [MIT License](LICENSE).
-© 2026 Swamy's Tech Skills Academy, ShyvnTech & Srivari Software Solutions.
+- **Pandas & RapidFuzz** - For data processing and fuzzy matching capabilities
+- **Flask & React Communities** - For excellent open-source frameworks
+- **PostgreSQL** - For robust database capabilities
+- **Open Source Contributors** - For the tools and libraries that made this possible
 
 **⭐ If you find this architecture useful, please star the repository!**
