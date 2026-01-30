@@ -46,6 +46,29 @@
 
 ---
 
+## Slide 5: How This Differs from Existing Solutions
+
+**Key Differentiators:**
+
+| Aspect | Existing Solutions | This Project |
+|:-------|:------------------|:-------------|
+| **Architecture** | Monolithic scripts or notebooks | N-Tier enterprise architecture (5 layers) |
+| **Explainability** | Label prediction only | GenAI-powered natural language explanations |
+| **ML Approach** | Complex transformers requiring GPUs | Lightweight Scikit-learn models (CPU-optimized) |
+| **Transparency** | Black-box predictions | Full audit trail + confidence scoring |
+| **Deployment** | Academic prototypes | Production-ready with database persistence |
+
+**Unique Innovations:**
+
+1. **Hybrid ML + GenAI Architecture:** Combines traditional ML (Logistic Regression/SVM) for fast, accurate classification with Google Gemini for human-readable explanations of model decisions.
+2. **CPU-Optimized Inference:** Uses TF-IDF + Scikit-learn models requiring no expensive GPU infrastructure, enabling deployment on standard servers.
+3. **Enterprise N-Tier Design:** Professional 5-layer architecture with clear separation of concerns—Presentation, Application, AI/ML Processing, Data Access, and Data layers.
+4. **Explainable AI Integration:** Consumers and support teams receive actionable context: *"Classified as 'Billing Issue' due to mentions of unauthorized charges and payment disputes. Confidence: 92%."*
+5. **Complete Audit Trail:** Every complaint, prediction, confidence score, and explanation persisted in PostgreSQL for compliance and analytics.
+6. **Production-Ready Security:** Environment-based configuration, parameterized SQL queries preventing injection attacks, and comprehensive error handling.
+
+---
+
 ## Slide 5: Key Features
 
 - **Automated Complaint Triage:** Instantly categorizes complaints into predefined classes (Billing, Product, Service, Delivery).
@@ -76,7 +99,7 @@
 
 1. **Presentation Layer:** REST API endpoints (JSON) for client applications.
 2. **Application Layer:** Flask orchestrating routing, validation, and business logic.
-3. **AI/ML Processing Layer:** 
+3. **AI/ML Processing Layer:**
    - ML Module: Preprocessing → TF-IDF → Classification
    - GenAI Module: Explanation generation via Google Gemini
 4. **Data Access Layer:** Parameterized SQL queries (psycopg2) for secure database operations.
