@@ -1,0 +1,21 @@
+# Postman Collection Validation - DISABLED (Not applicable to this project)
+# This repository uses React frontend + Flask REST API
+# API testing will be done with different tools (pytest, Jest/React Testing Library)
+# This workflow is preserved for reference only and will not trigger
+
+name: Postman Validation (Disabled)
+
+on:
+  workflow_dispatch:  # Manual trigger only
+
+jobs:
+  placeholder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Placeholder
+        run: |
+          echo "This workflow is disabled for consumer-complaints-ml-genai-ntier repository"
+          echo "API testing approach:"
+          echo "  - Backend: pytest for Flask REST API tests"
+          echo "  - ML Pipeline: Unit tests for classification and preprocessing"
+          echo "  - Integration: End-to-end complaint classification tests"

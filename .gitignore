@@ -12,7 +12,11 @@
 *.env
 .copilot/
 .cursor/
-.github/
+
+# Track only GitHub Actions workflows under .github/
+.github/*
+!.github/workflows/
+!.github/workflows/**
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -419,3 +423,22 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# Python virtual environments
+__pycache__
+.venv/
+
+# Frontend (Vite/React)
+src/frontend/dist/
+src/frontend/node_modules/
+src/frontend/.env
+src/frontend/.env.local
+src/frontend/.env.development.local
+src/frontend/.env.test.local
+src/frontend/.env.production.local
+
+# Database files
+database/
+*.db
+*.sqlite
+*.sqlite3
