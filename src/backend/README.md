@@ -1,6 +1,6 @@
-# Enterprise Policy Assistant - Backend
+# Consumer Complaints Classification System - Backend
 
-FastAPI backend with 6 core endpoints for the Enterprise Policy Assistant RAG application.
+FastAPI backend with 6 core endpoints for the Consumer Complaints Classification System RAG application.
 
 ## 🎯 Endpoints Implemented
 
@@ -127,7 +127,7 @@ Response:
 ```json
 {
   "status": "ok",
-  "message": "Enterprise Policy Assistant API",
+  "message": "Consumer Complaints Classification System API",
   "version": "1.0.0",
   "endpoints": {
     "health": "/health",

@@ -1,4 +1,4 @@
-"""Enterprise Policy Assistant FastAPI Application.
+"""Consumer Complaints Classification System FastAPI Application.
 
 Main application entry point with OpenAPI configuration,
 endpoint registration, and middleware setup.
@@ -12,7 +12,7 @@ from fastapi.responses import PlainTextResponse
 
 # Initialize FastAPI app with OpenAPI metadata
 app = FastAPI(
-    title="Enterprise Policy Assistant API",
+    title="Consumer Complaints Classification System API",
     description=(
         "RAG-based policy query system with OpenAI and Qdrant. "
         "Enables semantic search of enterprise policy documents with "
@@ -72,7 +72,7 @@ app.include_router(auth.router)
                 "application/json": {
                     "example": {
                         "status": "ok",
-                        "message": "Enterprise Policy Assistant API",
+                        "message": "Consumer Complaints Classification System API",
                         "version": "1.0.0",
                         "endpoints": {
                             "health": "/health",
@@ -94,7 +94,7 @@ async def root() -> dict:
     """
     return {
         "status": "ok",
-        "message": "Enterprise Policy Assistant API",
+        "message": "Consumer Complaints Classification System API",
         "version": "1.0.0",
         "endpoints": {
             "health": "/health",

@@ -1,4 +1,4 @@
-"""Configuration management for Enterprise Policy Assistant.
+"""Configuration management for Consumer Complaints Classification System.
 
 Uses pydantic-settings to load environment variables with validation.
 All secrets must be provided via environment variables.
