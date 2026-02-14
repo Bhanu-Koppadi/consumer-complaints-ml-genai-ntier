@@ -438,7 +438,11 @@ src/frontend/.env.test.local
 src/frontend/.env.production.local
 
 # Database files
-database/
 *.db
 *.sqlite
 *.sqlite3
+
+# Python distribution / Packaging
+*.egg
+*.egg-info/
+src/consumer_complaints_ml_genai_ntier.egg-info/
