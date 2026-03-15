@@ -1,0 +1,404 @@
+complaint_text,category
+I was charged twice for the same transaction.,Billing Issue
+My bill is incorrect and shows extra fees.,Billing Issue
+I was billed for a service I never signed up for.,Billing Issue
+An unauthorized charge appeared on my account.,Billing Issue
+My refund has not been processed after 30 days.,Billing Issue
+I was overcharged by fifty dollars on my last invoice.,Billing Issue
+My subscription was cancelled but I am still being charged.,Billing Issue
+The amount deducted from my account does not match the invoice.,Billing Issue
+I was charged a late fee even though I paid on time.,Billing Issue
+A duplicate payment was taken from my bank account.,Billing Issue
+My promotional discount was not applied to my bill.,Billing Issue
+I received a bill for an account I already closed.,Billing Issue
+The price shown on your website is different from what I was charged.,Billing Issue
+I was charged for a premium plan I never upgraded to.,Billing Issue
+My account shows an outstanding balance but I have proof of payment.,Billing Issue
+I noticed a hidden fee on my statement that was never disclosed.,Billing Issue
+I requested a refund two months ago and have received nothing.,Billing Issue
+My credit card was charged after I cancelled the order.,Billing Issue
+The wrong tax amount was calculated on my invoice.,Billing Issue
+I am being billed for equipment I returned to your store.,Billing Issue
+My automatic payment failed but I was still charged a penalty.,Billing Issue
+I did not authorise this charge of ninety nine dollars.,Billing Issue
+My bill keeps increasing every month without any explanation.,Billing Issue
+I was charged an early termination fee even though I completed my contract.,Billing Issue
+The currency conversion on my international transaction is incorrect.,Billing Issue
+My annual subscription was renewed without any prior notice or consent.,Billing Issue
+I was charged for three months after requesting cancellation in writing.,Billing Issue
+The invoice I received lists services that were never delivered.,Billing Issue
+I paid in full but my account still shows an unpaid balance.,Billing Issue
+My debit card was charged twice on the same day for the same order.,Billing Issue
+The refund I was promised has not appeared in my account after six weeks.,Billing Issue
+I was billed at the old rate after a price lock guarantee was agreed.,Billing Issue
+An extra line item appeared on my statement that I do not recognise.,Billing Issue
+My gift card balance was deducted but the purchase did not go through.,Billing Issue
+I was charged a membership fee for a club I never joined.,Billing Issue
+The instalment plan I agreed to has the wrong monthly amount.,Billing Issue
+I was levied a service charge that was not mentioned at the time of purchase.,Billing Issue
+My bill shows usage charges for a period when my account was suspended.,Billing Issue
+I paid via bank transfer but you claim the payment was never received.,Billing Issue
+The advertised price was significantly lower than the amount I was charged.,Billing Issue
+I received a collection notice for a debt I already settled.,Billing Issue
+My loyalty points were not credited after my qualifying purchase.,Billing Issue
+I was charged a paper billing fee even though I opted for electronic statements.,Billing Issue
+The deposit I paid when signing up has not been returned after account closure.,Billing Issue
+My bill includes roaming charges for a period I was at home.,Billing Issue
+I was billed for a full month even though I cancelled on the first day.,Billing Issue
+An interest charge was applied to my account despite zero balance.,Billing Issue
+My payment was applied to the wrong account on your system.,Billing Issue
+I was charged for insurance I specifically declined at the time of purchase.,Billing Issue
+The final invoice does not match the written quote I was given.,Billing Issue
+I have been billed for a service that has been offline for the past two weeks.,Billing Issue
+A charge for an upgrade I never requested appeared on my latest statement.,Billing Issue
+I was told the cancellation was free but now I see a fee on my account.,Billing Issue
+My billing cycle was changed without my knowledge and I was double-billed.,Billing Issue
+I was sent to collections for a bill that was covered by insurance.,Billing Issue
+The wrong account number appears on my invoice.,Billing Issue
+I was overcharged for international calling despite having an unlimited plan.,Billing Issue
+A security deposit was taken from me twice for the same booking.,Billing Issue
+My invoice shows a rental charge for equipment I own outright.,Billing Issue
+I was charged a setup fee that was supposed to be waived as part of my promotion.,Billing Issue
+My statement shows a purchase I made was never refunded after it was returned.,Billing Issue
+I was billed for two separate plans simultaneously when I only have one.,Billing Issue
+The discount code I applied at checkout was not reflected on my final bill.,Billing Issue
+My account was charged after I froze it pending a dispute investigation.,Billing Issue
+I was promised a lower rate for being a long-term customer but was billed at full price.,Billing Issue
+An unknown recurring charge has appeared on my account for the past four months.,Billing Issue
+I was charged a restocking fee even though the product I returned was faulty.,Billing Issue
+My refund was processed but it was for the wrong amount.,Billing Issue
+I was billed for a consultation that lasted only five minutes when I was quoted an hour rate.,Billing Issue
+My bank confirmed the payment cleared but your system shows it as outstanding.,Billing Issue
+I was emailed a receipt for an amount different from what was taken from my card.,Billing Issue
+The package deal I purchased is being billed as individual items at a higher rate.,Billing Issue
+A charge appeared on my account from a merchant I have never interacted with.,Billing Issue
+I was not informed about the annual fee associated with this account.,Billing Issue
+My invoice contains a duplicate line item for the same service.,Billing Issue
+I was charged a booking fee that your website clearly states is free.,Billing Issue
+My account was debited on a public holiday when the payment was not yet due.,Billing Issue
+I received a demand for payment for an invoice I disputed three months ago.,Billing Issue
+The billing address on my invoice is incorrect even though I updated it online.,Billing Issue
+I was charged full price after being assured I would receive the student discount.,Billing Issue
+My refund was issued as store credit without my consent instead of a cash refund.,Billing Issue
+I was billed for a service tier that has more features than what I am actually receiving.,Billing Issue
+My statement shows a charge at a foreign exchange rate that is much higher than the market rate.,Billing Issue
+A chargeback I filed was reversed without any notification or evidence from the merchant.,Billing Issue
+I was charged a delivery fee after being guaranteed free shipping at checkout.,Billing Issue
+My account was debited for an amount I had queried and asked to be placed on hold.,Billing Issue
+I was billed for the full year even though I downgraded to a monthly plan.,Billing Issue
+The price increase I was notified about takes effect next month but I have already been charged the new rate.,Billing Issue
+I was charged for a hotel room I cancelled within the free cancellation window.,Billing Issue
+My invoice for professional services is missing several items I was quoted for.,Billing Issue
+I was charged an additional fee for a service that is included in my current plan.,Billing Issue
+I notice my bill has charges in a currency I never agreed to be billed in.,Billing Issue
+My finance agreement shows a higher interest rate than the one I signed for.,Billing Issue
+I was charged a trip fee for a ride that was cancelled by the driver.,Billing Issue
+My subscription includes family sharing but I have been billed for each member separately.,Billing Issue
+I was charged a convenience fee online even though the website claims online payments are free.,Billing Issue
+A penalty fee was added to my account even though I contacted you in advance about paying late.,Billing Issue
+I was billed on my old expired card without my permission to use it.,Billing Issue
+My account was charged the day before the due date without authorization.,Billing Issue
+The eco fee on my bill is double the amount legally permitted in my region.,Billing Issue
+The product arrived damaged and broken.,Product Defect
+The screen on my new phone is cracked.,Product Defect
+The item I received looks nothing like the product in the listing.,Product Defect
+The device stopped working after just three days of use.,Product Defect
+My laptop overheats and shuts down within minutes of use.,Product Defect
+The battery on my new phone does not hold a charge.,Product Defect
+The zipper on the bag broke the very first time I used it.,Product Defect
+One of the components was missing from the box.,Product Defect
+The paint on the product is already peeling after one week.,Product Defect
+The buttons on the remote control are stuck and unresponsive.,Product Defect
+The hinge on my laptop is broken and the screen wobbles.,Product Defect
+The motor in the appliance burned out after the first use.,Product Defect
+The product has a strong chemical smell that will not go away.,Product Defect
+The stitching on my new jacket came apart after the first wash.,Product Defect
+My new television has a dead pixel cluster in the middle of the screen.,Product Defect
+The product software crashes every time I open the app.,Product Defect
+The lens of the camera was scratched right out of the box.,Product Defect
+The power cord included with the device is frayed and unsafe.,Product Defect
+The item I received is a completely different colour from the one I ordered.,Product Defect
+My headphones produce a constant buzzing sound on one side.,Product Defect
+The clasp on the necklace is defective and keeps opening.,Product Defect
+The wheels on the suitcase broke off on the very first trip.,Product Defect
+The product short-circuited when I plugged it in for the first time.,Product Defect
+The fabric on the chair is tearing after just two months of normal use.,Product Defect
+The toy I purchased for my child had a broken part right out of the box.,Product Defect
+The washing machine leaks water from the bottom after every cycle.,Product Defect
+My refrigerator stopped cooling after only four months of use.,Product Defect
+The microwave makes a loud grinding noise and does not heat food evenly.,Product Defect
+The blender blade came loose during operation and cracked the jar.,Product Defect
+My vacuum cleaner lost suction completely within the first week.,Product Defect
+The shoe sole separated from the upper after just two wears.,Product Defect
+The watch I purchased stopped keeping accurate time within days of wearing.,Product Defect
+My new mattress has a visible sag in the centre despite barely being used.,Product Defect
+The sofa cushions have lost their shape and are completely flat after a month.,Product Defect
+The table legs are uneven and the table wobbles on a flat surface.,Product Defect
+The bed frame I assembled cracked at the joints under normal weight.,Product Defect
+The laptop keyboard has keys that do not register when pressed.,Product Defect
+My tablet touchscreen is unresponsive in the lower half of the display.,Product Defect
+The gaming console disc drive makes a grinding noise and does not read discs.,Product Defect
+The smart speaker cuts out randomly and loses connection to the network.,Product Defect
+The earbuds I purchased have no audio in the left bud despite being brand new.,Product Defect
+The camera lens cap is cracked and the lens itself has a visible chip.,Product Defect
+The printer jams on every page even with the recommended paper type.,Product Defect
+My external hard drive is not recognised by any computer I connect it to.,Product Defect
+The USB hub I ordered has three out of four ports that do not work.,Product Defect
+The keyboard I received has keys printed in the wrong layout.,Product Defect
+The monitor I ordered has a flickering backlight that causes eye strain.,Product Defect
+My desktop computer fails to boot up and shows a blue error screen.,Product Defect
+The router drops the internet connection every few minutes.,Product Defect
+The charger included with my phone gets extremely hot and stopped working.,Product Defect
+The dress I ordered shrank two full sizes after following the washing instructions.,Product Defect
+The colour of my shirt faded after a single wash despite following care instructions.,Product Defect
+The buttons on my coat fell off within a week of light use.,Product Defect
+The hat I ordered is visibly misshapen and does not hold its form.,Product Defect
+The sunglasses frame snapped in half during normal use.,Product Defect
+My leather wallet cracked and peeled within a month revealing it was synthetic.,Product Defect
+The ring I purchased turned my finger green indicating it is not the material advertised.,Product Defect
+The perfume I received smells completely different from the product description.,Product Defect
+The toy car I bought for my son has sharp metal edges exposed around the wheels.,Product Defect
+The children's game was missing half the pieces needed to play.,Product Defect
+The book I received has a large section of pages that are printed upside down.,Product Defect
+The food product I purchased was mouldy despite being well within the expiry date.,Product Defect
+The supplement I received has a damaged seal and appears to have been opened.,Product Defect
+The energy drink I purchased tasted off and had sediment at the bottom.,Product Defect
+The candle I bought produced an excessive amount of black smoke when lit.,Product Defect
+The picture frame I bought shattered immediately upon attempting to hang it.,Product Defect
+The storage boxes I ordered collapsed under a very light load.,Product Defect
+The garden hose split at the first connection point during its first use.,Product Defect
+My new iron leaves brown marks on clothing even at the lowest temperature setting.,Product Defect
+The toaster sparks and trips the electrical breaker when in use.,Product Defect
+The hairdryer I purchased stopped working and emitted a burning smell.,Product Defect
+The electric toothbrush I bought does not vibrate at the advertised speed.,Product Defect
+The kitchen knife I purchased has a blade that is visibly bent out of alignment.,Product Defect
+The cookware set I bought has a non-stick coating that started flaking into food.,Product Defect
+My thermos leaks from the lid despite being sealed correctly.,Product Defect
+The folding chair broke under a normal adult weight on its first use.,Product Defect
+The umbrella I purchased inverted in mild wind and the ribs snapped.,Product Defect
+My new bicycle tyre deflated completely after just one short ride.,Product Defect
+The phone case I purchased cracked along the camera cutout after two days.,Product Defect
+The screen protector I applied has large bubbles that obscure the display.,Product Defect
+My fitness tracker reported inaccurate step and heart rate data from day one.,Product Defect
+The smart bulb I installed does not respond to voice commands as advertised.,Product Defect
+The electric kettle I purchased switches off after just thirty seconds.,Product Defect
+The running shoes I purchased caused significant heel pain due to poor cushioning.,Product Defect
+The backpack I ordered has a torn inner lining that catches on everything I put inside.,Product Defect
+The air purifier I bought has a fan that makes a rattling noise that never stops.,Product Defect
+My new coffee machine produces lukewarm water instead of hot coffee.,Product Defect
+The paint I purchased dried with a completely different shade to the colour on the tin.,Product Defect
+The drill bit set I ordered included two bits of the same size and was missing one size entirely.,Product Defect
+The measuring tape I received retracts violently and the blade is deformed.,Product Defect
+The shampoo I bought caused a significant scalp reaction after the first use.,Product Defect
+The moisturiser I purchased separated in the bottle and could not be mixed.,Product Defect
+The receipt printer I bought for my business jams on every other label.,Product Defect
+The gaming headset microphone does not work and produces no audio input.,Product Defect
+The window blinds I ordered are ten centimetres shorter than the size I specified.,Product Defect
+The shower head I purchased has low water pressure despite adequate water supply.,Product Defect
+The replacement battery I purchased for my laptop is not compatible despite matching the stated model number.,Product Defect
+The plyboard shelving unit I assembled bowed immediately under moderate weight.,Product Defect
+The new phone I received powers off on its own whenever the battery drops below fifty percent.,Product Defect
+The construction set I bought for my child is missing the instruction manual entirely.,Product Defect
+The projector I purchased produces a blurry image even at the minimum recommended distance.,Product Defect
+Customer service was rude and unhelpful.,Customer Support
+No one answered my support call for an hour.,Customer Support
+I was kept on hold for over forty five minutes and then disconnected.,Customer Support
+The support agent gave me completely wrong information about my account.,Customer Support
+I have sent three emails and received no response from your team.,Customer Support
+I was transferred between five different agents and my issue was never resolved.,Customer Support
+The representative hung up on me when I asked to speak to a supervisor.,Customer Support
+Your live chat agent was dismissive and refused to help me.,Customer Support
+I was promised a callback within 24 hours and never heard back.,Customer Support
+I contacted support ten days ago and my complaint is still open with no update.,Customer Support
+The agent I spoke with was condescending and made me feel like a burden.,Customer Support
+Your support team closed my ticket without resolving the issue.,Customer Support
+I was given contradicting information by two different agents on the same day.,Customer Support
+My complaint was dismissed without any investigation.,Customer Support
+The support representative could not answer basic questions about your product.,Customer Support
+I waited in the online chat queue for over an hour before giving up.,Customer Support
+Your customer service team shows no empathy toward my situation.,Customer Support
+I have been asking for an escalation for three weeks with no progress.,Customer Support
+The agent read from a script and offered no real help for my specific issue.,Customer Support
+I feel ignored and disrespected by your customer support team.,Customer Support
+Your support hours are listed as 24 hours but no one answered at midnight.,Customer Support
+The self-service portal is broken and redirects me in a loop with no resolution.,Customer Support
+I was asked to repeat my problem to every new agent I was transferred to.,Customer Support
+I received an automated response but no human has followed up.,Customer Support
+Your support team promised a resolution by Friday and it is now Tuesday with nothing.,Customer Support
+The support ticket I raised was closed and marked as resolved without any contact.,Customer Support
+I have called five times this week and each time been told someone will follow up.,Customer Support
+The agent I spoke to laughed when I described my problem.,Customer Support
+Your chatbot is unable to connect me to a human agent despite my repeated requests.,Customer Support
+I was told my complaint would be escalated to a specialist but no one has contacted me.,Customer Support
+The support agent spoke over me and did not let me explain my situation.,Customer Support
+I was refused a refund and told to contact a third party when the fault is yours.,Customer Support
+Your email support team takes seven days to respond which is unacceptable.,Customer Support
+I was told a supervisor would contact me within 48 hours but it has been two weeks.,Customer Support
+The agent actively blamed me for the problem instead of trying to help.,Customer Support
+I was told there is nothing your team can do and was simply hung up on.,Customer Support
+My issue has been raised four times and each time a new agent acts like it is the first they are hearing of it.,Customer Support
+I cannot reach a human being through any of your contact channels.,Customer Support
+The phone number listed on your website leads to a non-working number.,Customer Support
+Your social media team has not responded to my public complaint in five days.,Customer Support
+I reported a safety issue with your product and your support team dismissed it.,Customer Support
+The agent told me the wait time was five minutes but I waited over an hour.,Customer Support
+I feel your support team is trained to deny and delay rather than help customers.,Customer Support
+I was not given a case number or any reference for my complaint.,Customer Support
+The online support form I submitted returned an error and my message was not received.,Customer Support
+Your support team gave me incorrect guidance and now my situation is worse.,Customer Support
+I was told the issue is a known problem but given no timeline for resolution.,Customer Support
+I have been a customer for ten years and I have never been treated this poorly.,Customer Support
+The agent made a promise on the call but the notes on my account say something different.,Customer Support
+I followed all the troubleshooting steps your agent gave me and nothing was resolved.,Customer Support
+Your team asked me to send photos as evidence and now no one is responding to my submission.,Customer Support
+The hold music on your support line played on a loop for two hours.,Customer Support
+I was told to call back during business hours but received the same automated response at those times.,Customer Support
+The support chat disconnected automatically after ten minutes and I lost the entire conversation.,Customer Support
+I have escalated my complaint to the highest level available and still heard nothing.,Customer Support
+Your agents keep telling me the system is down and to try again later.,Customer Support
+I was offered a solution that does not address my actual problem.,Customer Support
+The callback I was offered was at a time that did not work for me and there were no alternatives.,Customer Support
+I was passed to four departments who each told me it was another department's responsibility.,Customer Support
+The complaint I submitted online was deleted and no record of it remains on your system.,Customer Support
+I received a survey asking about my support experience before my issue was even addressed.,Customer Support
+Your agent told me the product works as intended but it clearly does not.,Customer Support
+I was told my case was low priority even though it involves a safety risk.,Customer Support
+The support agent kept me on the line for forty minutes only to tell me I needed to call a different number.,Customer Support
+I was disconnected mid-sentence and when I called back was treated as a new call from scratch.,Customer Support
+Your team is not equipped to handle technical queries and only reads from a basic script.,Customer Support
+I requested the call be recorded for training purposes and the agent became hostile.,Customer Support
+I was denied service and told I need to visit a branch in person for an issue resolvable over the phone.,Customer Support
+The online complaint form does not work on mobile browsers and there is no alternative.,Customer Support
+I asked to be contacted by email but keep receiving automated text messages instead.,Customer Support
+Your agent gave me a workaround that voided my product warranty without informing me.,Customer Support
+I have proof of my evidence but the agent refused to check it on the call.,Customer Support
+The live chat agent ended the conversation without notice claiming it had been idle.,Customer Support
+I was told the wait would be ten minutes but I was in the queue for two and a half hours.,Customer Support
+Your representative promised me a discount to compensate for the inconvenience and it was never applied.,Customer Support
+I used the callback service but the agent who called me spoke over me at all times.,Customer Support
+The agent took all my personal details and then told me they could not help me.,Customer Support
+I contacted you via your official email address and received a bounce-back notification.,Customer Support
+My issue remains unresolved after six contacts and the problem keeps getting worse.,Customer Support
+The agent tried to upsell me a product while I was calling about a serious complaint.,Customer Support
+Your customer service representative provided incorrect technical instructions that caused additional damage.,Customer Support
+I contacted support before the warranty expired but my claim was processed after it lapsed due to your delays.,Customer Support
+I was told I would receive a full transcript of the call but it never arrived.,Customer Support
+The representative told me my complaint would be resolved before the end of day and it has now been a week.,Customer Support
+Every time I call I am told the previous agent made an error but no one takes ownership.,Customer Support
+Your support team marked my issue as resolved in their system without contacting me at all.,Customer Support
+I was told there is a known outage affecting my account but no public notice was posted.,Customer Support
+I requested a formal complaints procedure and was not provided one.,Customer Support
+I was told I would be compensated for the inconvenience and received nothing.,Customer Support
+The agent I spoke to was unable to locate my account despite me providing all my details.,Customer Support
+I feel your support process is deliberately designed to make customers give up.,Customer Support
+I had to repeat my address, account number and issue summary to six different agents.,Customer Support
+Your phone line played a message saying all agents are busy and immediately disconnected.,Customer Support
+I was told the product I complained about is discontinued so no support is available.,Customer Support
+I contacted your accessibility support line and was placed on a regular queue with no specialist.,Customer Support
+Your support agent sent me to a third-party forum for official product support questions.,Customer Support
+I received a template response that did not address any part of my specific complaint.,Customer Support
+The agent refused to put the agreement we reached in writing.,Customer Support
+I was told to reset the product which I had already done multiple times before calling.,Customer Support
+I submitted a formal complaint in writing and have received no acknowledgement.,Customer Support
+Delivery was delayed by two weeks.,Delivery Problem
+Package was left in rain and got wet.,Delivery Problem
+My order was marked as delivered but I never received it.,Delivery Problem
+The package was delivered to the wrong address.,Delivery Problem
+My shipment has been stuck at the same location for ten days.,Delivery Problem
+The tracking information has not updated in over a week.,Delivery Problem
+The delivery driver left the package outside in extreme heat.,Delivery Problem
+My package was returned to sender without any delivery attempt.,Delivery Problem
+I was given a delivery window and no one showed up.,Delivery Problem
+The box arrived completely crushed and the contents were destroyed.,Delivery Problem
+My order was split into multiple shipments and one part is missing.,Delivery Problem
+The courier left the package with my neighbour without my permission.,Delivery Problem
+I paid for express shipping and my order arrived two weeks late.,Delivery Problem
+My parcel was delivered to the completely wrong city.,Delivery Problem
+The delivery confirmation shows a signature that is not mine.,Delivery Problem
+My order has been out for delivery for three days and never arrives.,Delivery Problem
+I was not notified that a delivery attempt was made.,Delivery Problem
+My package is showing as lost in transit and no one is helping me.,Delivery Problem
+Half of my order is missing and the rest was damaged in shipping.,Delivery Problem
+The estimated delivery date keeps being pushed back with no explanation.,Delivery Problem
+I had to pay customs duties on a domestic order which makes no sense.,Delivery Problem
+The courier attempted delivery but I was home and no one knocked.,Delivery Problem
+My fragile items were not packed properly and arrived broken.,Delivery Problem
+I am unable to reschedule my delivery and cannot reach the courier.,Delivery Problem
+My order was shipped to an old address even though I updated it before checkout.,Delivery Problem
+The tracking link I was sent does not work and returns an error page.,Delivery Problem
+My package has been at the local depot for five days with no delivery attempt.,Delivery Problem
+The courier left a failed delivery card but made no attempt to deliver.,Delivery Problem
+My package was delivered opened and items appear to have been removed.,Delivery Problem
+I have been waiting for a re-delivery that was promised three times and never came.,Delivery Problem
+The driver delivered my parcel to the wrong floor in my building.,Delivery Problem
+My order shows delivered via GPS but the location shown is not my address.,Delivery Problem
+My parcel was left outside overnight in freezing temperatures and the contents are damaged.,Delivery Problem
+The courier claims they attempted delivery but my security camera shows no visit.,Delivery Problem
+I was charged a re-delivery fee for a package that was never attempted in the first place.,Delivery Problem
+My same-day delivery order arrived three days later with no apology or compensation.,Delivery Problem
+The parcel was marked as undeliverable without any attempt shown on the tracking.,Delivery Problem
+My package was delivered to the wrong building in my street.,Delivery Problem
+I was told to collect my parcel from a depot that is over fifty kilometres from me.,Delivery Problem
+My order was dispatched a week after the stated processing time.,Delivery Problem
+The courier left my package at a collection point that has now closed down.,Delivery Problem
+My perishable food order arrived two days late and is no longer safe to eat.,Delivery Problem
+The return shipment I sent was lost in transit and I have not received a refund.,Delivery Problem
+I was told my order was delivered and signed for but I was not home at that time.,Delivery Problem
+My package arrived with a different name on the label than the one I used.,Delivery Problem
+The dispatch confirmation email I received has the wrong items listed.,Delivery Problem
+My international order has been held in customs for over three weeks.,Delivery Problem
+I paid for tracked delivery but there is no tracking information available.,Delivery Problem
+My order was sent via regular post despite having paid for courier delivery.,Delivery Problem
+The delivery driver left my large appliance on the pavement and refused to bring it inside.,Delivery Problem
+My package shows as delivered but the photo evidence shows someone else's door.,Delivery Problem
+I was given a time slot for delivery that I arranged specifically around but was missed.,Delivery Problem
+The courier attempted to deliver my parcel to my workplace after business hours.,Delivery Problem
+My medication was sent by standard post and arrived damaged and delayed.,Delivery Problem
+I cannot collect my parcel from the depot as there is no parking and no public transport.,Delivery Problem
+The collection point where my parcel was left is only open one day a week.,Delivery Problem
+My order was cancelled by the courier company and I was not informed.,Delivery Problem
+The weight and dimensions on the shipping label do not match my actual order.,Delivery Problem
+My fragile glassware was packed with no protective material and arrived shattered.,Delivery Problem
+I was told I needed to be home all day for a delivery window that spans eight hours.,Delivery Problem
+The parcel was placed inside my recycling bin where it was almost thrown away.,Delivery Problem
+My order was shipped in three separate boxes but only one has arrived.,Delivery Problem
+I had to chase the courier repeatedly to find out where my order was.,Delivery Problem
+The driver dropped my package from a van height and I saw it fall on the camera.,Delivery Problem
+My parcel was delivered to a locked mailroom and I cannot access it.,Delivery Problem
+I was told to pick up my parcel from a post office that says they have no record of it.,Delivery Problem
+My Christmas order arrived in January because of unexplained dispatch delays.,Delivery Problem
+The courier company says it was delivered but the retailer says it was not dispatched yet.,Delivery Problem
+I paid for white glove delivery and installation but the driver just left the boxes outside.,Delivery Problem
+My tracking status has shown out for delivery for four consecutive days.,Delivery Problem
+The delivery notification arrived after the delivery window had already passed.,Delivery Problem
+My package was delivered during the weekend when I had requested a weekday delivery.,Delivery Problem
+I received a different customer's order and my own order is unaccounted for.,Delivery Problem
+The courier took a photo of delivery at a completely different property.,Delivery Problem
+My return package was collected but never scanned into the courier system.,Delivery Problem
+The estimated delivery window on the website was five days but it took three weeks.,Delivery Problem
+I was told my item had been delivered successfully but it turned out to be someone else's parcel.,Delivery Problem
+My package sat at a customs checkpoint for two weeks with no updates or explanation.,Delivery Problem
+The driver rang my intercom and left before I had a chance to answer and buzz them in.,Delivery Problem
+I received my order with the items loose inside the box because the inner packaging had broken.,Delivery Problem
+My package shows a failed delivery scan but I live in a flat that is accessible all day.,Delivery Problem
+I was not given the option to authorise a safe place for delivery despite it being offered online.,Delivery Problem
+My express delivery order is now three weeks overdue and tracking still shows in transit.,Delivery Problem
+I had to personally call the depot after five days to find out my parcel was there waiting.,Delivery Problem
+The courier website allows me to rebook delivery but the slots keep disappearing before I can confirm.,Delivery Problem
+My parcel was handed to a neighbour who has since moved away and I cannot retrieve it.,Delivery Problem
+I signed up for delivery notifications but received no alerts at any stage of the process.,Delivery Problem
+The package was too large for my mailbox and the driver made no attempt to knock.,Delivery Problem
+My order was despatched to the right postcode but the wrong street entirely.,Delivery Problem
+I was charged a failed delivery fee even though the driver made no attempt.,Delivery Problem
+My parcel requires a signature but the driver attempted delivery when I specified an alternative.,Delivery Problem
+The delivery address was completed correctly at checkout but the label was printed incorrectly.,Delivery Problem
+My refrigerated goods arrived at room temperature because the cold chain was broken.,Delivery Problem
+I am being asked to pay import duties on goods that were manufactured domestically.,Delivery Problem
+My parcel was collected by a courier but the collection was not logged in the system.,Delivery Problem
+The return label I was sent is for a different country than the one I am sending from.,Delivery Problem
+My order was marked as out for delivery and then suddenly changed to return to sender.,Delivery Problem
+I was told my package was held due to an incomplete address but the address I provided is full and correct.,Delivery Problem
+The delivery company damaged my gate while attempting access and has refused to compensate me.,Delivery Problem
+My order required assembly on delivery but the courier team was not equipped or willing to do so.,Delivery Problem
+I waited at home all day for a delivery that was ultimately rescheduled without any notification.,Delivery Problem
+My parcel was delivered to a smart locker but I was not sent the access code.,Delivery Problem

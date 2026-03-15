@@ -1,0 +1,670 @@
+openapi: 3.0.3
+info:
+  title: Consumer Complaints ML + GenAI API
+  description: API for the AI-Based Consumer Complaints Classification System. Handles complaint submission, ML classification, and GenAI explanations.
+  version: 1.0.0
+servers:
+  - url: /
+    description: Current server origin
+  - url: http://127.0.0.1:5000
+    description: Local Development Server (127.0.0.1)
+  - url: http://localhost:5000
+    description: Local Development Server (localhost)
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: >
+        JWT access token issued by POST /api/auth/login.
+        Include in the Authorization header as: Bearer <access_token>
+
+paths:
+  /:
+    get:
+      summary: API Root
+      description: Returns a friendly landing payload with links to health, OpenAPI, and Swagger UI.
+      responses:
+        '200':
+          description: Root metadata
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "ok"
+                  message:
+                    type: string
+                    example: "Consumer Complaints ML + GenAI System API"
+                  health:
+                    type: string
+                    example: "/health"
+                  openapi:
+                    type: string
+                    example: "/api/openapi.yaml"
+                  swagger:
+                    type: string
+                    example: "/api/docs"
+
+  /api/openapi.yaml:
+    get:
+      summary: OpenAPI Specification
+      description: Serves the raw OpenAPI 3.0.3 YAML document for this API.
+      responses:
+        '200':
+          description: OpenAPI YAML document
+          content:
+            application/yaml:
+              schema:
+                type: string
+
+  /api/docs:
+    get:
+      summary: Swagger UI
+      description: Serves a Swagger UI page configured to load the API OpenAPI specification.
+      responses:
+        '200':
+          description: Swagger UI HTML page
+          content:
+            text/html:
+              schema:
+                type: string
+
+  /api/auth/register:
+    post:
+      summary: Register a New User
+      description: Creates a new user account with the USER role. Returns the created user record on success.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - username
+                - email
+                - password
+              properties:
+                username:
+                  type: string
+                  minLength: 3
+                  maxLength: 50
+                  description: Unique display name for the account
+                  example: "hema_sri"
+                email:
+                  type: string
+                  format: email
+                  description: Valid email address for the account
+                  example: "hema@example.com"
+                password:
+                  type: string
+                  minLength: 8
+                  description: Account password (minimum 8 characters)
+                  example: "SecurePass1"
+      responses:
+        '201':
+          description: User registered successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "User registered successfully"
+                  user:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 5
+                      username:
+                        type: string
+                        example: "hema_sri"
+                      role:
+                        type: string
+                        example: "USER"
+        '400':
+          description: Missing or invalid fields
+        '409':
+          description: Username already taken
+        '500':
+          description: Registration failed due to a server error
+
+  /api/auth/login:
+    post:
+      summary: Authenticate and Obtain Tokens
+      description: Validates credentials and returns a JWT access token, a refresh token, and user details.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - username
+                - password
+              properties:
+                username:
+                  type: string
+                  description: Registered username
+                  example: "hema_sri"
+                password:
+                  type: string
+                  description: Account password
+                  example: "SecurePass1"
+      responses:
+        '200':
+          description: Authentication successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  access_token:
+                    type: string
+                    description: Short-lived JWT used in the Authorization header
+                  refresh_token:
+                    type: string
+                    description: Long-lived token used to obtain a new access token
+                  token_type:
+                    type: string
+                    example: "Bearer"
+                  expires_in:
+                    type: integer
+                    description: Access token lifetime in seconds
+                    example: 86400
+                  user:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 5
+                      username:
+                        type: string
+                        example: "hema_sri"
+                      role:
+                        type: string
+                        example: "USER"
+        '400':
+          description: Missing username or password
+        '401':
+          description: Invalid credentials
+
+  /api/auth/refresh:
+    post:
+      summary: Refresh Access Token
+      description: >
+        Issues a new short-lived access token using a valid refresh token.
+        The refresh token must be sent in the Authorization header as: Bearer <refresh_token>
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: New access token issued
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  access_token:
+                    type: string
+                    description: Newly issued JWT access token
+                  token_type:
+                    type: string
+                    example: "Bearer"
+                  expires_in:
+                    type: integer
+                    description: Token lifetime in seconds
+                    example: 86400
+        '401':
+          description: Refresh token missing or invalid
+        '422':
+          description: Malformed token
+
+
+  /health:
+    get:
+      summary: System Health Check
+      description: Returns the status of the API and version information.
+      responses:
+        '200':
+          description: Service is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "healthy"
+                  app_name:
+                    type: string
+                    example: "Consumer Complaints ML + GenAI System"
+                  version:
+                    type: string
+                    example: "1.0.0"
+
+  /api/info:
+    get:
+      summary: API Information
+      description: Returns metadata about the API and available endpoints.
+      responses:
+        '200':
+          description: API Information
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  description:
+                    type: string
+                  endpoints:
+                    type: array
+                    items:
+                      type: string
+
+  /api/complaints:
+    post:
+      summary: Submit a Complaint
+      description: Submits a consumer complaint for storage without immediate ML classification.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - complaint_text
+              properties:
+                user_id:
+                  type: integer
+                  description: ID of the user submitting the complaint (optional)
+                complaint_text:
+                  type: string
+                  description: The raw text of the consumer complaint
+                  example: "I was charged twice for the same transaction."
+      responses:
+        '201':
+          description: Complaint submitted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  id:
+                    type: integer
+        '400':
+          description: Invalid Input
+        '500':
+          description: Internal Server Error
+    get:
+      summary: Get Authenticated User's Complaint History
+      description: >
+        Returns the complaint history for the currently authenticated user,
+        ordered newest first. Each item includes the latest classification result.
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: User's complaint history
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  complaints:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 7
+                        complaint_text:
+                          type: string
+                          example: "I was charged twice for the same transaction."
+                        category:
+                          type: string
+                          nullable: true
+                          example: "Billing Issue"
+                        confidence:
+                          type: number
+                          format: float
+                          nullable: true
+                          example: 0.91
+                        created_at:
+                          type: string
+                          format: date-time
+                          nullable: true
+                          example: "2025-03-01T10:23:45"
+        '401':
+          description: Missing or invalid access token
+        '500':
+          description: Database error
+
+  /api/classify:
+    post:
+      summary: Classify Complaint & Generate Explanation
+      description: >
+        Core endpoint: Receives complaint text, classifies it using the ML model,
+        and generates an explanation using GenAI. Also stores the results.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - complaint_text
+              properties:
+                user_id:
+                  type: integer
+                  description: ID of the user (optional)
+                complaint_text:
+                  type: string
+                  description: The complaint text to be classified
+                  example: "The product arrived damaged and the packaging was torn."
+      responses:
+        '200':
+          description: Classification successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  complaint_id:
+                    type: integer
+                  category:
+                    type: string
+                    example: "Product Defect"
+                  confidence:
+                    type: number
+                    format: float
+                    example: 0.925
+                  explanation:
+                    type: string
+                    example: "The complaint is classified as a Product Defect because it explicitly mentions damage to the item and packaging issues."
+        '400':
+          description: Invalid Input (Missing text)
+        '500':
+          description: Internal Server Error (ML or GenAI failure)
+
+  /api/complaints/{complaint_id}:
+    get:
+      summary: Get Complaint by ID
+      description: >
+        Retrieves the full details of a single complaint including its classification result and explanation.
+        A USER may only access their own complaints; an ADMIN may access any complaint.
+      security:
+        - BearerAuth: []
+      parameters:
+        - in: path
+          name: complaint_id
+          schema:
+            type: integer
+          required: true
+          description: Numeric ID of the complaint
+      responses:
+        '200':
+          description: Complaint record retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    example: 7
+                  complaint_text:
+                    type: string
+                    example: "I was charged twice for the same transaction."
+                  category:
+                    type: string
+                    example: "Billing Issue"
+                  confidence:
+                    type: number
+                    format: float
+                    example: 0.91
+                  explanation:
+                    type: string
+                    example: "The complaint mentions duplicate charges, commonly associated with billing errors."
+                  created_at:
+                    type: string
+                    format: date-time
+                    example: "2025-03-01T10:23:45"
+                  classified_at:
+                    type: string
+                    format: date-time
+                    example: "2025-03-01T10:23:46"
+        '401':
+          description: Missing or invalid access token
+        '403':
+          description: Forbidden — complaint belongs to another user
+        '404':
+          description: Complaint not found
+
+  /api/explanation/{complaint_id}:
+    get:
+      summary: Get Explanation by ID
+      description: Retrieve a stored explanation for a specific complaint ID.
+      parameters:
+        - in: path
+          name: complaint_id
+          schema:
+            type: integer
+          required: true
+          description: Numeric ID of the complaint
+      responses:
+        '200':
+          description: Explanation retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  complaint_id:
+                    type: integer
+                  explanation:
+                    type: string
+        '404':
+          description: Complaint or Explanation not found
+
+  /api/admin/complaints:
+    get:
+      summary: List All Complaints (Admin)
+      description: >
+        Returns a paginated list of all complaints across all users. Supports optional filtering by
+        category and minimum confidence score. Requires ADMIN role.
+      security:
+        - BearerAuth: []
+      parameters:
+        - in: query
+          name: page
+          schema:
+            type: integer
+            default: 1
+            minimum: 1
+          description: Page number (1-based)
+        - in: query
+          name: limit
+          schema:
+            type: integer
+            default: 20
+            minimum: 1
+          description: Number of records per page
+        - in: query
+          name: category
+          schema:
+            type: string
+          description: Filter results to a specific complaint category
+          example: "Billing Issue"
+        - in: query
+          name: min_confidence
+          schema:
+            type: number
+            format: float
+          description: Return only complaints whose confidence score is at or above this value
+          example: 0.8
+      responses:
+        '200':
+          description: Paginated list of complaints
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  total:
+                    type: integer
+                    description: Total number of complaints matching the filters
+                    example: 142
+                  page:
+                    type: integer
+                    example: 1
+                  limit:
+                    type: integer
+                    example: 20
+                  complaints:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 7
+                        complaint_text:
+                          type: string
+                          example: "I was charged twice for the same transaction."
+                        category:
+                          type: string
+                          example: "Billing Issue"
+                        confidence:
+                          type: number
+                          format: float
+                          example: 0.91
+                        created_at:
+                          type: string
+                          format: date-time
+                          example: "2025-03-01T10:23:45"
+        '400':
+          description: Invalid query parameters
+        '401':
+          description: Missing or invalid access token
+        '403':
+          description: Forbidden — ADMIN role required
+        '500':
+          description: Database error
+
+  /api/admin/statistics:
+    get:
+      summary: Complaint Category Statistics (Admin)
+      description: >
+        Returns aggregated statistics — total complaints, per-category breakdown,
+        average confidence, low-confidence count, and date range.
+        Requires ADMIN role.
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Aggregate complaint statistics
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  total_complaints:
+                    type: integer
+                    example: 350
+                  by_category:
+                    type: object
+                    additionalProperties:
+                      type: integer
+                    example:
+                      "Billing Issue": 98
+                      "Product Defect": 75
+                  average_confidence:
+                    type: number
+                    format: float
+                    example: 0.82
+                  low_confidence_count:
+                    type: integer
+                    description: Number of complaints with confidence < 0.5
+                    example: 12
+                  date_range:
+                    type: object
+                    properties:
+                      start:
+                        type: string
+                        format: date
+                        nullable: true
+                        example: "2024-01-01"
+                      end:
+                        type: string
+                        format: date
+                        nullable: true
+                        example: "2025-03-01"
+        '401':
+          description: Missing or invalid access token
+        '403':
+          description: Forbidden — ADMIN role required
+        '500':
+          description: Database error
+
+  /api/draft-response:
+    post:
+      summary: Draft a Customer-Service Response
+      description: >
+        Generates a professional customer-service response draft for a classified
+        complaint using GenAI. Falls back to a structured mock draft when no API
+        key is configured.
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - complaint_text
+                - category
+                - confidence
+              properties:
+                complaint_text:
+                  type: string
+                  description: The original complaint text
+                  example: "I was charged twice for the same transaction."
+                category:
+                  type: string
+                  description: The ML-predicted complaint category
+                  example: "Billing Issue"
+                confidence:
+                  type: number
+                  format: float
+                  description: The classifier confidence score (0.0 – 1.0)
+                  example: 0.91
+      responses:
+        '200':
+          description: Draft response generated
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  draft_response:
+                    type: string
+                    description: A professional customer-service response draft
+        '400':
+          description: Missing or invalid request fields
+        '401':
+          description: Missing or invalid access token
+        '500':
+          description: Internal Server Error (GenAI failure)

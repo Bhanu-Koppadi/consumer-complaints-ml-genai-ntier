@@ -1,0 +1,5 @@
+# Optional heavy dependencies for the MiniLM-L6 / HuggingFace zero-shot predictor.
+# Required only when USE_TRANSFORMER_MODEL=true.
+# Install with: uv pip install -r requirements-transformer.txt --link-mode=copy
+transformers>=4.40.0,<5.0.0
+torch>=2.2.0,<3.0.0

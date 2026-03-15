@@ -1,67 +1,48 @@
-"""Pytest configuration and fixtures for backend tests.
-
-Provides test client, mock database, and test user fixtures.
+"""
+Pytest fixtures for backend API tests.
+Run from src/backend with PYTHONPATH=. so that app and config resolve.
 """
 
 import os
+import sys
 
-# Set test environment variables BEFORE any imports
-os.environ["JWT_SECRET_KEY"] = "test-secret-key-for-testing-only"
-os.environ["JWT_ALGORITHM"] = "HS256"
-os.environ["JWT_ACCESS_TOKEN_EXPIRE_MINUTES"] = "30"
-os.environ["DATABASE_URL"] = "postgresql://postgres:postgres@localhost:5432/test_db"
-
-from datetime import datetime  # noqa: E402
-from unittest.mock import MagicMock  # noqa: E402
+# Ensure backend root is on path when running tests from repo or backend
+_backend = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if _backend not in sys.path:
+    sys.path.insert(0, _backend)
 
 import pytest  # noqa: E402
-from app.main import app  # noqa: E402
-from app.models.auth import User  # noqa: E402
-from fastapi.testclient import TestClient  # noqa: E402
+from flask_jwt_extended import create_access_token  # noqa: E402
+
+from app import app as flask_app  # noqa: E402
+from app import limiter as flask_limiter  # noqa: E402
 
 
 @pytest.fixture
-def test_client():
-    """Create a test client for FastAPI app.
-
-    Returns:
-        TestClient instance for making test requests
-    """
-    return TestClient(app)
-
-
-@pytest.fixture
-def mock_db_connection():
-    """Mock database connection for tests.
-
-    Returns:
-        MagicMock connection object
-    """
-    mock_conn = MagicMock()
-    mock_cursor = MagicMock()
-    mock_conn.cursor.return_value = mock_cursor
-    return mock_conn, mock_cursor
+def app():
+    """Flask application fixture."""
+    flask_app.config["TESTING"] = True
+    flask_app.config["RATELIMIT_ENABLED"] = False
+    flask_limiter.enabled = False
+    yield flask_app
 
 
 @pytest.fixture
-def test_user():
-    """Create a test user object.
-
-    Returns:
-        User object for testing
-    """
-    return User(
-        id=1, username="testuser", email="test@example.com", role="USER", created_at=datetime(2026, 2, 12, 10, 0, 0)
-    )
+def client(app):
+    """Flask test client."""
+    with app.test_client() as c:
+        yield c
 
 
 @pytest.fixture
-def test_admin_user():
-    """Create a test admin user object.
+def admin_token(app):
+    """JWT access token with ADMIN role."""
+    with app.app_context():
+        return create_access_token(identity="99", additional_claims={"role": "ADMIN"})
 
-    Returns:
-        Admin User object for testing
-    """
-    return User(
-        id=2, username="adminuser", email="admin@example.com", role="ADMIN", created_at=datetime(2026, 2, 12, 10, 0, 0)
-    )
+
+@pytest.fixture
+def user_token(app):
+    """JWT access token with USER role (user_id=1)."""
+    with app.app_context():
+        return create_access_token(identity="1", additional_claims={"role": "USER"})
