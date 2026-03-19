@@ -10,7 +10,7 @@ Hybrid Machine Learning and Generative AI System with Enterprise N-Tier Architec
 This document summarizes what was completed across the full lifecycle of the project, from initial problem definition to a working full-stack implementation with testing, security, and documentation.
 
 ## Version Baseline and Review Scope
-- Baseline date for this report: March 18, 2026.
+- Baseline date for this report: March 19, 2026.
 - API runtime version reference: 1.0.0 (from health endpoint payload in backend application code).
 - Report scope: end-to-end implementation status for the current codebase snapshot.
 - Verification scope used to prepare this report:
@@ -31,12 +31,13 @@ This document summarizes what was completed across the full lifecycle of the pro
 
 ## 2. System Architecture Design
 - Designed a 5-layer N-tier architecture:
-  - Presentation layer (React frontend + API docs).
-  - Application layer (Flask routing, validation, orchestration).
-  - AI/ML processing layer (classification, severity, decision engine, explanation).
-  - Data access layer (database module and SQL operations).
-  - Data layer (PostgreSQL schema and migrations).
+  - Presentation layer (React + TypeScript frontend + Swagger API docs).
+  - Application layer (Flask routing, validation, orchestration, JWT + RBAC).
+  - AI/ML processing layer (classification, severity detection, decision engine, GenAI explanation).
+  - Data access layer (parameterized SQL via psycopg2 with ThreadedConnectionPool).
+  - Data layer (PostgreSQL schema, indexes, and migration scripts).
 - Created architecture artifacts and review visuals in `docs/diagrams/`.
+- Note: Some architecture diagrams reference SQLAlchemy ORM; actual implementation uses direct parameterized SQL for performance control. ORM migration is planned for a future iteration.
 
 ## 3. Data and ML Pipeline Implementation
 - Prepared complaint dataset pipeline under backend dataset directory.
@@ -81,8 +82,10 @@ This document summarizes what was completed across the full lifecycle of the pro
   - Classification results
   - AI explanations
 - Added indexes for key access patterns (history, category filtering, admin views).
-- Added migration scripts for response workflow enhancements and operational queries.
-- Implemented pooled connection handling and transactional writes in backend database layer.
+- Added migration scripts (v2, v3) for severity/priority fields and response workflow enhancements.
+- Implemented psycopg2 `ThreadedConnectionPool` (min=1, max=10 connections) for concurrent request handling.
+- All SQL queries use parameterized placeholders (`%s`) to prevent SQL injection — no raw string interpolation of user input.
+- A deliberate partial-write rollback guard protects data integrity: if classification save fails after complaint is saved, the complaint row is automatically deleted.
 
 ## 8. Frontend Application Implementation (React + TypeScript)
 - Built multi-page user experience with routing:
@@ -116,9 +119,10 @@ This document summarizes what was completed across the full lifecycle of the pro
   - Architecture and report artifacts
 
 ## 11. Deployment and Infra Readiness
-- Added containerized setup via Docker Compose in `infra/`.
-- Prepared backend/frontend/database structure for local deployment and demo.
-- Kept configuration externalized via environment-driven settings.
+- Added Docker Compose setup in `infra/` to spin up the PostgreSQL database with a single command (`docker compose up -d`).
+- Backend (Flask/Gunicorn) and frontend (React + Vite) run as local dev servers for the current demo phase.
+- Kept all configuration externalized via `.env` files and environment variables for clean separation of secrets from code.
+- Future improvement: full containerization of backend and frontend services using Docker multi-stage builds and Nginx reverse-proxy.
 
 ## 12. End-to-End Functional Flow Delivered
 Implemented complete lifecycle flow:
