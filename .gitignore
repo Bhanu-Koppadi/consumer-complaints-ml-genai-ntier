@@ -438,6 +438,7 @@ src/frontend/.env.test.local
 src/frontend/.env.production.local
 
 # Database files
+<<<<<<< HEAD
 *.db
 *.sqlite
 *.sqlite3
@@ -446,3 +447,9 @@ src/frontend/.env.production.local
 *.egg
 *.egg-info/
 src/consumer_complaints_ml_genai_ntier.egg-info/
+=======
+database/
+*.db
+*.sqlite
+*.sqlite3
+>>>>>>> 9c6a2e945d1d67bf4b80f527529f4d7c0db42ddb
