@@ -10,6 +10,7 @@ import logging
 import google.generativeai as genai
 
 from config import Config
+from genai.policy_knowledge_base import get_policy
 
 logger = logging.getLogger(__name__)
 
@@ -55,6 +56,9 @@ class ResponseDrafter:
             safe_text = " ".join(complaint_text.split())
             safe_category = " ".join(predicted_category.split())
 
+            # Retrieve relevant policy for this category
+            policy_text = get_policy(predicted_category)
+
             prompt = f"""
             You are a professional customer-service representative.
             A consumer complaint has been received and automatically classified.
@@ -63,9 +67,31 @@ class ResponseDrafter:
             Category: "{safe_category}"
             Classifier Confidence: {confidence:.0%}
 
+            Relevant Company Policy:
+            {policy_text}
+
             Task: Write a concise, empathetic, and professional response email to
-            the customer acknowledging their complaint and outlining next steps.
-            Keep the response under 120 words.
+            the customer acknowledging their complaint, referencing the relevant
+            policy, and outlining next steps based on that policy.
+
+            STRICT FORMAT (use exactly these sections in plain text):
+            Subject: <clear subject line>
+
+            Dear Customer,
+
+            <Acknowledgement paragraph>
+
+            <Policy-aligned action paragraph>
+
+            <Timeline / next steps paragraph>
+
+            Regards,
+            Customer Support Team
+
+            Additional constraints:
+            - Keep under 140 words.
+            - Do not use markdown bullets.
+            - Do not fabricate policy details beyond what is stated above.
             """
 
             response = self._model.generate_content(prompt)
@@ -86,15 +112,15 @@ class ResponseDrafter:
             A non-empty mock draft string tailored to the category.
         """
         return (
-            "Dear Valued Customer,\n\n"
-            f"Thank you for contacting us regarding your {category} concern. "
-            "We sincerely apologise for any inconvenience caused and want to "
-            "assure you that your complaint has been received and is being "
-            "reviewed by our team.\n\n"
-            "A dedicated representative will follow up with you within 2 "
-            "business days with a resolution or further information.\n\n"
-            "We appreciate your patience and the opportunity to make this right.\n\n"
-            "Kind regards,\n"
+            f"Subject: Update on your {category} complaint\n\n"
+            "Dear Customer,\n\n"
+            "Thank you for contacting us. We are sorry for the inconvenience you experienced, "
+            "and we confirm that your complaint has been registered in our system.\n\n"
+            "Our support team has started reviewing this issue under the relevant complaint-handling "
+            "policy and will process the required corrective action.\n\n"
+            "You will receive a follow-up update within 2 business days with either resolution details "
+            "or the next action required from our side.\n\n"
+            "Regards,\n"
             "Customer Support Team"
         )
 

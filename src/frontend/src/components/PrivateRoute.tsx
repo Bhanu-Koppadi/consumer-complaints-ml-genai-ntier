@@ -5,6 +5,7 @@ import { LoadingSpinner } from './LoadingSpinner';
 
 interface PrivateRouteProps {
   children: ReactNode;
+  allowAdmin?: boolean;
 }
 
 /**
@@ -12,8 +13,8 @@ interface PrivateRouteProps {
  * Shows a loading spinner while session bootstrap is in progress.
  * Redirects unauthenticated users to /login.
  */
-export function PrivateRoute({ children }: PrivateRouteProps) {
-  const { isAuthenticated, loading } = useAppSelector((state) => state.auth);
+export function PrivateRoute({ children, allowAdmin = true }: PrivateRouteProps) {
+  const { isAuthenticated, loading, user } = useAppSelector((state) => state.auth);
 
   if (loading) {
     return (
@@ -25,6 +26,11 @@ export function PrivateRoute({ children }: PrivateRouteProps) {
 
   if (!isAuthenticated) {
     return <Navigate to="/login" replace />;
+  }
+
+  // User-only pages should redirect admins to the dashboard.
+  if (!allowAdmin && user?.role === 'ADMIN') {
+    return <Navigate to="/admin" replace />;
   }
 
   return <>{children}</>;

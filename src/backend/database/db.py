@@ -59,31 +59,46 @@ class Database:
             if conn:
                 self._get_pool().putconn(conn)
 
-    def save_classification(self, complaint_id, category, confidence):
-        """Save classification result."""
+    def save_classification(
+        self,
+        complaint_id,
+        category,
+        confidence,
+        severity: str = "Low",
+        priority: str = "P3",
+        recommended_action: str = "review_required",
+        response_status: str = "pending",
+    ) -> bool:
+        """Save classification result including advanced intelligence fields."""
         conn = self.get_connection()
         if not conn:
-            return
+            return False
 
         try:
             with conn.cursor() as cur:
                 cur.execute(
-                    "INSERT INTO classification_results (complaint_id, category, confidence) VALUES (%s, %s, %s)",
-                    (complaint_id, category, confidence),
+                    """
+                    INSERT INTO classification_results
+                        (complaint_id, category, confidence, severity, priority, recommended_action, response_status)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s)
+                    """,
+                    (complaint_id, category, confidence, severity, priority, recommended_action, response_status),
                 )
                 conn.commit()
+                return True
         except psycopg2.Error as e:
             conn.rollback()
             logger.error("Error saving classification: %s", e)
+            return False
         finally:
             if conn:
                 self._get_pool().putconn(conn)
 
-    def save_explanation(self, complaint_id, explanation):
+    def save_explanation(self, complaint_id, explanation) -> bool:
         """Save GenAI explanation."""
         conn = self.get_connection()
         if not conn:
-            return
+            return False
 
         try:
             with conn.cursor() as cur:
@@ -92,9 +107,31 @@ class Database:
                     (complaint_id, explanation),
                 )
                 conn.commit()
+                return True
         except psycopg2.Error as e:
             conn.rollback()
             logger.error("Error saving explanation: %s", e)
+            return False
+        finally:
+            if conn:
+                self._get_pool().putconn(conn)
+
+    def delete_complaint(self, complaint_id: int) -> bool:
+        """Delete a complaint row by id. Used to clean failed partial writes."""
+        conn = self.get_connection()
+        if not conn:
+            return False
+
+        try:
+            with conn.cursor() as cur:
+                cur.execute("DELETE FROM complaints WHERE id = %s", (complaint_id,))
+                deleted = cur.rowcount > 0
+                conn.commit()
+                return deleted
+        except psycopg2.Error as e:
+            conn.rollback()
+            logger.error("Error deleting complaint %s: %s", complaint_id, e)
+            return False
         finally:
             if conn:
                 self._get_pool().putconn(conn)
@@ -114,13 +151,26 @@ class Database:
                         c.user_id,
                         c.complaint_text,
                         c.created_at,
+                        u.email AS user_email,
                         cr.category,
                         cr.confidence,
+                        cr.severity,
+                        cr.priority,
+                        cr.recommended_action,
+                        cr.response_status,
+                        cr.auto_sent_at,
+                        cr.draft_response_text,
+                        cr.final_response_text,
+                        cr.sent_to_email,
+                        cr.delivery_mode,
                         cr.created_at AS classified_at,
                         ae.explanation
                     FROM complaints c
+                    LEFT JOIN users u ON c.user_id = u.id
                     LEFT JOIN LATERAL (
-                        SELECT category, confidence, created_at
+                        SELECT category, confidence, severity, priority, recommended_action,
+                               response_status, auto_sent_at, draft_response_text,
+                               final_response_text, sent_to_email, delivery_mode, created_at
                         FROM classification_results
                         WHERE complaint_id = c.id
                         ORDER BY created_at DESC
@@ -141,6 +191,67 @@ class Database:
         except psycopg2.Error as e:
             logger.error("Error fetching complaint by ID: %s", e)
             return None
+        finally:
+            if conn:
+                self._get_pool().putconn(conn)
+
+    def update_response_workflow(
+        self,
+        complaint_id: int,
+        *,
+        response_status: str,
+        draft_response_text: str | None = None,
+        final_response_text: str | None = None,
+        sent_to_email: str | None = None,
+        delivery_mode: str | None = None,
+        auto_sent_at=None,
+        override_by_user_id: int | None = None,
+        override_at=None,
+    ) -> bool:
+        """Update workflow and delivery fields on the latest classification row."""
+        conn = self.get_connection()
+        if not conn:
+            return False
+
+        try:
+            with conn.cursor() as cur:
+                cur.execute(
+                    """
+                    UPDATE classification_results
+                    SET response_status = %s,
+                        draft_response_text = COALESCE(%s, draft_response_text),
+                        final_response_text = COALESCE(%s, final_response_text),
+                        sent_to_email = COALESCE(%s, sent_to_email),
+                        delivery_mode = COALESCE(%s, delivery_mode),
+                        auto_sent_at = COALESCE(%s, auto_sent_at),
+                        override_by_user_id = COALESCE(%s, override_by_user_id),
+                        override_at = COALESCE(%s, override_at)
+                    WHERE id = (
+                        SELECT id
+                        FROM classification_results
+                        WHERE complaint_id = %s
+                        ORDER BY created_at DESC
+                        LIMIT 1
+                    )
+                    """,
+                    (
+                        response_status,
+                        draft_response_text,
+                        final_response_text,
+                        sent_to_email,
+                        delivery_mode,
+                        auto_sent_at,
+                        override_by_user_id,
+                        override_at,
+                        complaint_id,
+                    ),
+                )
+                conn.commit()
+                return cur.rowcount > 0
+        except psycopg2.Error as e:
+            conn.rollback()
+            logger.error("Error updating response workflow: %s", e)
+            return False
         finally:
             if conn:
                 self._get_pool().putconn(conn)
@@ -167,10 +278,13 @@ class Database:
                         c.complaint_text,
                         c.created_at,
                         cr.category,
-                        cr.confidence
+                        cr.confidence,
+                        cr.response_status,
+                        cr.sent_to_email,
+                        cr.delivery_mode
                     FROM complaints c
                     LEFT JOIN LATERAL (
-                        SELECT category, confidence
+                        SELECT category, confidence, response_status, sent_to_email, delivery_mode
                         FROM classification_results
                         WHERE complaint_id = c.id
                         ORDER BY created_at DESC
@@ -189,8 +303,8 @@ class Database:
             if conn:
                 self._get_pool().putconn(conn)
 
-    def get_admin_complaints(self, page: int, limit: int, category=None, min_confidence=None):
-        """Fetch paginated complaints with optional category / confidence filters."""
+    def get_admin_complaints(self, page: int, limit: int, category=None, min_confidence=None, status_filter=None):
+        """Fetch paginated complaints with optional category/confidence/status filters."""
         conn = self.get_connection()
         if not conn:
             return None, 0
@@ -199,28 +313,35 @@ class Database:
             with conn.cursor(cursor_factory=RealDictCursor) as cur:
                 conditions = []
                 params: list = []
+                bound_param_conditions = 0
                 if category is not None:
                     conditions.append("cr.category = %s")
                     params.append(category)
+                    bound_param_conditions += 1
                 if min_confidence is not None:
                     conditions.append("cr.confidence >= %s")
                     params.append(min_confidence)
+                    bound_param_conditions += 1
+                if status_filter == "resolved":
+                    conditions.append("cr.response_status IN ('approved', 'overridden', 'auto_sent')")
+                elif status_filter == "active":
+                    conditions.append("COALESCE(cr.response_status, 'pending') IN ('pending', 'escalated')")
 
                 # SAFETY: where_clause is assembled from hard-coded SQL literals only.
                 # All user-controlled values are bound through 'params' via %s placeholders.
                 # Never embed user-supplied strings directly into conditions.
                 where_clause = ("WHERE " + " AND ".join(conditions)) if conditions else ""
-                # Verify every condition contributes exactly one bound parameter.
-                if len(params) != len(conditions):
+                # Verify every placeholder-based condition contributes exactly one bound parameter.
+                if len(params) != bound_param_conditions:
                     raise AssertionError(
-                        "Each filter condition must correspond to exactly one bound parameter; "
+                        "Each placeholder condition must correspond to exactly one bound parameter; "
                         "never interpolate user input directly into SQL."
                     )
                 count_sql = f"""
                     SELECT COUNT(*) AS total
                     FROM complaints c
                     LEFT JOIN LATERAL (
-                        SELECT category, confidence
+                        SELECT category, confidence, response_status
                         FROM classification_results
                         WHERE complaint_id = c.id
                         ORDER BY created_at DESC
@@ -235,11 +356,14 @@ class Database:
                 data_sql = f"""
                     SELECT c.id, c.user_id, c.complaint_text, c.created_at,
                            cr.category, cr.confidence,
+                          cr.severity, cr.priority, cr.recommended_action,
+                          cr.response_status, cr.sent_to_email, cr.delivery_mode,
                            u.username AS submitted_by_username
                     FROM complaints c
                     LEFT JOIN users u ON c.user_id = u.id
                     LEFT JOIN LATERAL (
-                        SELECT category, confidence
+                       SELECT category, confidence, severity, priority, recommended_action,
+                           response_status, sent_to_email, delivery_mode
                         FROM classification_results
                         WHERE complaint_id = c.id
                         ORDER BY created_at DESC
@@ -303,6 +427,28 @@ class Database:
                 )
                 by_category = {row["category"]: row["count"] for row in cur.fetchall()}
 
+                # Severity breakdown (v2 columns — zero if migration not yet applied)
+                cur.execute(
+                    """
+                    SELECT
+                        COALESCE(SUM(CASE WHEN cr.severity = 'High'   THEN 1 ELSE 0 END), 0) AS high_severity_count,
+                        COALESCE(SUM(CASE WHEN cr.severity = 'Medium' THEN 1 ELSE 0 END), 0) AS medium_severity_count,
+                        COALESCE(SUM(CASE WHEN cr.severity = 'Low'    THEN 1 ELSE 0 END), 0) AS low_severity_count,
+                        COALESCE(SUM(CASE WHEN cr.recommended_action = 'auto_send'        THEN 1 ELSE 0 END), 0) AS auto_send_count,
+                        COALESCE(SUM(CASE WHEN cr.recommended_action = 'review_required'  THEN 1 ELSE 0 END), 0) AS review_required_count,
+                        COALESCE(SUM(CASE WHEN cr.recommended_action = 'escalate'         THEN 1 ELSE 0 END), 0) AS escalated_count
+                    FROM complaints c
+                    LEFT JOIN LATERAL (
+                        SELECT severity, recommended_action
+                        FROM classification_results
+                        WHERE complaint_id = c.id
+                        ORDER BY created_at DESC
+                        LIMIT 1
+                    ) cr ON true
+                    """
+                )
+                severity_stats = cur.fetchone() or {}
+
                 return {
                     "total_complaints": stats["total_complaints"],
                     "by_category": by_category,
@@ -314,6 +460,12 @@ class Database:
                         "start": str(stats["start_date"]) if stats["start_date"] else None,
                         "end": str(stats["end_date"]) if stats["end_date"] else None,
                     },
+                    "high_severity_count": int(severity_stats.get("high_severity_count") or 0),
+                    "medium_severity_count": int(severity_stats.get("medium_severity_count") or 0),
+                    "low_severity_count": int(severity_stats.get("low_severity_count") or 0),
+                    "auto_send_count": int(severity_stats.get("auto_send_count") or 0),
+                    "review_required_count": int(severity_stats.get("review_required_count") or 0),
+                    "escalated_count": int(severity_stats.get("escalated_count") or 0),
                 }
         except psycopg2.Error as e:
             logger.error("Error fetching admin statistics: %s", e)

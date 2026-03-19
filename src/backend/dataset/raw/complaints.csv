@@ -1,404 +1,1261 @@
 complaint_text,category
-I was charged twice for the same transaction.,Billing Issue
-My bill is incorrect and shows extra fees.,Billing Issue
-I was billed for a service I never signed up for.,Billing Issue
-An unauthorized charge appeared on my account.,Billing Issue
-My refund has not been processed after 30 days.,Billing Issue
-I was overcharged by fifty dollars on my last invoice.,Billing Issue
-My subscription was cancelled but I am still being charged.,Billing Issue
-The amount deducted from my account does not match the invoice.,Billing Issue
-I was charged a late fee even though I paid on time.,Billing Issue
-A duplicate payment was taken from my bank account.,Billing Issue
-My promotional discount was not applied to my bill.,Billing Issue
-I received a bill for an account I already closed.,Billing Issue
-The price shown on your website is different from what I was charged.,Billing Issue
-I was charged for a premium plan I never upgraded to.,Billing Issue
-My account shows an outstanding balance but I have proof of payment.,Billing Issue
-I noticed a hidden fee on my statement that was never disclosed.,Billing Issue
-I requested a refund two months ago and have received nothing.,Billing Issue
-My credit card was charged after I cancelled the order.,Billing Issue
-The wrong tax amount was calculated on my invoice.,Billing Issue
-I am being billed for equipment I returned to your store.,Billing Issue
-My automatic payment failed but I was still charged a penalty.,Billing Issue
-I did not authorise this charge of ninety nine dollars.,Billing Issue
-My bill keeps increasing every month without any explanation.,Billing Issue
-I was charged an early termination fee even though I completed my contract.,Billing Issue
-The currency conversion on my international transaction is incorrect.,Billing Issue
-My annual subscription was renewed without any prior notice or consent.,Billing Issue
-I was charged for three months after requesting cancellation in writing.,Billing Issue
-The invoice I received lists services that were never delivered.,Billing Issue
-I paid in full but my account still shows an unpaid balance.,Billing Issue
-My debit card was charged twice on the same day for the same order.,Billing Issue
-The refund I was promised has not appeared in my account after six weeks.,Billing Issue
-I was billed at the old rate after a price lock guarantee was agreed.,Billing Issue
-An extra line item appeared on my statement that I do not recognise.,Billing Issue
-My gift card balance was deducted but the purchase did not go through.,Billing Issue
-I was charged a membership fee for a club I never joined.,Billing Issue
-The instalment plan I agreed to has the wrong monthly amount.,Billing Issue
-I was levied a service charge that was not mentioned at the time of purchase.,Billing Issue
-My bill shows usage charges for a period when my account was suspended.,Billing Issue
-I paid via bank transfer but you claim the payment was never received.,Billing Issue
-The advertised price was significantly lower than the amount I was charged.,Billing Issue
-I received a collection notice for a debt I already settled.,Billing Issue
-My loyalty points were not credited after my qualifying purchase.,Billing Issue
-I was charged a paper billing fee even though I opted for electronic statements.,Billing Issue
-The deposit I paid when signing up has not been returned after account closure.,Billing Issue
-My bill includes roaming charges for a period I was at home.,Billing Issue
-I was billed for a full month even though I cancelled on the first day.,Billing Issue
-An interest charge was applied to my account despite zero balance.,Billing Issue
-My payment was applied to the wrong account on your system.,Billing Issue
-I was charged for insurance I specifically declined at the time of purchase.,Billing Issue
-The final invoice does not match the written quote I was given.,Billing Issue
-I have been billed for a service that has been offline for the past two weeks.,Billing Issue
-A charge for an upgrade I never requested appeared on my latest statement.,Billing Issue
-I was told the cancellation was free but now I see a fee on my account.,Billing Issue
-My billing cycle was changed without my knowledge and I was double-billed.,Billing Issue
-I was sent to collections for a bill that was covered by insurance.,Billing Issue
-The wrong account number appears on my invoice.,Billing Issue
-I was overcharged for international calling despite having an unlimited plan.,Billing Issue
-A security deposit was taken from me twice for the same booking.,Billing Issue
-My invoice shows a rental charge for equipment I own outright.,Billing Issue
-I was charged a setup fee that was supposed to be waived as part of my promotion.,Billing Issue
-My statement shows a purchase I made was never refunded after it was returned.,Billing Issue
-I was billed for two separate plans simultaneously when I only have one.,Billing Issue
-The discount code I applied at checkout was not reflected on my final bill.,Billing Issue
-My account was charged after I froze it pending a dispute investigation.,Billing Issue
-I was promised a lower rate for being a long-term customer but was billed at full price.,Billing Issue
-An unknown recurring charge has appeared on my account for the past four months.,Billing Issue
-I was charged a restocking fee even though the product I returned was faulty.,Billing Issue
-My refund was processed but it was for the wrong amount.,Billing Issue
-I was billed for a consultation that lasted only five minutes when I was quoted an hour rate.,Billing Issue
-My bank confirmed the payment cleared but your system shows it as outstanding.,Billing Issue
-I was emailed a receipt for an amount different from what was taken from my card.,Billing Issue
-The package deal I purchased is being billed as individual items at a higher rate.,Billing Issue
-A charge appeared on my account from a merchant I have never interacted with.,Billing Issue
-I was not informed about the annual fee associated with this account.,Billing Issue
-My invoice contains a duplicate line item for the same service.,Billing Issue
-I was charged a booking fee that your website clearly states is free.,Billing Issue
-My account was debited on a public holiday when the payment was not yet due.,Billing Issue
-I received a demand for payment for an invoice I disputed three months ago.,Billing Issue
-The billing address on my invoice is incorrect even though I updated it online.,Billing Issue
-I was charged full price after being assured I would receive the student discount.,Billing Issue
-My refund was issued as store credit without my consent instead of a cash refund.,Billing Issue
-I was billed for a service tier that has more features than what I am actually receiving.,Billing Issue
-My statement shows a charge at a foreign exchange rate that is much higher than the market rate.,Billing Issue
-A chargeback I filed was reversed without any notification or evidence from the merchant.,Billing Issue
-I was charged a delivery fee after being guaranteed free shipping at checkout.,Billing Issue
-My account was debited for an amount I had queried and asked to be placed on hold.,Billing Issue
-I was billed for the full year even though I downgraded to a monthly plan.,Billing Issue
-The price increase I was notified about takes effect next month but I have already been charged the new rate.,Billing Issue
-I was charged for a hotel room I cancelled within the free cancellation window.,Billing Issue
-My invoice for professional services is missing several items I was quoted for.,Billing Issue
-I was charged an additional fee for a service that is included in my current plan.,Billing Issue
-I notice my bill has charges in a currency I never agreed to be billed in.,Billing Issue
-My finance agreement shows a higher interest rate than the one I signed for.,Billing Issue
-I was charged a trip fee for a ride that was cancelled by the driver.,Billing Issue
-My subscription includes family sharing but I have been billed for each member separately.,Billing Issue
-I was charged a convenience fee online even though the website claims online payments are free.,Billing Issue
-A penalty fee was added to my account even though I contacted you in advance about paying late.,Billing Issue
-I was billed on my old expired card without my permission to use it.,Billing Issue
-My account was charged the day before the due date without authorization.,Billing Issue
-The eco fee on my bill is double the amount legally permitted in my region.,Billing Issue
-The product arrived damaged and broken.,Product Defect
-The screen on my new phone is cracked.,Product Defect
-The item I received looks nothing like the product in the listing.,Product Defect
-The device stopped working after just three days of use.,Product Defect
-My laptop overheats and shuts down within minutes of use.,Product Defect
-The battery on my new phone does not hold a charge.,Product Defect
-The zipper on the bag broke the very first time I used it.,Product Defect
-One of the components was missing from the box.,Product Defect
-The paint on the product is already peeling after one week.,Product Defect
-The buttons on the remote control are stuck and unresponsive.,Product Defect
-The hinge on my laptop is broken and the screen wobbles.,Product Defect
-The motor in the appliance burned out after the first use.,Product Defect
-The product has a strong chemical smell that will not go away.,Product Defect
-The stitching on my new jacket came apart after the first wash.,Product Defect
-My new television has a dead pixel cluster in the middle of the screen.,Product Defect
-The product software crashes every time I open the app.,Product Defect
-The lens of the camera was scratched right out of the box.,Product Defect
-The power cord included with the device is frayed and unsafe.,Product Defect
-The item I received is a completely different colour from the one I ordered.,Product Defect
-My headphones produce a constant buzzing sound on one side.,Product Defect
-The clasp on the necklace is defective and keeps opening.,Product Defect
-The wheels on the suitcase broke off on the very first trip.,Product Defect
-The product short-circuited when I plugged it in for the first time.,Product Defect
-The fabric on the chair is tearing after just two months of normal use.,Product Defect
-The toy I purchased for my child had a broken part right out of the box.,Product Defect
-The washing machine leaks water from the bottom after every cycle.,Product Defect
-My refrigerator stopped cooling after only four months of use.,Product Defect
-The microwave makes a loud grinding noise and does not heat food evenly.,Product Defect
-The blender blade came loose during operation and cracked the jar.,Product Defect
-My vacuum cleaner lost suction completely within the first week.,Product Defect
-The shoe sole separated from the upper after just two wears.,Product Defect
-The watch I purchased stopped keeping accurate time within days of wearing.,Product Defect
-My new mattress has a visible sag in the centre despite barely being used.,Product Defect
-The sofa cushions have lost their shape and are completely flat after a month.,Product Defect
-The table legs are uneven and the table wobbles on a flat surface.,Product Defect
-The bed frame I assembled cracked at the joints under normal weight.,Product Defect
-The laptop keyboard has keys that do not register when pressed.,Product Defect
-My tablet touchscreen is unresponsive in the lower half of the display.,Product Defect
-The gaming console disc drive makes a grinding noise and does not read discs.,Product Defect
-The smart speaker cuts out randomly and loses connection to the network.,Product Defect
-The earbuds I purchased have no audio in the left bud despite being brand new.,Product Defect
-The camera lens cap is cracked and the lens itself has a visible chip.,Product Defect
-The printer jams on every page even with the recommended paper type.,Product Defect
-My external hard drive is not recognised by any computer I connect it to.,Product Defect
-The USB hub I ordered has three out of four ports that do not work.,Product Defect
-The keyboard I received has keys printed in the wrong layout.,Product Defect
-The monitor I ordered has a flickering backlight that causes eye strain.,Product Defect
-My desktop computer fails to boot up and shows a blue error screen.,Product Defect
-The router drops the internet connection every few minutes.,Product Defect
-The charger included with my phone gets extremely hot and stopped working.,Product Defect
-The dress I ordered shrank two full sizes after following the washing instructions.,Product Defect
-The colour of my shirt faded after a single wash despite following care instructions.,Product Defect
-The buttons on my coat fell off within a week of light use.,Product Defect
-The hat I ordered is visibly misshapen and does not hold its form.,Product Defect
-The sunglasses frame snapped in half during normal use.,Product Defect
-My leather wallet cracked and peeled within a month revealing it was synthetic.,Product Defect
-The ring I purchased turned my finger green indicating it is not the material advertised.,Product Defect
-The perfume I received smells completely different from the product description.,Product Defect
-The toy car I bought for my son has sharp metal edges exposed around the wheels.,Product Defect
-The children's game was missing half the pieces needed to play.,Product Defect
-The book I received has a large section of pages that are printed upside down.,Product Defect
-The food product I purchased was mouldy despite being well within the expiry date.,Product Defect
-The supplement I received has a damaged seal and appears to have been opened.,Product Defect
-The energy drink I purchased tasted off and had sediment at the bottom.,Product Defect
-The candle I bought produced an excessive amount of black smoke when lit.,Product Defect
-The picture frame I bought shattered immediately upon attempting to hang it.,Product Defect
-The storage boxes I ordered collapsed under a very light load.,Product Defect
-The garden hose split at the first connection point during its first use.,Product Defect
-My new iron leaves brown marks on clothing even at the lowest temperature setting.,Product Defect
-The toaster sparks and trips the electrical breaker when in use.,Product Defect
-The hairdryer I purchased stopped working and emitted a burning smell.,Product Defect
-The electric toothbrush I bought does not vibrate at the advertised speed.,Product Defect
-The kitchen knife I purchased has a blade that is visibly bent out of alignment.,Product Defect
-The cookware set I bought has a non-stick coating that started flaking into food.,Product Defect
-My thermos leaks from the lid despite being sealed correctly.,Product Defect
-The folding chair broke under a normal adult weight on its first use.,Product Defect
-The umbrella I purchased inverted in mild wind and the ribs snapped.,Product Defect
-My new bicycle tyre deflated completely after just one short ride.,Product Defect
-The phone case I purchased cracked along the camera cutout after two days.,Product Defect
-The screen protector I applied has large bubbles that obscure the display.,Product Defect
-My fitness tracker reported inaccurate step and heart rate data from day one.,Product Defect
-The smart bulb I installed does not respond to voice commands as advertised.,Product Defect
-The electric kettle I purchased switches off after just thirty seconds.,Product Defect
-The running shoes I purchased caused significant heel pain due to poor cushioning.,Product Defect
-The backpack I ordered has a torn inner lining that catches on everything I put inside.,Product Defect
-The air purifier I bought has a fan that makes a rattling noise that never stops.,Product Defect
-My new coffee machine produces lukewarm water instead of hot coffee.,Product Defect
-The paint I purchased dried with a completely different shade to the colour on the tin.,Product Defect
-The drill bit set I ordered included two bits of the same size and was missing one size entirely.,Product Defect
-The measuring tape I received retracts violently and the blade is deformed.,Product Defect
-The shampoo I bought caused a significant scalp reaction after the first use.,Product Defect
-The moisturiser I purchased separated in the bottle and could not be mixed.,Product Defect
-The receipt printer I bought for my business jams on every other label.,Product Defect
-The gaming headset microphone does not work and produces no audio input.,Product Defect
-The window blinds I ordered are ten centimetres shorter than the size I specified.,Product Defect
-The shower head I purchased has low water pressure despite adequate water supply.,Product Defect
-The replacement battery I purchased for my laptop is not compatible despite matching the stated model number.,Product Defect
-The plyboard shelving unit I assembled bowed immediately under moderate weight.,Product Defect
-The new phone I received powers off on its own whenever the battery drops below fifty percent.,Product Defect
-The construction set I bought for my child is missing the instruction manual entirely.,Product Defect
-The projector I purchased produces a blurry image even at the minimum recommended distance.,Product Defect
-Customer service was rude and unhelpful.,Customer Support
-No one answered my support call for an hour.,Customer Support
-I was kept on hold for over forty five minutes and then disconnected.,Customer Support
-The support agent gave me completely wrong information about my account.,Customer Support
-I have sent three emails and received no response from your team.,Customer Support
-I was transferred between five different agents and my issue was never resolved.,Customer Support
-The representative hung up on me when I asked to speak to a supervisor.,Customer Support
-Your live chat agent was dismissive and refused to help me.,Customer Support
-I was promised a callback within 24 hours and never heard back.,Customer Support
-I contacted support ten days ago and my complaint is still open with no update.,Customer Support
-The agent I spoke with was condescending and made me feel like a burden.,Customer Support
-Your support team closed my ticket without resolving the issue.,Customer Support
-I was given contradicting information by two different agents on the same day.,Customer Support
-My complaint was dismissed without any investigation.,Customer Support
-The support representative could not answer basic questions about your product.,Customer Support
-I waited in the online chat queue for over an hour before giving up.,Customer Support
-Your customer service team shows no empathy toward my situation.,Customer Support
-I have been asking for an escalation for three weeks with no progress.,Customer Support
-The agent read from a script and offered no real help for my specific issue.,Customer Support
-I feel ignored and disrespected by your customer support team.,Customer Support
-Your support hours are listed as 24 hours but no one answered at midnight.,Customer Support
-The self-service portal is broken and redirects me in a loop with no resolution.,Customer Support
-I was asked to repeat my problem to every new agent I was transferred to.,Customer Support
-I received an automated response but no human has followed up.,Customer Support
-Your support team promised a resolution by Friday and it is now Tuesday with nothing.,Customer Support
-The support ticket I raised was closed and marked as resolved without any contact.,Customer Support
-I have called five times this week and each time been told someone will follow up.,Customer Support
-The agent I spoke to laughed when I described my problem.,Customer Support
-Your chatbot is unable to connect me to a human agent despite my repeated requests.,Customer Support
-I was told my complaint would be escalated to a specialist but no one has contacted me.,Customer Support
-The support agent spoke over me and did not let me explain my situation.,Customer Support
-I was refused a refund and told to contact a third party when the fault is yours.,Customer Support
-Your email support team takes seven days to respond which is unacceptable.,Customer Support
-I was told a supervisor would contact me within 48 hours but it has been two weeks.,Customer Support
-The agent actively blamed me for the problem instead of trying to help.,Customer Support
-I was told there is nothing your team can do and was simply hung up on.,Customer Support
-My issue has been raised four times and each time a new agent acts like it is the first they are hearing of it.,Customer Support
-I cannot reach a human being through any of your contact channels.,Customer Support
-The phone number listed on your website leads to a non-working number.,Customer Support
-Your social media team has not responded to my public complaint in five days.,Customer Support
-I reported a safety issue with your product and your support team dismissed it.,Customer Support
-The agent told me the wait time was five minutes but I waited over an hour.,Customer Support
-I feel your support team is trained to deny and delay rather than help customers.,Customer Support
-I was not given a case number or any reference for my complaint.,Customer Support
-The online support form I submitted returned an error and my message was not received.,Customer Support
-Your support team gave me incorrect guidance and now my situation is worse.,Customer Support
-I was told the issue is a known problem but given no timeline for resolution.,Customer Support
-I have been a customer for ten years and I have never been treated this poorly.,Customer Support
-The agent made a promise on the call but the notes on my account say something different.,Customer Support
-I followed all the troubleshooting steps your agent gave me and nothing was resolved.,Customer Support
-Your team asked me to send photos as evidence and now no one is responding to my submission.,Customer Support
-The hold music on your support line played on a loop for two hours.,Customer Support
-I was told to call back during business hours but received the same automated response at those times.,Customer Support
-The support chat disconnected automatically after ten minutes and I lost the entire conversation.,Customer Support
-I have escalated my complaint to the highest level available and still heard nothing.,Customer Support
-Your agents keep telling me the system is down and to try again later.,Customer Support
-I was offered a solution that does not address my actual problem.,Customer Support
-The callback I was offered was at a time that did not work for me and there were no alternatives.,Customer Support
-I was passed to four departments who each told me it was another department's responsibility.,Customer Support
-The complaint I submitted online was deleted and no record of it remains on your system.,Customer Support
-I received a survey asking about my support experience before my issue was even addressed.,Customer Support
-Your agent told me the product works as intended but it clearly does not.,Customer Support
-I was told my case was low priority even though it involves a safety risk.,Customer Support
-The support agent kept me on the line for forty minutes only to tell me I needed to call a different number.,Customer Support
-I was disconnected mid-sentence and when I called back was treated as a new call from scratch.,Customer Support
-Your team is not equipped to handle technical queries and only reads from a basic script.,Customer Support
-I requested the call be recorded for training purposes and the agent became hostile.,Customer Support
-I was denied service and told I need to visit a branch in person for an issue resolvable over the phone.,Customer Support
-The online complaint form does not work on mobile browsers and there is no alternative.,Customer Support
-I asked to be contacted by email but keep receiving automated text messages instead.,Customer Support
-Your agent gave me a workaround that voided my product warranty without informing me.,Customer Support
-I have proof of my evidence but the agent refused to check it on the call.,Customer Support
-The live chat agent ended the conversation without notice claiming it had been idle.,Customer Support
-I was told the wait would be ten minutes but I was in the queue for two and a half hours.,Customer Support
-Your representative promised me a discount to compensate for the inconvenience and it was never applied.,Customer Support
-I used the callback service but the agent who called me spoke over me at all times.,Customer Support
-The agent took all my personal details and then told me they could not help me.,Customer Support
-I contacted you via your official email address and received a bounce-back notification.,Customer Support
-My issue remains unresolved after six contacts and the problem keeps getting worse.,Customer Support
-The agent tried to upsell me a product while I was calling about a serious complaint.,Customer Support
-Your customer service representative provided incorrect technical instructions that caused additional damage.,Customer Support
-I contacted support before the warranty expired but my claim was processed after it lapsed due to your delays.,Customer Support
-I was told I would receive a full transcript of the call but it never arrived.,Customer Support
-The representative told me my complaint would be resolved before the end of day and it has now been a week.,Customer Support
-Every time I call I am told the previous agent made an error but no one takes ownership.,Customer Support
-Your support team marked my issue as resolved in their system without contacting me at all.,Customer Support
-I was told there is a known outage affecting my account but no public notice was posted.,Customer Support
-I requested a formal complaints procedure and was not provided one.,Customer Support
-I was told I would be compensated for the inconvenience and received nothing.,Customer Support
-The agent I spoke to was unable to locate my account despite me providing all my details.,Customer Support
-I feel your support process is deliberately designed to make customers give up.,Customer Support
-I had to repeat my address, account number and issue summary to six different agents.,Customer Support
-Your phone line played a message saying all agents are busy and immediately disconnected.,Customer Support
-I was told the product I complained about is discontinued so no support is available.,Customer Support
-I contacted your accessibility support line and was placed on a regular queue with no specialist.,Customer Support
-Your support agent sent me to a third-party forum for official product support questions.,Customer Support
-I received a template response that did not address any part of my specific complaint.,Customer Support
-The agent refused to put the agreement we reached in writing.,Customer Support
-I was told to reset the product which I had already done multiple times before calling.,Customer Support
-I submitted a formal complaint in writing and have received no acknowledgement.,Customer Support
-Delivery was delayed by two weeks.,Delivery Problem
-Package was left in rain and got wet.,Delivery Problem
-My order was marked as delivered but I never received it.,Delivery Problem
-The package was delivered to the wrong address.,Delivery Problem
-My shipment has been stuck at the same location for ten days.,Delivery Problem
-The tracking information has not updated in over a week.,Delivery Problem
-The delivery driver left the package outside in extreme heat.,Delivery Problem
-My package was returned to sender without any delivery attempt.,Delivery Problem
-I was given a delivery window and no one showed up.,Delivery Problem
-The box arrived completely crushed and the contents were destroyed.,Delivery Problem
-My order was split into multiple shipments and one part is missing.,Delivery Problem
-The courier left the package with my neighbour without my permission.,Delivery Problem
-I paid for express shipping and my order arrived two weeks late.,Delivery Problem
-My parcel was delivered to the completely wrong city.,Delivery Problem
-The delivery confirmation shows a signature that is not mine.,Delivery Problem
-My order has been out for delivery for three days and never arrives.,Delivery Problem
-I was not notified that a delivery attempt was made.,Delivery Problem
-My package is showing as lost in transit and no one is helping me.,Delivery Problem
-Half of my order is missing and the rest was damaged in shipping.,Delivery Problem
-The estimated delivery date keeps being pushed back with no explanation.,Delivery Problem
-I had to pay customs duties on a domestic order which makes no sense.,Delivery Problem
-The courier attempted delivery but I was home and no one knocked.,Delivery Problem
-My fragile items were not packed properly and arrived broken.,Delivery Problem
-I am unable to reschedule my delivery and cannot reach the courier.,Delivery Problem
-My order was shipped to an old address even though I updated it before checkout.,Delivery Problem
-The tracking link I was sent does not work and returns an error page.,Delivery Problem
-My package has been at the local depot for five days with no delivery attempt.,Delivery Problem
-The courier left a failed delivery card but made no attempt to deliver.,Delivery Problem
-My package was delivered opened and items appear to have been removed.,Delivery Problem
-I have been waiting for a re-delivery that was promised three times and never came.,Delivery Problem
-The driver delivered my parcel to the wrong floor in my building.,Delivery Problem
-My order shows delivered via GPS but the location shown is not my address.,Delivery Problem
-My parcel was left outside overnight in freezing temperatures and the contents are damaged.,Delivery Problem
-The courier claims they attempted delivery but my security camera shows no visit.,Delivery Problem
-I was charged a re-delivery fee for a package that was never attempted in the first place.,Delivery Problem
-My same-day delivery order arrived three days later with no apology or compensation.,Delivery Problem
-The parcel was marked as undeliverable without any attempt shown on the tracking.,Delivery Problem
-My package was delivered to the wrong building in my street.,Delivery Problem
-I was told to collect my parcel from a depot that is over fifty kilometres from me.,Delivery Problem
-My order was dispatched a week after the stated processing time.,Delivery Problem
-The courier left my package at a collection point that has now closed down.,Delivery Problem
-My perishable food order arrived two days late and is no longer safe to eat.,Delivery Problem
-The return shipment I sent was lost in transit and I have not received a refund.,Delivery Problem
-I was told my order was delivered and signed for but I was not home at that time.,Delivery Problem
-My package arrived with a different name on the label than the one I used.,Delivery Problem
-The dispatch confirmation email I received has the wrong items listed.,Delivery Problem
-My international order has been held in customs for over three weeks.,Delivery Problem
-I paid for tracked delivery but there is no tracking information available.,Delivery Problem
-My order was sent via regular post despite having paid for courier delivery.,Delivery Problem
-The delivery driver left my large appliance on the pavement and refused to bring it inside.,Delivery Problem
-My package shows as delivered but the photo evidence shows someone else's door.,Delivery Problem
-I was given a time slot for delivery that I arranged specifically around but was missed.,Delivery Problem
-The courier attempted to deliver my parcel to my workplace after business hours.,Delivery Problem
-My medication was sent by standard post and arrived damaged and delayed.,Delivery Problem
-I cannot collect my parcel from the depot as there is no parking and no public transport.,Delivery Problem
-The collection point where my parcel was left is only open one day a week.,Delivery Problem
-My order was cancelled by the courier company and I was not informed.,Delivery Problem
-The weight and dimensions on the shipping label do not match my actual order.,Delivery Problem
-My fragile glassware was packed with no protective material and arrived shattered.,Delivery Problem
-I was told I needed to be home all day for a delivery window that spans eight hours.,Delivery Problem
-The parcel was placed inside my recycling bin where it was almost thrown away.,Delivery Problem
-My order was shipped in three separate boxes but only one has arrived.,Delivery Problem
-I had to chase the courier repeatedly to find out where my order was.,Delivery Problem
-The driver dropped my package from a van height and I saw it fall on the camera.,Delivery Problem
-My parcel was delivered to a locked mailroom and I cannot access it.,Delivery Problem
-I was told to pick up my parcel from a post office that says they have no record of it.,Delivery Problem
-My Christmas order arrived in January because of unexplained dispatch delays.,Delivery Problem
-The courier company says it was delivered but the retailer says it was not dispatched yet.,Delivery Problem
-I paid for white glove delivery and installation but the driver just left the boxes outside.,Delivery Problem
-My tracking status has shown out for delivery for four consecutive days.,Delivery Problem
-The delivery notification arrived after the delivery window had already passed.,Delivery Problem
-My package was delivered during the weekend when I had requested a weekday delivery.,Delivery Problem
-I received a different customer's order and my own order is unaccounted for.,Delivery Problem
-The courier took a photo of delivery at a completely different property.,Delivery Problem
-My return package was collected but never scanned into the courier system.,Delivery Problem
-The estimated delivery window on the website was five days but it took three weeks.,Delivery Problem
-I was told my item had been delivered successfully but it turned out to be someone else's parcel.,Delivery Problem
-My package sat at a customs checkpoint for two weeks with no updates or explanation.,Delivery Problem
-The driver rang my intercom and left before I had a chance to answer and buzz them in.,Delivery Problem
-I received my order with the items loose inside the box because the inner packaging had broken.,Delivery Problem
-My package shows a failed delivery scan but I live in a flat that is accessible all day.,Delivery Problem
-I was not given the option to authorise a safe place for delivery despite it being offered online.,Delivery Problem
-My express delivery order is now three weeks overdue and tracking still shows in transit.,Delivery Problem
-I had to personally call the depot after five days to find out my parcel was there waiting.,Delivery Problem
-The courier website allows me to rebook delivery but the slots keep disappearing before I can confirm.,Delivery Problem
-My parcel was handed to a neighbour who has since moved away and I cannot retrieve it.,Delivery Problem
-I signed up for delivery notifications but received no alerts at any stage of the process.,Delivery Problem
-The package was too large for my mailbox and the driver made no attempt to knock.,Delivery Problem
-My order was despatched to the right postcode but the wrong street entirely.,Delivery Problem
-I was charged a failed delivery fee even though the driver made no attempt.,Delivery Problem
-My parcel requires a signature but the driver attempted delivery when I specified an alternative.,Delivery Problem
-The delivery address was completed correctly at checkout but the label was printed incorrectly.,Delivery Problem
-My refrigerated goods arrived at room temperature because the cold chain was broken.,Delivery Problem
-I am being asked to pay import duties on goods that were manufactured domestically.,Delivery Problem
-My parcel was collected by a courier but the collection was not logged in the system.,Delivery Problem
-The return label I was sent is for a different country than the one I am sending from.,Delivery Problem
-My order was marked as out for delivery and then suddenly changed to return to sender.,Delivery Problem
-I was told my package was held due to an incomplete address but the address I provided is full and correct.,Delivery Problem
-The delivery company damaged my gate while attempting access and has refused to compensate me.,Delivery Problem
-My order required assembly on delivery but the courier team was not equipped or willing to do so.,Delivery Problem
-I waited at home all day for a delivery that was ultimately rescheduled without any notification.,Delivery Problem
-My parcel was delivered to a smart locker but I was not sent the access code.,Delivery Problem
+I am unable to delete my account despite multiple requests. Please resolve this urgently.,Other
+The support agent was rude and dismissive about my issue. I demand an immediate response.,Customer Support
+The referral bonus I was promised was never credited to my account. I demand an immediate response.,Other
+I want to report suspicious activity on my account. Please resolve this urgently.,Other
+This is unacceptable. My automatic payment was debited twice this month.,Billing Issue
+I want to report that i am paying for premium service but am getting basic service features.,Service Quality
+Complaint: The resolution provided by support does not solve my actual problem.,Customer Support
+My package was held at the post office and I never got the collection notice.,Delivery Problem
+The delivery estimate keeps changing and no one explains why.,Delivery Problem
+I am not satisfied with the overall experience and want to escalate. This has been going on for too long.,Other
+The service maintenance schedule was not communicated to subscribers. Please resolve this urgently.,Service Quality
+I am unable to delete my account despite multiple requests. This has been going on for too long.,Other
+The courier left my package in the wrong location. This has been going on for too long.,Delivery Problem
+Complaint: The support staff lacks knowledge about the product I purchased.,Customer Support
+My escalation request was acknowledged but never followed up.,Customer Support
+My TV channels keep disappearing from the subscription package. This has been going on for too long.,Service Quality
+This is unacceptable. My package was held at the post office and I never got the collection notice.,Delivery Problem
+I am unable to delete my account despite multiple requests.,Other
+The product I bought does not match the description on the website.,Product Defect
+This is unacceptable. The chatbot keeps sending me in circles and never resolves my issue.,Customer Support
+The service is frequently unavailable during peak hours. I demand an immediate response.,Service Quality
+Complaint: My broadband router was replaced but the speed is still very low.,Service Quality
+I would like to request information about my personal data being used. Please resolve this urgently.,Other
+I want to report that i received a threatening message from someone claiming to be from your company.,Other
+The referral bonus I was promised was never credited to my account. Please resolve this urgently.,Other
+This is unacceptable. I received someone else order instead of my own.,Delivery Problem
+This is unacceptable. My delivery was rescheduled twice without my consent.,Delivery Problem
+I want to report that the referral bonus I was promised was never credited to my account.,Other
+Complaint: The service was suspended without any prior notification or warning.,Service Quality
+My new television has dead pixels visible from the moment I turned it on. I demand an immediate response.,Product Defect
+Complaint: I received contradictory information from two different support agents.,Customer Support
+I want to report that my account shows active but none of the services are working.,Service Quality
+This is unacceptable. My broadband router was replaced but the speed is still very low.,Service Quality
+The product arrived with a broken screen and cracks on the frame. This has been going on for too long.,Product Defect
+I need a formal acknowledgment letter for a complaint I filed earlier.,Other
+I received a final notice for a bill I already paid in full. Please resolve this urgently.,Billing Issue
+The support team closed my ticket without resolving the issue. I demand an immediate response.,Customer Support
+I want to report that i am unhappy with the policy changes that were made without notice.,Other
+I subscribed to roaming services but they did not activate abroad.,Service Quality
+The support system does not allow me to attach evidence to my ticket. I demand an immediate response.,Customer Support
+I want to report that i have been waiting four weeks for a replacement shipment.,Delivery Problem
+This is unacceptable. The wrong size was delivered and I need the correct item urgently.,Delivery Problem
+The cloud storage service deleted my files without any warning. Please resolve this urgently.,Service Quality
+I want to report that i see foreign transaction fees on purchases made locally.,Billing Issue
+The promotional discount was not applied to my bill.,Billing Issue
+The loyalty program points I earned were deleted without explanation. Please resolve this urgently.,Other
+I am unhappy with the policy changes that were made without notice. I demand an immediate response.,Other
+The delivery driver did not attempt delivery and left no notice. Please resolve this urgently.,Delivery Problem
+This is unacceptable. I paid for express delivery but the package arrived standard.,Delivery Problem
+The agent I spoke to made commitments that have not been honored.,Customer Support
+I want to report that i received contradictory information from two different support agents.,Customer Support
+My subscription plan was downgraded without my permission. This has been going on for too long.,Service Quality
+My account was suspended without any violation on my part. Please resolve this urgently.,Other
+Support said they would send an email but I never received it. I demand an immediate response.,Customer Support
+The scheduled maintenance keeps happening during my working hours.,Service Quality
+I want to report that my furniture arrived with a broken leg and cannot be assembled.,Product Defect
+I was charged in a foreign currency without any prior notice. This has been going on for too long.,Billing Issue
+My wallet deduction was processed but the service was not provided. I demand an immediate response.,Billing Issue
+I have been charged a service fee that was not in the terms. Please resolve this urgently.,Billing Issue
+Complaint: I subscribed to roaming services but they did not activate abroad.,Service Quality
+The support team closed my ticket without resolving the issue. This has been going on for too long.,Customer Support
+This is unacceptable. My statement has errors and shows charges I do not recognize.,Billing Issue
+The jacket has an irreparable tear in the fabric from day one. I demand an immediate response.,Product Defect
+I was transferred to five different agents and had to repeat my issue each time. This has been going on for too long.,Customer Support
+Complaint: I am experiencing frequent dropped calls despite being in a coverage area.,Service Quality
+I want to report that the service is frequently unavailable during peak hours.,Service Quality
+I want to report that my order was returned to sender without any notification to me.,Delivery Problem
+Complaint: The product I ordered is out of stock but I was not informed before delivery.,Delivery Problem
+I want to report that i received a damaged box and the item inside was missing.,Delivery Problem
+My appliance overheats and shuts down automatically. I demand an immediate response.,Product Defect
+This is unacceptable. The toy I ordered for my child has broken pieces and is unsafe.,Product Defect
+I want to report that the item was missing key components when I unboxed it.,Product Defect
+This is unacceptable. I was transferred to five different agents and had to repeat my issue each time.,Customer Support
+I received a final notice for a bill I already paid in full.,Billing Issue
+I want to report that i received a generic response that did not address my specific complaint.,Customer Support
+Complaint: I was told my issue would be resolved in 24 hours but it has been a week.,Customer Support
+Complaint: The fabric of the clothing item I ordered has a visible defect.,Product Defect
+This is unacceptable. The service is frequently unavailable during peak hours.,Service Quality
+The platform keeps logging me out and I cannot access my account. This has been going on for too long.,Service Quality
+This is unacceptable. My support ticket has been open for 15 days with no resolution.,Customer Support
+I want to report that the product I bought does not match the description on the website.,Product Defect
+This is unacceptable. I have a feedback that I want to formally register as a complaint.,Other
+I want to formally withdraw my consent for data processing.,Other
+My name on the account has a spelling error that support refuses to fix. I demand an immediate response.,Other
+The customer service helpline is unreachable during business hours. This has been going on for too long.,Customer Support
+This is unacceptable. I was not given a delivery time slot and missed the delivery.,Delivery Problem
+I received a threatening message from someone claiming to be from your company. I demand an immediate response.,Other
+This is unacceptable. I received a damaged box and the item inside was missing.,Delivery Problem
+Complaint: An unknown subscription charge appeared on my account.,Billing Issue
+I have concerns about the environmental practices of this company. Please resolve this urgently.,Other
+Complaint: My subscription plan was downgraded without my permission.,Service Quality
+The survey I was asked to complete contained misleading questions. This has been going on for too long.,Other
+I am not satisfied with the overall experience and want to escalate. I demand an immediate response.,Other
+The app I use for the service crashes constantly on my device. I demand an immediate response.,Service Quality
+I want to report that my subscription box was not delivered this month without any notice.,Delivery Problem
+I want to escalate an unresolved issue from a previous complaint. This has been going on for too long.,Other
+My account merge request has been pending for over two months. This has been going on for too long.,Other
+I want to report that my account balance does not match the payment I submitted.,Billing Issue
+I want to report that i have been charged a service fee that was not in the terms.,Billing Issue
+The streaming quality is consistently poor despite high-speed subscription. Please resolve this urgently.,Service Quality
+I would like to request information about my personal data being used. This has been going on for too long.,Other
+The package was marked as delivered but I never received it.,Delivery Problem
+The product key I received is invalid and cannot be activated.,Product Defect
+My new laptop battery drains in less than one hour. This has been going on for too long.,Product Defect
+I want to report that my subscription plan was downgraded without my permission.,Service Quality
+This is unacceptable. My order was supposed to arrive three days ago and has not been delivered.,Delivery Problem
+The terms and conditions I agreed to are not being honored. This has been going on for too long.,Other
+This is unacceptable. The support team closed my ticket without resolving the issue.,Customer Support
+Complaint: My business email service has been down affecting my daily operations.,Service Quality
+This is unacceptable. My account balance does not match the payment I submitted.,Billing Issue
+My heavy furniture order was left outside instead of being brought inside. Please resolve this urgently.,Delivery Problem
+This is unacceptable. The delivery confirmation email shows the wrong item was sent.,Delivery Problem
+My statement has errors and shows charges I do not recognize. I demand an immediate response.,Billing Issue
+I was billed for a service I cancelled three months ago.,Billing Issue
+My automatic payment was debited twice this month.,Billing Issue
+I paid for express delivery but the package arrived standard. I demand an immediate response.,Delivery Problem
+My support ticket has been open for 15 days with no resolution.,Customer Support
+I want to report that the support system does not allow me to attach evidence to my ticket.,Customer Support
+My loyalty points were deducted but the discount was never applied to the bill.,Billing Issue
+This is unacceptable. The item I ordered stopped working after just two days of use.,Product Defect
+I want to report that the server keeps timing out when I try to use the online service.,Service Quality
+My account balance does not match the payment I submitted.,Billing Issue
+I received contradictory information from two different support agents. This has been going on for too long.,Customer Support
+This is unacceptable. My watch stopped working within a week of purchase.,Product Defect
+The refund I requested 30 days ago has not been processed.,Billing Issue
+I want to report that my account shows a duplicate payment that was not refunded.,Billing Issue
+This is unacceptable. My package was delivered to a wrong address.,Delivery Problem
+I want to report that the same order was delivered twice and I am being asked to return one at my cost.,Delivery Problem
+My complaint was marked as resolved without contacting me.,Customer Support
+My order was supposed to arrive three days ago and has not been delivered. This has been going on for too long.,Delivery Problem
+The toy I ordered for my child has broken pieces and is unsafe. This has been going on for too long.,Product Defect
+Complaint: I was charged a cancellation fee even though I cancelled within the window.,Billing Issue
+I want to report that my order shows out for delivery for three days but nothing arrived.,Delivery Problem
+I want to report that i received someone else order instead of my own.,Delivery Problem
+I received an incorrect invoice with wrong amounts. I demand an immediate response.,Billing Issue
+My new laptop battery drains in less than one hour. Please resolve this urgently.,Product Defect
+I want to report that my international shipment has been held at customs for 30 days.,Delivery Problem
+My headphones only work on one side due to a hardware defect. Please resolve this urgently.,Product Defect
+The product I ordered is out of stock but I was not informed before delivery. This has been going on for too long.,Delivery Problem
+Complaint: The service outage has been going on for three days with no update.,Service Quality
+My business email service has been down affecting my daily operations.,Service Quality
+My appliance overheats and shuts down automatically. Please resolve this urgently.,Product Defect
+This is unacceptable. My TV channels keep disappearing from the subscription package.,Service Quality
+The app I use for the service crashes constantly on my device.,Service Quality
+I submitted a complaint online but received no confirmation or response. This has been going on for too long.,Customer Support
+This is unacceptable. The delivery driver did not attempt delivery and left no notice.,Delivery Problem
+Complaint: I was told to visit a store but the store could not help with my online order.,Customer Support
+I am being charged late fees even though I paid on time. I demand an immediate response.,Billing Issue
+I want to report that my automatic payment was debited twice this month.,Billing Issue
+I have been charged a service fee that was not in the terms. I demand an immediate response.,Billing Issue
+Complaint: My shipment has been stuck at the warehouse for two weeks.,Delivery Problem
+Complaint: I subscribed for monthly service but it expired after just two weeks.,Service Quality
+Complaint: My order was split into three deliveries but only one arrived.,Delivery Problem
+The glass item I ordered was shattered inside the packaging. This has been going on for too long.,Product Defect
+My statement has errors and shows charges I do not recognize. Please resolve this urgently.,Billing Issue
+I want to close my account but the process is unnecessarily complicated. I demand an immediate response.,Other
+Complaint: The product key I received is invalid and cannot be activated.,Product Defect
+Complaint: My new television has dead pixels visible from the moment I turned it on.,Product Defect
+This is unacceptable. My EMI deduction is higher than what was agreed in the contract.,Billing Issue
+I am experiencing frequent dropped calls despite being in a coverage area.,Service Quality
+I was given wrong information by the customer support team. I demand an immediate response.,Customer Support
+Complaint: I have a general concern about the terms of service I agreed to.,Other
+The internet service I am paying for has been down for five days. I demand an immediate response.,Service Quality
+An unknown subscription charge appeared on my account. This has been going on for too long.,Billing Issue
+This is unacceptable. I received a legal notice that seems to be sent in error to my address.,Other
+This is unacceptable. My new mobile phone has a ghost touch issue on the screen.,Product Defect
+This is unacceptable. The service was suspended without any prior notification or warning.,Service Quality
+Complaint: I am unhappy with the policy changes that were made without notice.,Other
+I want to report that the product I received is a counterfeit and not genuine.,Product Defect
+My new laptop battery drains in less than one hour. I demand an immediate response.,Product Defect
+Complaint: I paid for express delivery but the package arrived standard.,Delivery Problem
+I want to report that my new laptop battery drains in less than one hour.,Product Defect
+I want to report that the scheduled maintenance keeps happening during my working hours.,Service Quality
+Support said they would send an email but I never received it.,Customer Support
+This is unacceptable. The product key I received is invalid and cannot be activated.,Product Defect
+The app I use for the service crashes constantly on my device. This has been going on for too long.,Service Quality
+My broadband router was replaced but the speed is still very low. I demand an immediate response.,Service Quality
+I want to report that i want to report a technical vulnerability I found in your service.,Other
+I want to report that my account access was blocked and support refuses to restore it.,Customer Support
+Complaint: My follow-up emails are being ignored by the support department.,Customer Support
+Complaint: I submitted a complaint online but received no confirmation or response.,Customer Support
+I was billed for a service I cancelled three months ago. Please resolve this urgently.,Billing Issue
+Complaint: I asked to speak to a manager but was refused without reason.,Customer Support
+This is unacceptable. I was charged a cancellation fee even though I cancelled within the window.,Billing Issue
+Complaint: My privacy settings were changed without my knowledge.,Other
+My automatic payment was debited twice this month. I demand an immediate response.,Billing Issue
+Complaint: I received someone else order instead of my own.,Delivery Problem
+I want to report that the product key I received is invalid and cannot be activated.,Product Defect
+My escalation request was acknowledged but never followed up. Please resolve this urgently.,Customer Support
+I want to report that the terms and conditions I agreed to are not being honored.,Other
+An incorrect tax amount was applied to my recent purchase. Please resolve this urgently.,Billing Issue
+The toy I ordered for my child has broken pieces and is unsafe. Please resolve this urgently.,Product Defect
+I want to report that the electrical appliance I bought sparks and is unsafe to use.,Product Defect
+Complaint: The survey I was asked to complete contained misleading questions.,Other
+The product I received is a counterfeit and not genuine.,Product Defect
+My statement has errors and shows charges I do not recognize.,Billing Issue
+The GPS service on my device is inaccurate despite map updates. I demand an immediate response.,Service Quality
+My shipment has been stuck at the warehouse for two weeks. I demand an immediate response.,Delivery Problem
+I have concerns about the environmental practices of this company. I demand an immediate response.,Other
+I want to report that the support staff lacks knowledge about the product I purchased.,Customer Support
+My watch stopped working within a week of purchase.,Product Defect
+This is unacceptable. The IVR system does not have an option for my specific problem.,Customer Support
+The GPS service on my device is inaccurate despite map updates.,Service Quality
+My order was split into three deliveries but only one arrived. Please resolve this urgently.,Delivery Problem
+Complaint: The size of the item delivered is wrong despite correct order placement.,Product Defect
+My data was shared with a third party without my explicit consent. This has been going on for too long.,Other
+I see foreign transaction fees on purchases made locally. This has been going on for too long.,Billing Issue
+Complaint: My loyalty points were deducted but the discount was never applied to the bill.,Billing Issue
+The tool I ordered broke on first use which indicates poor quality. Please resolve this urgently.,Product Defect
+The support staff lacks knowledge about the product I purchased. This has been going on for too long.,Customer Support
+I want to report that the fabric of the clothing item I ordered has a visible defect.,Product Defect
+The server keeps timing out when I try to use the online service.,Service Quality
+This is unacceptable. The account verification process is overly complicated and unfair.,Other
+I want to report that the survey I was asked to complete contained misleading questions.,Other
+I have a general concern about the terms of service I agreed to.,Other
+My account balance does not match the payment I submitted. I demand an immediate response.,Billing Issue
+I want to report that i received spam from this company after opting out of communications.,Other
+Complaint: The IVR system does not have an option for my specific problem.,Customer Support
+I want to report that the platform keeps logging me out and I cannot access my account.,Service Quality
+I want to report that i received only part of my order and the rest is missing.,Delivery Problem
+My internet speed is consistently below the minimum guaranteed in the plan. This has been going on for too long.,Service Quality
+Complaint: The food product I ordered was expired when it arrived.,Product Defect
+Complaint: My shoes have stitching defects and started coming apart immediately.,Product Defect
+The live chat support takes over 30 minutes just to connect to an agent. Please resolve this urgently.,Customer Support
+My wallet deduction was processed but the service was not provided.,Billing Issue
+I want to report that the GPS service on my device is inaccurate despite map updates.,Service Quality
+My privacy settings were changed without my knowledge. This has been going on for too long.,Other
+The item has rust and corrosion signs indicating it is not new. Please resolve this urgently.,Product Defect
+I am being harassed by repeated automated calls from this company.,Other
+My international shipment has been held at customs for 30 days. I demand an immediate response.,Delivery Problem
+This is unacceptable. I submitted a complaint online but received no confirmation or response.,Customer Support
+Complaint: My EMI deduction is higher than what was agreed in the contract.,Billing Issue
+I am being billed for a premium plan but I only subscribed to the basic plan. I demand an immediate response.,Billing Issue
+This is unacceptable. The agent I spoke to made commitments that have not been honored.,Customer Support
+This is unacceptable. Support said they would send an email but I never received it.,Customer Support
+This is unacceptable. The service outage has been going on for three days with no update.,Service Quality
+My appliance overheats and shuts down automatically. This has been going on for too long.,Product Defect
+This is unacceptable. The internet service I am paying for has been down for five days.,Service Quality
+I want to report misleading advertising claims made by the company. I demand an immediate response.,Other
+My smart home service disconnects every few hours and needs manual reset. This has been going on for too long.,Service Quality
+Complaint: The app I use for the service crashes constantly on my device.,Service Quality
+Complaint: I was overcharged by double the agreed price.,Billing Issue
+My heavy furniture order was left outside instead of being brought inside. I demand an immediate response.,Delivery Problem
+Complaint: My credit card was charged after I cancelled my subscription.,Billing Issue
+My new laptop battery drains in less than one hour.,Product Defect
+The jacket has an irreparable tear in the fabric from day one. This has been going on for too long.,Product Defect
+I am unhappy with the policy changes that were made without notice.,Other
+I want to report that the cloud storage service deleted my files without any warning.,Service Quality
+The scheduled maintenance keeps happening during my working hours. This has been going on for too long.,Service Quality
+This is unacceptable. The same order was delivered twice and I am being asked to return one at my cost.,Delivery Problem
+This is unacceptable. I received a final notice for a bill I already paid in full.,Billing Issue
+I want to report that the item I ordered stopped working after just two days of use.,Product Defect
+I was charged twice for the same transaction on my account. This has been going on for too long.,Billing Issue
+The toy I ordered for my child has broken pieces and is unsafe. I demand an immediate response.,Product Defect
+This is unacceptable. The support agent was rude and dismissive about my issue.,Customer Support
+My loyalty points were deducted but the discount was never applied to the bill. I demand an immediate response.,Billing Issue
+I want to report that an incorrect tax amount was applied to my recent purchase.,Billing Issue
+I am being charged late fees even though I paid on time. Please resolve this urgently.,Billing Issue
+Complaint: The toy I ordered for my child has broken pieces and is unsafe.,Product Defect
+The support agent disconnected the call while I was explaining my problem. Please resolve this urgently.,Customer Support
+The phone support has a very long wait time and often disconnects. This has been going on for too long.,Customer Support
+This is unacceptable. My billing address was updated but invoices still go to the wrong address.,Billing Issue
+My bill shows an extra fee that I never agreed to. This has been going on for too long.,Billing Issue
+This is unacceptable. The streaming quality is consistently poor despite high-speed subscription.,Service Quality
+The fabric of the clothing item I ordered has a visible defect. I demand an immediate response.,Product Defect
+I want to report that the warehouse shows my item as shipped but tracking shows no movement.,Delivery Problem
+I want to report that my wallet deduction was processed but the service was not provided.,Billing Issue
+The promotional discount was not applied to my bill. I demand an immediate response.,Billing Issue
+The service outage has been going on for three days with no update. Please resolve this urgently.,Service Quality
+My escalation request was acknowledged but never followed up. I demand an immediate response.,Customer Support
+This is unacceptable. My data was shared with a third party without my explicit consent.,Other
+This is unacceptable. The warehouse shows my item as shipped but tracking shows no movement.,Delivery Problem
+The product packaging was tampered and the seal was already broken. Please resolve this urgently.,Product Defect
+Complaint: My heavy furniture order was left outside instead of being brought inside.,Delivery Problem
+The refund I requested 30 days ago has not been processed. Please resolve this urgently.,Billing Issue
+The product I received is a counterfeit and not genuine. Please resolve this urgently.,Product Defect
+Complaint: I received an incorrect invoice with wrong amounts.,Billing Issue
+The service outage has been going on for three days with no update. I demand an immediate response.,Service Quality
+Complaint: My account access was blocked and support refuses to restore it.,Customer Support
+I have a feedback that I want to formally register as a complaint.,Other
+Complaint: My account balance does not match the payment I submitted.,Billing Issue
+Complaint: The internet service I am paying for has been down for five days.,Service Quality
+The survey I was asked to complete contained misleading questions.,Other
+My package was delivered to a wrong address. I demand an immediate response.,Delivery Problem
+Complaint: I was transferred to five different agents and had to repeat my issue each time.,Customer Support
+I received a generic response that did not address my specific complaint.,Customer Support
+My EMI deduction is higher than what was agreed in the contract. Please resolve this urgently.,Billing Issue
+Complaint: The platform keeps logging me out and I cannot access my account.,Service Quality
+My order was split into three deliveries but only one arrived.,Delivery Problem
+Complaint: The customer service helpline is unreachable during business hours.,Customer Support
+I have been waiting four weeks for a replacement shipment. Please resolve this urgently.,Delivery Problem
+My printer cartridge was empty when it arrived as a new product. This has been going on for too long.,Product Defect
+The fabric of the clothing item I ordered has a visible defect. Please resolve this urgently.,Product Defect
+The app I use for the service crashes constantly on my device. Please resolve this urgently.,Service Quality
+I want to formally withdraw my consent for data processing. Please resolve this urgently.,Other
+The product I bought does not match the description on the website. I demand an immediate response.,Product Defect
+I want to report that i was not given a delivery time slot and missed the delivery.,Delivery Problem
+My escalation request was acknowledged but never followed up. This has been going on for too long.,Customer Support
+This is unacceptable. I want to formally withdraw my consent for data processing.,Other
+I was given wrong information by the customer support team. Please resolve this urgently.,Customer Support
+I have a feedback that I want to formally register as a complaint. I demand an immediate response.,Other
+This is unacceptable. The product I received has scratches and looks like a used item.,Product Defect
+The agent promised a resolution but stopped responding after one reply. Please resolve this urgently.,Customer Support
+I am not satisfied with the overall experience and want to escalate. Please resolve this urgently.,Other
+I received spam from this company after opting out of communications.,Other
+The service was suspended without any prior notification or warning. Please resolve this urgently.,Service Quality
+I received spam from this company after opting out of communications. I demand an immediate response.,Other
+Complaint: My wallet deduction was processed but the service was not provided.,Billing Issue
+I received an overdue notice for an invoice the system never sent me. Please resolve this urgently.,Billing Issue
+Complaint: My name on the account has a spelling error that support refuses to fix.,Other
+The tool I ordered broke on first use which indicates poor quality. This has been going on for too long.,Product Defect
+Complaint: The scheduled maintenance keeps happening during my working hours.,Service Quality
+Complaint: My order was supposed to arrive three days ago and has not been delivered.,Delivery Problem
+I am unhappy with the policy changes that were made without notice. Please resolve this urgently.,Other
+My headphones only work on one side due to a hardware defect. This has been going on for too long.,Product Defect
+I want to report that i need a formal acknowledgment letter for a complaint I filed earlier.,Other
+I am being billed for a premium plan but I only subscribed to the basic plan.,Billing Issue
+Complaint: My delivery appointment was cancelled without informing me.,Delivery Problem
+I want to report that my smart home service disconnects every few hours and needs manual reset.,Service Quality
+My package was delivered to a wrong address. Please resolve this urgently.,Delivery Problem
+My electronic device stopped charging after one week. I demand an immediate response.,Product Defect
+Complaint: I requested a callback but no one has called back after three days.,Customer Support
+I want to report a technical vulnerability I found in your service. Please resolve this urgently.,Other
+I want to report that the promotional discount was not applied to my bill.,Billing Issue
+I want to report that the phone support has a very long wait time and often disconnects.,Customer Support
+The IVR system does not have an option for my specific problem.,Customer Support
+I subscribed to roaming services but they did not activate abroad. Please resolve this urgently.,Service Quality
+The courier left my package in the wrong location. I demand an immediate response.,Delivery Problem
+The glass item I ordered was shattered inside the packaging.,Product Defect
+My printer cartridge was empty when it arrived as a new product. Please resolve this urgently.,Product Defect
+This is unacceptable. The server keeps timing out when I try to use the online service.,Service Quality
+I subscribed to roaming services but they did not activate abroad. I demand an immediate response.,Service Quality
+Complaint: I was charged twice for the same transaction on my account.,Billing Issue
+The support staff lacks knowledge about the product I purchased. Please resolve this urgently.,Customer Support
+I want to report that the support agent disconnected the call while I was explaining my problem.,Customer Support
+I want to report that i submitted a complaint online but received no confirmation or response.,Customer Support
+Complaint: I was billed for a service I cancelled three months ago.,Billing Issue
+I am being charged late fees even though I paid on time. This has been going on for too long.,Billing Issue
+I upgraded my plan but the new features are not accessible to me.,Service Quality
+My delivery was rescheduled twice without my consent. I demand an immediate response.,Delivery Problem
+The promotional discount was not applied to my bill. Please resolve this urgently.,Billing Issue
+My printer cartridge was empty when it arrived as a new product. I demand an immediate response.,Product Defect
+My subscription box was not delivered this month without any notice. This has been going on for too long.,Delivery Problem
+The item has rust and corrosion signs indicating it is not new. This has been going on for too long.,Product Defect
+I want to report misleading advertising claims made by the company. Please resolve this urgently.,Other
+I asked to speak to a manager but was refused without reason.,Customer Support
+My international shipment has been held at customs for 30 days. Please resolve this urgently.,Delivery Problem
+My delivery was rescheduled twice without my consent. Please resolve this urgently.,Delivery Problem
+The loyalty program points I earned were deleted without explanation. This has been going on for too long.,Other
+My package was held at the post office and I never got the collection notice. Please resolve this urgently.,Delivery Problem
+The product I received is a counterfeit and not genuine. I demand an immediate response.,Product Defect
+I want to report that the jacket has an irreparable tear in the fabric from day one.,Product Defect
+Complaint: The referral bonus I was promised was never credited to my account.,Other
+I requested a billing correction two weeks ago with no response. This has been going on for too long.,Billing Issue
+I want to report that the account verification process is overly complicated and unfair.,Other
+I want to report that i was asked to provide the same documents three times for one request.,Customer Support
+My subscription plan was downgraded without my permission. I demand an immediate response.,Service Quality
+My statement has errors and shows charges I do not recognize. This has been going on for too long.,Billing Issue
+Complaint: The product I bought does not match the description on the website.,Product Defect
+My business email service has been down affecting my daily operations. I demand an immediate response.,Service Quality
+The software on my device has bugs and crashes frequently. This has been going on for too long.,Product Defect
+I want to report that the courier left my package in the wrong location.,Delivery Problem
+My complaint was marked as resolved without contacting me. This has been going on for too long.,Customer Support
+I want to report a technical vulnerability I found in your service. I demand an immediate response.,Other
+My new television has dead pixels visible from the moment I turned it on.,Product Defect
+I am being charged for a service that has been non-functional for weeks. Please resolve this urgently.,Service Quality
+I want to close my account but the process is unnecessarily complicated.,Other
+The referral bonus I was promised was never credited to my account. This has been going on for too long.,Other
+The customer service helpline is unreachable during business hours. Please resolve this urgently.,Customer Support
+I have been waiting four weeks for a replacement shipment. This has been going on for too long.,Delivery Problem
+I paid for express delivery but the package arrived standard.,Delivery Problem
+My order was supposed to arrive three days ago and has not been delivered. Please resolve this urgently.,Delivery Problem
+This is unacceptable. I subscribed to roaming services but they did not activate abroad.,Service Quality
+The GPS service on my device is inaccurate despite map updates. This has been going on for too long.,Service Quality
+I received someone else order instead of my own. Please resolve this urgently.,Delivery Problem
+The streaming quality is consistently poor despite high-speed subscription.,Service Quality
+Complaint: The item was missing key components when I unboxed it.,Product Defect
+My subscription box was not delivered this month without any notice. I demand an immediate response.,Delivery Problem
+I want to report that i received an incorrect invoice with wrong amounts.,Billing Issue
+I would like to request information about my personal data being used.,Other
+The streaming service buffers endlessly on my high-speed connection. Please resolve this urgently.,Service Quality
+The toy I ordered for my child has broken pieces and is unsafe.,Product Defect
+This is unacceptable. The delivery estimate keeps changing and no one explains why.,Delivery Problem
+This is unacceptable. My account shows a duplicate payment that was not refunded.,Billing Issue
+The delivery driver did not attempt delivery and left no notice. I demand an immediate response.,Delivery Problem
+The service is frequently unavailable during peak hours. This has been going on for too long.,Service Quality
+I want to report that my support ticket has been open for 15 days with no resolution.,Customer Support
+The service is frequently unavailable during peak hours. Please resolve this urgently.,Service Quality
+I received a generic response that did not address my specific complaint. This has been going on for too long.,Customer Support
+I want to report that my escalation request was acknowledged but never followed up.,Customer Support
+Complaint: My escalation request was acknowledged but never followed up.,Customer Support
+I want to report that my billing address was updated but invoices still go to the wrong address.,Billing Issue
+I want to report that my shoes have stitching defects and started coming apart immediately.,Product Defect
+Complaint: The same order was delivered twice and I am being asked to return one at my cost.,Delivery Problem
+The tracking number provided does not show any updates.,Delivery Problem
+The glass item I ordered was shattered inside the packaging. I demand an immediate response.,Product Defect
+This is unacceptable. I was overcharged by double the agreed price.,Billing Issue
+Complaint: I was not given a delivery time slot and missed the delivery.,Delivery Problem
+The support agent disconnected the call while I was explaining my problem. This has been going on for too long.,Customer Support
+I have a general concern about the terms of service I agreed to. This has been going on for too long.,Other
+I was given wrong information by the customer support team. This has been going on for too long.,Customer Support
+This is unacceptable. My loyalty points were deducted but the discount was never applied to the bill.,Billing Issue
+The size of the item delivered is wrong despite correct order placement. Please resolve this urgently.,Product Defect
+The courier service used is not trackable and I have no updates. I demand an immediate response.,Delivery Problem
+I have a feedback that I want to formally register as a complaint. Please resolve this urgently.,Other
+The product I received is a counterfeit and not genuine. This has been going on for too long.,Product Defect
+I was overcharged by double the agreed price. I demand an immediate response.,Billing Issue
+I want to report that the product I received has scratches and looks like a used item.,Product Defect
+My headphones only work on one side due to a hardware defect.,Product Defect
+I want to report that my new mobile phone has a ghost touch issue on the screen.,Product Defect
+Complaint: I want to close my account but the process is unnecessarily complicated.,Other
+The same order was delivered twice and I am being asked to return one at my cost.,Delivery Problem
+This is unacceptable. I received an incorrect invoice with wrong amounts.,Billing Issue
+This is unacceptable. There is an unauthorized charge on my credit card statement.,Billing Issue
+The product I received has scratches and looks like a used item. I demand an immediate response.,Product Defect
+This is unacceptable. I was told my issue would be resolved in 24 hours but it has been a week.,Customer Support
+I want to report that the phone I purchased has a manufacturing defect in the camera.,Product Defect
+My new television has dead pixels visible from the moment I turned it on. This has been going on for too long.,Product Defect
+Complaint: I want to escalate an unresolved issue from a previous complaint.,Other
+I was charged in a foreign currency without any prior notice.,Billing Issue
+Complaint: My account was suspended without any violation on my part.,Other
+My data was shared with a third party without my explicit consent. Please resolve this urgently.,Other
+Complaint: My electronic device stopped charging after one week.,Product Defect
+The item has rust and corrosion signs indicating it is not new. I demand an immediate response.,Product Defect
+I want to report that the size of the item delivered is wrong despite correct order placement.,Product Defect
+I requested a billing correction two weeks ago with no response.,Billing Issue
+This is unacceptable. The app I use for the service crashes constantly on my device.,Service Quality
+I cannot make calls through the VOIP service I subscribed to. I demand an immediate response.,Service Quality
+Complaint: The product arrived with a broken screen and cracks on the frame.,Product Defect
+Complaint: The phone I purchased has a manufacturing defect in the camera.,Product Defect
+I requested a callback but no one has called back after three days. This has been going on for too long.,Customer Support
+Complaint: The courier service used is not trackable and I have no updates.,Delivery Problem
+I requested a billing correction two weeks ago with no response. Please resolve this urgently.,Billing Issue
+Complaint: My subscription box was not delivered this month without any notice.,Delivery Problem
+I was asked to provide the same documents three times for one request. I demand an immediate response.,Customer Support
+My delivery was rescheduled twice without my consent.,Delivery Problem
+I want to report that i received an overdue notice for an invoice the system never sent me.,Billing Issue
+The courier service used is not trackable and I have no updates. This has been going on for too long.,Delivery Problem
+This is unacceptable. I am experiencing frequent dropped calls despite being in a coverage area.,Service Quality
+I want to report that i requested a callback but no one has called back after three days.,Customer Support
+My subscription plan was downgraded without my permission. Please resolve this urgently.,Service Quality
+Complaint: The streaming service buffers endlessly on my high-speed connection.,Service Quality
+The product I received has scratches and looks like a used item. This has been going on for too long.,Product Defect
+This is unacceptable. My account access was blocked and support refuses to restore it.,Customer Support
+I want to report that my broadband router was replaced but the speed is still very low.,Service Quality
+My privacy settings were changed without my knowledge. Please resolve this urgently.,Other
+I want to report that the streaming quality is consistently poor despite high-speed subscription.,Service Quality
+I want to report that i am being charged for a service that has been non-functional for weeks.,Service Quality
+Complaint: I requested a billing correction two weeks ago with no response.,Billing Issue
+Complaint: A refund was promised but the credit never appeared on my statement.,Billing Issue
+The IVR system does not have an option for my specific problem. This has been going on for too long.,Customer Support
+The service is frequently unavailable during peak hours.,Service Quality
+I requested a callback but no one has called back after three days. Please resolve this urgently.,Customer Support
+I have a complaint but it does not fall into any specific category. I demand an immediate response.,Other
+I received only part of my order and the rest is missing. Please resolve this urgently.,Delivery Problem
+I requested a callback but no one has called back after three days. I demand an immediate response.,Customer Support
+I want to report that the agent promised a resolution but stopped responding after one reply.,Customer Support
+I want to report that the package box was completely crushed when I received it.,Delivery Problem
+I have a general concern about the terms of service I agreed to. Please resolve this urgently.,Other
+I want to report that my new television has dead pixels visible from the moment I turned it on.,Product Defect
+I want to report that my delivery was rescheduled twice without my consent.,Delivery Problem
+My internet speed is consistently below the minimum guaranteed in the plan.,Service Quality
+The support team closed my ticket without resolving the issue.,Customer Support
+I received a final notice for a bill I already paid in full. I demand an immediate response.,Billing Issue
+I want to escalate an unresolved issue from a previous complaint.,Other
+I want to report that the package was marked as delivered but I never received it.,Delivery Problem
+I want to report that i was given wrong information by the customer support team.,Customer Support
+I want to report that i subscribed for monthly service but it expired after just two weeks.,Service Quality
+This is unacceptable. The color of the product is completely different from the image shown.,Product Defect
+I am paying for premium service but am getting basic service features. Please resolve this urgently.,Service Quality
+My shoes have stitching defects and started coming apart immediately.,Product Defect
+The streaming quality is consistently poor despite high-speed subscription. This has been going on for too long.,Service Quality
+This is unacceptable. The platform keeps logging me out and I cannot access my account.,Service Quality
+The referral bonus I was promised was never credited to my account.,Other
+Complaint: I am not satisfied with the overall experience and want to escalate.,Other
+This is unacceptable. The payment I made online shows as failed but my bank confirms it went through.,Billing Issue
+My account shows a duplicate payment that was not refunded. This has been going on for too long.,Billing Issue
+My business email service has been down affecting my daily operations. Please resolve this urgently.,Service Quality
+I want to report suspicious activity on my account. This has been going on for too long.,Other
+My order was returned to sender without any notification to me.,Delivery Problem
+I was not given a delivery time slot and missed the delivery. This has been going on for too long.,Delivery Problem
+The promised installation date was missed and no rescheduling was offered. Please resolve this urgently.,Service Quality
+This is unacceptable. My complaint was marked as resolved without contacting me.,Customer Support
+I want to report that my package was delivered to a wrong address.,Delivery Problem
+Complaint: I want to formally withdraw my consent for data processing.,Other
+My account balance does not match the payment I submitted. This has been going on for too long.,Billing Issue
+This is unacceptable. I have a general concern about the terms of service I agreed to.,Other
+The delivery driver did not attempt delivery and left no notice. This has been going on for too long.,Delivery Problem
+My electronic device stopped charging after one week. This has been going on for too long.,Product Defect
+I want to report that a refund was promised but the credit never appeared on my statement.,Billing Issue
+My billing address was updated but invoices still go to the wrong address. I demand an immediate response.,Billing Issue
+This is unacceptable. My name on the account has a spelling error that support refuses to fix.,Other
+This is unacceptable. The promotional discount was not applied to my bill.,Billing Issue
+I received a final notice for a bill I already paid in full. This has been going on for too long.,Billing Issue
+The item I ordered stopped working after just two days of use. I demand an immediate response.,Product Defect
+I want to report that the resolution provided by support does not solve my actual problem.,Customer Support
+This is unacceptable. The GPS service on my device is inaccurate despite map updates.,Service Quality
+The platform keeps logging me out and I cannot access my account. Please resolve this urgently.,Service Quality
+My credit card was charged after I cancelled my subscription. I demand an immediate response.,Billing Issue
+I was told to visit a store but the store could not help with my online order. This has been going on for too long.,Customer Support
+I want to report that my headphones only work on one side due to a hardware defect.,Product Defect
+The account verification process is overly complicated and unfair. This has been going on for too long.,Other
+This is unacceptable. I am being charged late fees even though I paid on time.,Billing Issue
+I want to report that i was told my issue would be resolved in 24 hours but it has been a week.,Customer Support
+I received contradictory information from two different support agents. I demand an immediate response.,Customer Support
+I paid for express delivery but the package arrived standard. Please resolve this urgently.,Delivery Problem
+I upgraded my plan but the new features are not accessible to me. This has been going on for too long.,Service Quality
+I want to report that i want to close my account but the process is unnecessarily complicated.,Other
+My heavy furniture order was left outside instead of being brought inside. This has been going on for too long.,Delivery Problem
+I have concerns about the accessibility features of the service. Please resolve this urgently.,Other
+I was overcharged by double the agreed price.,Billing Issue
+The product arrived with a broken screen and cracks on the frame. Please resolve this urgently.,Product Defect
+I have been waiting on hold for over two hours with no answer.,Customer Support
+There is an unauthorized charge on my credit card statement. I demand an immediate response.,Billing Issue
+This is unacceptable. I received only part of my order and the rest is missing.,Delivery Problem
+My order was returned to sender without any notification to me. I demand an immediate response.,Delivery Problem
+The product I bought does not match the description on the website. Please resolve this urgently.,Product Defect
+The SLA guarantees 99 percent uptime but I have had 20 percent downtime. I demand an immediate response.,Service Quality
+This is unacceptable. The survey I was asked to complete contained misleading questions.,Other
+My internet speed is consistently below the minimum guaranteed in the plan. I demand an immediate response.,Service Quality
+The chatbot keeps sending me in circles and never resolves my issue. I demand an immediate response.,Customer Support
+The customer service helpline is unreachable during business hours. I demand an immediate response.,Customer Support
+I was asked to provide the same documents three times for one request. This has been going on for too long.,Customer Support
+Complaint: My new laptop battery drains in less than one hour.,Product Defect
+I want to report that my bill shows an extra fee that I never agreed to.,Billing Issue
+The item has rust and corrosion signs indicating it is not new.,Product Defect
+The terms and conditions I agreed to are not being honored. Please resolve this urgently.,Other
+Complaint: My headphones only work on one side due to a hardware defect.,Product Defect
+This is unacceptable. The product arrived with a broken screen and cracks on the frame.,Product Defect
+The promised installation date was missed and no rescheduling was offered. I demand an immediate response.,Service Quality
+I have a complaint but it does not fall into any specific category. Please resolve this urgently.,Other
+The food product I ordered was expired when it arrived. I demand an immediate response.,Product Defect
+The color of the product is completely different from the image shown. I demand an immediate response.,Product Defect
+The phone support has a very long wait time and often disconnects. I demand an immediate response.,Customer Support
+My printer cartridge was empty when it arrived as a new product.,Product Defect
+This is unacceptable. I am being billed for a premium plan but I only subscribed to the basic plan.,Billing Issue
+My support ticket has been open for 15 days with no resolution. This has been going on for too long.,Customer Support
+This is unacceptable. I was told to visit a store but the store could not help with my online order.,Customer Support
+The mobile network signal in my area is extremely weak all the time. I demand an immediate response.,Service Quality
+This is unacceptable. My new laptop battery drains in less than one hour.,Product Defect
+Complaint: The server keeps timing out when I try to use the online service.,Service Quality
+I received a damaged box and the item inside was missing. I demand an immediate response.,Delivery Problem
+The support staff lacks knowledge about the product I purchased. I demand an immediate response.,Customer Support
+The GPS service on my device is inaccurate despite map updates. Please resolve this urgently.,Service Quality
+The account verification process is overly complicated and unfair.,Other
+Complaint: The live chat support takes over 30 minutes just to connect to an agent.,Customer Support
+I received spam from this company after opting out of communications. Please resolve this urgently.,Other
+This is unacceptable. I received a threatening message from someone claiming to be from your company.,Other
+The jacket has an irreparable tear in the fabric from day one.,Product Defect
+This is unacceptable. The cloud storage service deleted my files without any warning.,Service Quality
+I requested a billing correction two weeks ago with no response. I demand an immediate response.,Billing Issue
+My EMI deduction is higher than what was agreed in the contract.,Billing Issue
+This is unacceptable. The courier service used is not trackable and I have no updates.,Delivery Problem
+An unknown subscription charge appeared on my account. I demand an immediate response.,Billing Issue
+Complaint: I have concerns about the environmental practices of this company.,Other
+The product arrived with a broken screen and cracks on the frame. I demand an immediate response.,Product Defect
+Complaint: The GPS service on my device is inaccurate despite map updates.,Service Quality
+I am not satisfied with the overall experience and want to escalate.,Other
+My delivery appointment was cancelled without informing me. Please resolve this urgently.,Delivery Problem
+I was charged twice for the same transaction on my account. Please resolve this urgently.,Billing Issue
+The payment I made online shows as failed but my bank confirms it went through. Please resolve this urgently.,Billing Issue
+My EMI deduction is higher than what was agreed in the contract. This has been going on for too long.,Billing Issue
+This is unacceptable. My order was returned to sender without any notification to me.,Delivery Problem
+I want to report that the loyalty program points I earned were deleted without explanation.,Other
+The payment I made online shows as failed but my bank confirms it went through. This has been going on for too long.,Billing Issue
+My new television has dead pixels visible from the moment I turned it on. Please resolve this urgently.,Product Defect
+Complaint: I am being charged for a service that has been non-functional for weeks.,Service Quality
+I was told to visit a store but the store could not help with my online order.,Customer Support
+I want to report that i have concerns about the accessibility features of the service.,Other
+The product packaging was tampered and the seal was already broken. This has been going on for too long.,Product Defect
+The software on my device has bugs and crashes frequently. I demand an immediate response.,Product Defect
+I want to report a technical vulnerability I found in your service. This has been going on for too long.,Other
+This is unacceptable. I am not satisfied with the overall experience and want to escalate.,Other
+I want to report that i have a general concern about the terms of service I agreed to.,Other
+My account access was blocked and support refuses to restore it. Please resolve this urgently.,Customer Support
+I cannot make calls through the VOIP service I subscribed to. This has been going on for too long.,Service Quality
+My follow-up emails are being ignored by the support department. Please resolve this urgently.,Customer Support
+The electrical appliance I bought sparks and is unsafe to use.,Product Defect
+I was charged a cancellation fee even though I cancelled within the window. This has been going on for too long.,Billing Issue
+I want to report that the payment I made online shows as failed but my bank confirms it went through.,Billing Issue
+My account shows a duplicate payment that was not refunded. I demand an immediate response.,Billing Issue
+My account was suspended without any violation on my part. This has been going on for too long.,Other
+Complaint: I have been waiting on hold for over two hours with no answer.,Customer Support
+My subscription box was not delivered this month without any notice.,Delivery Problem
+I asked to speak to a manager but was refused without reason. This has been going on for too long.,Customer Support
+I received an incorrect invoice with wrong amounts. This has been going on for too long.,Billing Issue
+My delivery was rescheduled twice without my consent. This has been going on for too long.,Delivery Problem
+I was transferred to five different agents and had to repeat my issue each time.,Customer Support
+This is unacceptable. The size of the item delivered is wrong despite correct order placement.,Product Defect
+This is unacceptable. The tracking number provided does not show any updates.,Delivery Problem
+I am experiencing frequent dropped calls despite being in a coverage area. This has been going on for too long.,Service Quality
+The service maintenance schedule was not communicated to subscribers.,Service Quality
+The wrong size was delivered and I need the correct item urgently. Please resolve this urgently.,Delivery Problem
+I was charged in a foreign currency without any prior notice. I demand an immediate response.,Billing Issue
+My headphones only work on one side due to a hardware defect. I demand an immediate response.,Product Defect
+The product packaging was tampered and the seal was already broken. I demand an immediate response.,Product Defect
+Complaint: I want to report a technical vulnerability I found in your service.,Other
+Complaint: I received a final notice for a bill I already paid in full.,Billing Issue
+I want to report that the agent I spoke to made commitments that have not been honored.,Customer Support
+The jacket has an irreparable tear in the fabric from day one. Please resolve this urgently.,Product Defect
+The item was missing key components when I unboxed it. This has been going on for too long.,Product Defect
+I want to report that my electronic device stopped charging after one week.,Product Defect
+My furniture arrived with a broken leg and cannot be assembled. Please resolve this urgently.,Product Defect
+I want to report that the glass item I ordered was shattered inside the packaging.,Product Defect
+The terms and conditions I agreed to are not being honored. I demand an immediate response.,Other
+This is unacceptable. My shipment has been stuck at the warehouse for two weeks.,Delivery Problem
+Complaint: The service is frequently unavailable during peak hours.,Service Quality
+Complaint: I received a legal notice that seems to be sent in error to my address.,Other
+I was charged a cancellation fee even though I cancelled within the window.,Billing Issue
+I want to report a technical vulnerability I found in your service.,Other
+This is unacceptable. My appliance overheats and shuts down automatically.,Product Defect
+This is unacceptable. The mobile network signal in my area is extremely weak all the time.,Service Quality
+The SLA guarantees 99 percent uptime but I have had 20 percent downtime. This has been going on for too long.,Service Quality
+My credit card was charged after I cancelled my subscription.,Billing Issue
+I want to report that my complaint was marked as resolved without contacting me.,Customer Support
+This is unacceptable. I would like to request information about my personal data being used.,Other
+My furniture arrived with a broken leg and cannot be assembled. This has been going on for too long.,Product Defect
+I received a legal notice that seems to be sent in error to my address. I demand an immediate response.,Other
+This is unacceptable. The item was missing key components when I unboxed it.,Product Defect
+The survey I was asked to complete contained misleading questions. Please resolve this urgently.,Other
+The color of the product is completely different from the image shown.,Product Defect
+I have a complaint but it does not fall into any specific category.,Other
+I received a legal notice that seems to be sent in error to my address. This has been going on for too long.,Other
+The product key I received is invalid and cannot be activated. I demand an immediate response.,Product Defect
+This is unacceptable. I have concerns about the environmental practices of this company.,Other
+I received spam from this company after opting out of communications. This has been going on for too long.,Other
+The service maintenance schedule was not communicated to subscribers. This has been going on for too long.,Service Quality
+I want to report that the live chat support takes over 30 minutes just to connect to an agent.,Customer Support
+Complaint: An incorrect tax amount was applied to my recent purchase.,Billing Issue
+The customer service helpline is unreachable during business hours.,Customer Support
+This is unacceptable. I want to escalate an unresolved issue from a previous complaint.,Other
+The server keeps timing out when I try to use the online service. This has been going on for too long.,Service Quality
+This is unacceptable. My account was suspended without any violation on my part.,Other
+Complaint: The support system does not allow me to attach evidence to my ticket.,Customer Support
+I was charged a cancellation fee even though I cancelled within the window. Please resolve this urgently.,Billing Issue
+This is unacceptable. I need a formal acknowledgment letter for a complaint I filed earlier.,Other
+My automatic payment was debited twice this month. This has been going on for too long.,Billing Issue
+Complaint: My account merge request has been pending for over two months.,Other
+My smart home service disconnects every few hours and needs manual reset. Please resolve this urgently.,Service Quality
+I received an overdue notice for an invoice the system never sent me. I demand an immediate response.,Billing Issue
+I received a generic response that did not address my specific complaint. Please resolve this urgently.,Customer Support
+The support system does not allow me to attach evidence to my ticket. This has been going on for too long.,Customer Support
+The streaming service buffers endlessly on my high-speed connection.,Service Quality
+This is unacceptable. I have a complaint but it does not fall into any specific category.,Other
+The service maintenance schedule was not communicated to subscribers. I demand an immediate response.,Service Quality
+This is unacceptable. I cannot make calls through the VOIP service I subscribed to.,Service Quality
+The food product I ordered was expired when it arrived. This has been going on for too long.,Product Defect
+My international shipment has been held at customs for 30 days. This has been going on for too long.,Delivery Problem
+My heavy furniture order was left outside instead of being brought inside.,Delivery Problem
+The live chat support takes over 30 minutes just to connect to an agent. I demand an immediate response.,Customer Support
+I was overcharged by double the agreed price. Please resolve this urgently.,Billing Issue
+An unknown subscription charge appeared on my account. Please resolve this urgently.,Billing Issue
+This is unacceptable. The customer service helpline is unreachable during business hours.,Customer Support
+Complaint: The product packaging was tampered and the seal was already broken.,Product Defect
+The phone I purchased has a manufacturing defect in the camera. Please resolve this urgently.,Product Defect
+I was not given a delivery time slot and missed the delivery. I demand an immediate response.,Delivery Problem
+This is unacceptable. My escalation request was acknowledged but never followed up.,Customer Support
+The server keeps timing out when I try to use the online service. Please resolve this urgently.,Service Quality
+I want to report that i was billed for a service I cancelled three months ago.,Billing Issue
+I was told my issue would be resolved in 24 hours but it has been a week.,Customer Support
+I received contradictory information from two different support agents.,Customer Support
+My EMI deduction is higher than what was agreed in the contract. I demand an immediate response.,Billing Issue
+This is unacceptable. An incorrect tax amount was applied to my recent purchase.,Billing Issue
+I want to report that i cannot make calls through the VOIP service I subscribed to.,Service Quality
+The tracking number provided does not show any updates. Please resolve this urgently.,Delivery Problem
+The food product I ordered was expired when it arrived. Please resolve this urgently.,Product Defect
+Complaint: My automatic payment was debited twice this month.,Billing Issue
+I want to report that the service was suspended without any prior notification or warning.,Service Quality
+I received someone else order instead of my own.,Delivery Problem
+This is unacceptable. The product I ordered is out of stock but I was not informed before delivery.,Delivery Problem
+This is unacceptable. The phone support has a very long wait time and often disconnects.,Customer Support
+I want to report that i subscribed to roaming services but they did not activate abroad.,Service Quality
+My name on the account has a spelling error that support refuses to fix.,Other
+Complaint: My delivery was rescheduled twice without my consent.,Delivery Problem
+Complaint: My package was held at the post office and I never got the collection notice.,Delivery Problem
+This is unacceptable. I was asked to provide the same documents three times for one request.,Customer Support
+Complaint: My package was delivered to a wrong address.,Delivery Problem
+My watch stopped working within a week of purchase. Please resolve this urgently.,Product Defect
+Complaint: I am being billed for a premium plan but I only subscribed to the basic plan.,Billing Issue
+I was given wrong information by the customer support team.,Customer Support
+I want to report misleading advertising claims made by the company.,Other
+Complaint: I was asked to provide the same documents three times for one request.,Customer Support
+This is unacceptable. My delivery appointment was cancelled without informing me.,Delivery Problem
+Complaint: The support agent was rude and dismissive about my issue.,Customer Support
+The streaming service buffers endlessly on my high-speed connection. I demand an immediate response.,Service Quality
+The wrong size was delivered and I need the correct item urgently. I demand an immediate response.,Delivery Problem
+I received a threatening message from someone claiming to be from your company. This has been going on for too long.,Other
+The service was suspended without any prior notification or warning. I demand an immediate response.,Service Quality
+The food product I ordered was expired when it arrived.,Product Defect
+My billing address was updated but invoices still go to the wrong address. Please resolve this urgently.,Billing Issue
+I submitted a complaint online but received no confirmation or response. Please resolve this urgently.,Customer Support
+My account access was blocked and support refuses to restore it. I demand an immediate response.,Customer Support
+My billing address was updated but invoices still go to the wrong address. This has been going on for too long.,Billing Issue
+My TV channels keep disappearing from the subscription package. Please resolve this urgently.,Service Quality
+The support agent was rude and dismissive about my issue.,Customer Support
+An unknown subscription charge appeared on my account.,Billing Issue
+The package was marked as delivered but I never received it. This has been going on for too long.,Delivery Problem
+The tracking number provided does not show any updates. I demand an immediate response.,Delivery Problem
+This is unacceptable. I want to close my account but the process is unnecessarily complicated.,Other
+The cloud storage service deleted my files without any warning. I demand an immediate response.,Service Quality
+I have been waiting four weeks for a replacement shipment. I demand an immediate response.,Delivery Problem
+My follow-up emails are being ignored by the support department.,Customer Support
+I want to report that i am experiencing frequent dropped calls despite being in a coverage area.,Service Quality
+I have concerns about the accessibility features of the service. This has been going on for too long.,Other
+I paid for express delivery but the package arrived standard. This has been going on for too long.,Delivery Problem
+I want to report that my internet speed is consistently below the minimum guaranteed in the plan.,Service Quality
+I was told my issue would be resolved in 24 hours but it has been a week. I demand an immediate response.,Customer Support
+Complaint: My support ticket has been open for 15 days with no resolution.,Customer Support
+This is unacceptable. I see foreign transaction fees on purchases made locally.,Billing Issue
+This is unacceptable. My order shows out for delivery for three days but nothing arrived.,Delivery Problem
+I want to report that my privacy settings were changed without my knowledge.,Other
+The item was missing key components when I unboxed it. Please resolve this urgently.,Product Defect
+The promised installation date was missed and no rescheduling was offered.,Service Quality
+My shipment has been stuck at the warehouse for two weeks. This has been going on for too long.,Delivery Problem
+I am experiencing frequent dropped calls despite being in a coverage area. Please resolve this urgently.,Service Quality
+I want to report that the delivery confirmation email shows the wrong item was sent.,Delivery Problem
+The terms and conditions I agreed to are not being honored.,Other
+I was told to visit a store but the store could not help with my online order. Please resolve this urgently.,Customer Support
+I want to report that the food product I ordered was expired when it arrived.,Product Defect
+I have been waiting on hold for over two hours with no answer. This has been going on for too long.,Customer Support
+I have a complaint but it does not fall into any specific category. This has been going on for too long.,Other
+I received a damaged box and the item inside was missing. This has been going on for too long.,Delivery Problem
+My account merge request has been pending for over two months.,Other
+This is unacceptable. My headphones only work on one side due to a hardware defect.,Product Defect
+I want to report that i paid for express delivery but the package arrived standard.,Delivery Problem
+The service was suspended without any prior notification or warning. This has been going on for too long.,Service Quality
+My order was returned to sender without any notification to me. Please resolve this urgently.,Delivery Problem
+I was billed for a service I cancelled three months ago. This has been going on for too long.,Billing Issue
+My bill shows an extra fee that I never agreed to.,Billing Issue
+There is an unauthorized charge on my credit card statement.,Billing Issue
+I was charged in a foreign currency without any prior notice. Please resolve this urgently.,Billing Issue
+Complaint: The color of the product is completely different from the image shown.,Product Defect
+This is unacceptable. The refund I requested 30 days ago has not been processed.,Billing Issue
+I want to close my account but the process is unnecessarily complicated. Please resolve this urgently.,Other
+The package box was completely crushed when I received it. I demand an immediate response.,Delivery Problem
+The scheduled maintenance keeps happening during my working hours. I demand an immediate response.,Service Quality
+The streaming service buffers endlessly on my high-speed connection. This has been going on for too long.,Service Quality
+The support team closed my ticket without resolving the issue. Please resolve this urgently.,Customer Support
+I want to report that the refund I requested 30 days ago has not been processed.,Billing Issue
+I have a feedback that I want to formally register as a complaint. This has been going on for too long.,Other
+Complaint: My watch stopped working within a week of purchase.,Product Defect
+I want to report that the courier service used is not trackable and I have no updates.,Delivery Problem
+I want to report that my printer cartridge was empty when it arrived as a new product.,Product Defect
+This is unacceptable. My account shows active but none of the services are working.,Service Quality
+I want to report that my statement has errors and shows charges I do not recognize.,Billing Issue
+This is unacceptable. The fabric of the clothing item I ordered has a visible defect.,Product Defect
+The warehouse shows my item as shipped but tracking shows no movement.,Delivery Problem
+The refund I requested 30 days ago has not been processed. I demand an immediate response.,Billing Issue
+My account access was blocked and support refuses to restore it. This has been going on for too long.,Customer Support
+The package was marked as delivered but I never received it. I demand an immediate response.,Delivery Problem
+My bill shows an extra fee that I never agreed to. I demand an immediate response.,Billing Issue
+This is unacceptable. The SLA guarantees 99 percent uptime but I have had 20 percent downtime.,Service Quality
+I want to report that the customer service helpline is unreachable during business hours.,Customer Support
+This is unacceptable. The product I bought does not match the description on the website.,Product Defect
+Complaint: The phone support has a very long wait time and often disconnects.,Customer Support
+There is an unauthorized charge on my credit card statement. This has been going on for too long.,Billing Issue
+I subscribed for monthly service but it expired after just two weeks. I demand an immediate response.,Service Quality
+My credit card was charged after I cancelled my subscription. Please resolve this urgently.,Billing Issue
+I want to report that i was overcharged by double the agreed price.,Billing Issue
+My electronic device stopped charging after one week.,Product Defect
+This is unacceptable. I have been waiting four weeks for a replacement shipment.,Delivery Problem
+I want to report that my name on the account has a spelling error that support refuses to fix.,Other
+I want to report that the mobile network signal in my area is extremely weak all the time.,Service Quality
+I was overcharged by double the agreed price. This has been going on for too long.,Billing Issue
+My account was suspended without any violation on my part.,Other
+My account merge request has been pending for over two months. I demand an immediate response.,Other
+I was not given a delivery time slot and missed the delivery. Please resolve this urgently.,Delivery Problem
+This is unacceptable. My credit card was charged after I cancelled my subscription.,Billing Issue
+I want to report that i received a final notice for a bill I already paid in full.,Billing Issue
+I was charged twice for the same transaction on my account.,Billing Issue
+This is unacceptable. My business email service has been down affecting my daily operations.,Service Quality
+I received only part of my order and the rest is missing. This has been going on for too long.,Delivery Problem
+The service outage has been going on for three days with no update. This has been going on for too long.,Service Quality
+This is unacceptable. My electronic device stopped charging after one week.,Product Defect
+A refund was promised but the credit never appeared on my statement.,Billing Issue
+Complaint: I received a threatening message from someone claiming to be from your company.,Other
+Complaint: My bill shows an extra fee that I never agreed to.,Billing Issue
+Complaint: The wrong size was delivered and I need the correct item urgently.,Delivery Problem
+A refund was promised but the credit never appeared on my statement. This has been going on for too long.,Billing Issue
+I received contradictory information from two different support agents. Please resolve this urgently.,Customer Support
+The courier service used is not trackable and I have no updates. Please resolve this urgently.,Delivery Problem
+I received an overdue notice for an invoice the system never sent me.,Billing Issue
+Complaint: The refund I requested 30 days ago has not been processed.,Billing Issue
+I received an incorrect invoice with wrong amounts.,Billing Issue
+The account verification process is overly complicated and unfair. Please resolve this urgently.,Other
+This is unacceptable. The package box was completely crushed when I received it.,Delivery Problem
+The resolution provided by support does not solve my actual problem.,Customer Support
+The product I ordered is out of stock but I was not informed before delivery. I demand an immediate response.,Delivery Problem
+This is unacceptable. The item has rust and corrosion signs indicating it is not new.,Product Defect
+My billing address was updated but invoices still go to the wrong address.,Billing Issue
+I want to report that an unknown subscription charge appeared on my account.,Billing Issue
+I asked to speak to a manager but was refused without reason. I demand an immediate response.,Customer Support
+The warehouse shows my item as shipped but tracking shows no movement. I demand an immediate response.,Delivery Problem
+My order shows out for delivery for three days but nothing arrived.,Delivery Problem
+This is unacceptable. I have been waiting on hold for over two hours with no answer.,Customer Support
+I want to report suspicious activity on my account.,Other
+The courier service used is not trackable and I have no updates.,Delivery Problem
+I am being harassed by repeated automated calls from this company. I demand an immediate response.,Other
+My shoes have stitching defects and started coming apart immediately. This has been going on for too long.,Product Defect
+This is unacceptable. I am unhappy with the policy changes that were made without notice.,Other
+Complaint: My internet speed is consistently below the minimum guaranteed in the plan.,Service Quality
+I see foreign transaction fees on purchases made locally. I demand an immediate response.,Billing Issue
+I want to report that i am not satisfied with the overall experience and want to escalate.,Other
+This is unacceptable. The support staff lacks knowledge about the product I purchased.,Customer Support
+I want to report that my data was shared with a third party without my explicit consent.,Other
+Complaint: The delivery estimate keeps changing and no one explains why.,Delivery Problem
+My package was held at the post office and I never got the collection notice. I demand an immediate response.,Delivery Problem
+My account shows a duplicate payment that was not refunded. Please resolve this urgently.,Billing Issue
+This is unacceptable. I received a generic response that did not address my specific complaint.,Customer Support
+This is unacceptable. The support system does not allow me to attach evidence to my ticket.,Customer Support
+I want to report that my appliance overheats and shuts down automatically.,Product Defect
+The same order was delivered twice and I am being asked to return one at my cost. I demand an immediate response.,Delivery Problem
+I asked to speak to a manager but was refused without reason. Please resolve this urgently.,Customer Support
+I want to report that the internet service I am paying for has been down for five days.,Service Quality
+I want to report that my order was supposed to arrive three days ago and has not been delivered.,Delivery Problem
+This is unacceptable. I have been charged a service fee that was not in the terms.,Billing Issue
+I am experiencing frequent dropped calls despite being in a coverage area. I demand an immediate response.,Service Quality
+I want to report that my loyalty points were deducted but the discount was never applied to the bill.,Billing Issue
+My electronic device stopped charging after one week. Please resolve this urgently.,Product Defect
+I want to report that my package was held at the post office and I never got the collection notice.,Delivery Problem
+The product I bought does not match the description on the website. This has been going on for too long.,Product Defect
+Complaint: The mobile network signal in my area is extremely weak all the time.,Service Quality
+This is unacceptable. My bill shows an extra fee that I never agreed to.,Billing Issue
+The item I ordered stopped working after just two days of use.,Product Defect
+My package was delivered to a wrong address.,Delivery Problem
+I want to report that the streaming service buffers endlessly on my high-speed connection.,Service Quality
+This is unacceptable. I am paying for premium service but am getting basic service features.,Service Quality
+I want to report that my credit card was charged after I cancelled my subscription.,Billing Issue
+The service was suspended without any prior notification or warning.,Service Quality
+I would like to request information about my personal data being used. I demand an immediate response.,Other
+This is unacceptable. I requested a billing correction two weeks ago with no response.,Billing Issue
+I received a threatening message from someone claiming to be from your company.,Other
+The SLA guarantees 99 percent uptime but I have had 20 percent downtime.,Service Quality
+The delivery estimate keeps changing and no one explains why. This has been going on for too long.,Delivery Problem
+This is unacceptable. My order was split into three deliveries but only one arrived.,Delivery Problem
+My loyalty points were deducted but the discount was never applied to the bill. Please resolve this urgently.,Billing Issue
+The item was missing key components when I unboxed it. I demand an immediate response.,Product Defect
+Complaint: I would like to request information about my personal data being used.,Other
+My watch stopped working within a week of purchase. I demand an immediate response.,Product Defect
+I want to report that there is an unauthorized charge on my credit card statement.,Billing Issue
+I have concerns about the environmental practices of this company.,Other
+I want to report that the item has rust and corrosion signs indicating it is not new.,Product Defect
+My broadband router was replaced but the speed is still very low. Please resolve this urgently.,Service Quality
+My TV channels keep disappearing from the subscription package. I demand an immediate response.,Service Quality
+The phone I purchased has a manufacturing defect in the camera. I demand an immediate response.,Product Defect
+The live chat support takes over 30 minutes just to connect to an agent. This has been going on for too long.,Customer Support
+The item was missing key components when I unboxed it.,Product Defect
+The package box was completely crushed when I received it.,Delivery Problem
+Complaint: I cannot make calls through the VOIP service I subscribed to.,Service Quality
+The mobile network signal in my area is extremely weak all the time. This has been going on for too long.,Service Quality
+The delivery estimate keeps changing and no one explains why. I demand an immediate response.,Delivery Problem
+Complaint: The terms and conditions I agreed to are not being honored.,Other
+This is unacceptable. I received contradictory information from two different support agents.,Customer Support
+I am unable to delete my account despite multiple requests. I demand an immediate response.,Other
+Complaint: My complaint was marked as resolved without contacting me.,Customer Support
+The promised installation date was missed and no rescheduling was offered. This has been going on for too long.,Service Quality
+The wrong size was delivered and I need the correct item urgently.,Delivery Problem
+This is unacceptable. I subscribed for monthly service but it expired after just two weeks.,Service Quality
+My privacy settings were changed without my knowledge.,Other
+My smart home service disconnects every few hours and needs manual reset. I demand an immediate response.,Service Quality
+This is unacceptable. I want to report suspicious activity on my account.,Other
+I want to report that i want to report suspicious activity on my account.,Other
+The fabric of the clothing item I ordered has a visible defect. This has been going on for too long.,Product Defect
+My privacy settings were changed without my knowledge. I demand an immediate response.,Other
+This is unacceptable. My international shipment has been held at customs for 30 days.,Delivery Problem
+I want to report that i was told to visit a store but the store could not help with my online order.,Customer Support
+The warehouse shows my item as shipped but tracking shows no movement. This has been going on for too long.,Delivery Problem
+My automatic payment was debited twice this month. Please resolve this urgently.,Billing Issue
+There is an unauthorized charge on my credit card statement. Please resolve this urgently.,Billing Issue
+The delivery confirmation email shows the wrong item was sent. This has been going on for too long.,Delivery Problem
+I received a damaged box and the item inside was missing. Please resolve this urgently.,Delivery Problem
+The support staff lacks knowledge about the product I purchased.,Customer Support
+Complaint: Support said they would send an email but I never received it.,Customer Support
+I want to report that the tool I ordered broke on first use which indicates poor quality.,Product Defect
+My appliance overheats and shuts down automatically.,Product Defect
+My name on the account has a spelling error that support refuses to fix. This has been going on for too long.,Other
+This is unacceptable. I was charged in a foreign currency without any prior notice.,Billing Issue
+Complaint: I have been waiting four weeks for a replacement shipment.,Delivery Problem
+My broadband router was replaced but the speed is still very low. This has been going on for too long.,Service Quality
+Complaint: My account shows active but none of the services are working.,Service Quality
+The resolution provided by support does not solve my actual problem. This has been going on for too long.,Customer Support
+The mobile network signal in my area is extremely weak all the time.,Service Quality
+The IVR system does not have an option for my specific problem. I demand an immediate response.,Customer Support
+I want to report that the promised installation date was missed and no rescheduling was offered.,Service Quality
+My account shows active but none of the services are working. This has been going on for too long.,Service Quality
+My order shows out for delivery for three days but nothing arrived. I demand an immediate response.,Delivery Problem
+The delivery estimate keeps changing and no one explains why. Please resolve this urgently.,Delivery Problem
+This is unacceptable. The agent promised a resolution but stopped responding after one reply.,Customer Support
+The agent promised a resolution but stopped responding after one reply. This has been going on for too long.,Customer Support
+The tracking number provided does not show any updates. This has been going on for too long.,Delivery Problem
+The promotional discount was not applied to my bill. This has been going on for too long.,Billing Issue
+My name on the account has a spelling error that support refuses to fix. Please resolve this urgently.,Other
+The internet service I am paying for has been down for five days. Please resolve this urgently.,Service Quality
+Complaint: The account verification process is overly complicated and unfair.,Other
+The item I ordered stopped working after just two days of use. Please resolve this urgently.,Product Defect
+My furniture arrived with a broken leg and cannot be assembled.,Product Defect
+My package was delivered to a wrong address. This has been going on for too long.,Delivery Problem
+Complaint: My smart home service disconnects every few hours and needs manual reset.,Service Quality
+The courier left my package in the wrong location.,Delivery Problem
+This is unacceptable. I am being charged for a service that has been non-functional for weeks.,Service Quality
+I received only part of my order and the rest is missing.,Delivery Problem
+I want to report that my account merge request has been pending for over two months.,Other
+I want to report that i requested a billing correction two weeks ago with no response.,Billing Issue
+This is unacceptable. The glass item I ordered was shattered inside the packaging.,Product Defect
+My wallet deduction was processed but the service was not provided. This has been going on for too long.,Billing Issue
+Complaint: I received a damaged box and the item inside was missing.,Delivery Problem
+The tool I ordered broke on first use which indicates poor quality. I demand an immediate response.,Product Defect
+I want to report that the wrong size was delivered and I need the correct item urgently.,Delivery Problem
+Complaint: The glass item I ordered was shattered inside the packaging.,Product Defect
+My order was supposed to arrive three days ago and has not been delivered.,Delivery Problem
+I want to report that my follow-up emails are being ignored by the support department.,Customer Support
+I want to report that the delivery driver did not attempt delivery and left no notice.,Delivery Problem
+I want to report that my business email service has been down affecting my daily operations.,Service Quality
+This is unacceptable. The service maintenance schedule was not communicated to subscribers.,Service Quality
+I want to report misleading advertising claims made by the company. This has been going on for too long.,Other
+Support said they would send an email but I never received it. This has been going on for too long.,Customer Support
+Complaint: The cloud storage service deleted my files without any warning.,Service Quality
+Complaint: My billing address was updated but invoices still go to the wrong address.,Billing Issue
+My shoes have stitching defects and started coming apart immediately. Please resolve this urgently.,Product Defect
+My order shows out for delivery for three days but nothing arrived. Please resolve this urgently.,Delivery Problem
+I want to report that i have been waiting on hold for over two hours with no answer.,Customer Support
+I want to report that my shipment has been stuck at the warehouse for two weeks.,Delivery Problem
+I subscribed to roaming services but they did not activate abroad. This has been going on for too long.,Service Quality
+This is unacceptable. My wallet deduction was processed but the service was not provided.,Billing Issue
+This is unacceptable. I was charged twice for the same transaction on my account.,Billing Issue
+The support agent disconnected the call while I was explaining my problem. I demand an immediate response.,Customer Support
+This is unacceptable. The software on my device has bugs and crashes frequently.,Product Defect
+The same order was delivered twice and I am being asked to return one at my cost. Please resolve this urgently.,Delivery Problem
+My international shipment has been held at customs for 30 days.,Delivery Problem
+My broadband router was replaced but the speed is still very low.,Service Quality
+This is unacceptable. My new television has dead pixels visible from the moment I turned it on.,Product Defect
+This is unacceptable. The terms and conditions I agreed to are not being honored.,Other
+The phone I purchased has a manufacturing defect in the camera.,Product Defect
+I requested a callback but no one has called back after three days.,Customer Support
+Complaint: My TV channels keep disappearing from the subscription package.,Service Quality
+My account was suspended without any violation on my part. I demand an immediate response.,Other
+I want to report that the IVR system does not have an option for my specific problem.,Customer Support
+Complaint: I am being charged late fees even though I paid on time.,Billing Issue
+Complaint: The support agent disconnected the call while I was explaining my problem.,Customer Support
+Complaint: I have concerns about the accessibility features of the service.,Other
+Complaint: The courier left my package in the wrong location.,Delivery Problem
+Complaint: The payment I made online shows as failed but my bank confirms it went through.,Billing Issue
+I was transferred to five different agents and had to repeat my issue each time. I demand an immediate response.,Customer Support
+I was transferred to five different agents and had to repeat my issue each time. Please resolve this urgently.,Customer Support
+Complaint: The warehouse shows my item as shipped but tracking shows no movement.,Delivery Problem
+The electrical appliance I bought sparks and is unsafe to use. This has been going on for too long.,Product Defect
+My shipment has been stuck at the warehouse for two weeks.,Delivery Problem
+My complaint was marked as resolved without contacting me. Please resolve this urgently.,Customer Support
+This is unacceptable. The jacket has an irreparable tear in the fabric from day one.,Product Defect
+This is unacceptable. My account merge request has been pending for over two months.,Other
+Complaint: The streaming quality is consistently poor despite high-speed subscription.,Service Quality
+I want to report that i am being billed for a premium plan but I only subscribed to the basic plan.,Billing Issue
+I want to close my account but the process is unnecessarily complicated. This has been going on for too long.,Other
+My account shows active but none of the services are working.,Service Quality
+I subscribed for monthly service but it expired after just two weeks. This has been going on for too long.,Service Quality
+I have been waiting four weeks for a replacement shipment.,Delivery Problem
+I want to report that the product I ordered is out of stock but I was not informed before delivery.,Delivery Problem
+The internet service I am paying for has been down for five days. This has been going on for too long.,Service Quality
+My support ticket has been open for 15 days with no resolution. I demand an immediate response.,Customer Support
+I want to report that i have concerns about the environmental practices of this company.,Other
+The product key I received is invalid and cannot be activated. Please resolve this urgently.,Product Defect
+I was asked to provide the same documents three times for one request.,Customer Support
+The delivery confirmation email shows the wrong item was sent.,Delivery Problem
+The chatbot keeps sending me in circles and never resolves my issue. This has been going on for too long.,Customer Support
+I see foreign transaction fees on purchases made locally.,Billing Issue
+Complaint: I am unable to delete my account despite multiple requests.,Other
+Complaint: The package box was completely crushed when I received it.,Delivery Problem
+The product key I received is invalid and cannot be activated. This has been going on for too long.,Product Defect
+My internet speed is consistently below the minimum guaranteed in the plan. Please resolve this urgently.,Service Quality
+I want to report that the toy I ordered for my child has broken pieces and is unsafe.,Product Defect
+The product I received has scratches and looks like a used item.,Product Defect
+I want to report that the software on my device has bugs and crashes frequently.,Product Defect
+Complaint: The tracking number provided does not show any updates.,Delivery Problem
+Complaint: The promotional discount was not applied to my bill.,Billing Issue
+Complaint: My data was shared with a third party without my explicit consent.,Other
+I am being billed for a premium plan but I only subscribed to the basic plan. This has been going on for too long.,Billing Issue
+My account shows active but none of the services are working. Please resolve this urgently.,Service Quality
+My wallet deduction was processed but the service was not provided. Please resolve this urgently.,Billing Issue
+I want to report that i am being charged late fees even though I paid on time.,Billing Issue
+The resolution provided by support does not solve my actual problem. Please resolve this urgently.,Customer Support
+The streaming quality is consistently poor despite high-speed subscription. I demand an immediate response.,Service Quality
+I want to formally withdraw my consent for data processing. I demand an immediate response.,Other
+My account shows a duplicate payment that was not refunded.,Billing Issue
+I want to report suspicious activity on my account. I demand an immediate response.,Other
+Complaint: The support team closed my ticket without resolving the issue.,Customer Support
+I was charged a cancellation fee even though I cancelled within the window. I demand an immediate response.,Billing Issue
+I am being charged for a service that has been non-functional for weeks. This has been going on for too long.,Service Quality
+Complaint: I have a feedback that I want to formally register as a complaint.,Other
+This is unacceptable. My privacy settings were changed without my knowledge.,Other
+My credit card was charged after I cancelled my subscription. This has been going on for too long.,Billing Issue
+This is unacceptable. My subscription box was not delivered this month without any notice.,Delivery Problem
+My watch stopped working within a week of purchase. This has been going on for too long.,Product Defect
+My follow-up emails are being ignored by the support department. I demand an immediate response.,Customer Support
+The size of the item delivered is wrong despite correct order placement.,Product Defect
+My furniture arrived with a broken leg and cannot be assembled. I demand an immediate response.,Product Defect
+This is unacceptable. My smart home service disconnects every few hours and needs manual reset.,Service Quality
+I received someone else order instead of my own. I demand an immediate response.,Delivery Problem
+The scheduled maintenance keeps happening during my working hours. Please resolve this urgently.,Service Quality
+My support ticket has been open for 15 days with no resolution. Please resolve this urgently.,Customer Support
+I received a threatening message from someone claiming to be from your company. Please resolve this urgently.,Other
+I cannot make calls through the VOIP service I subscribed to. Please resolve this urgently.,Service Quality
+I am unhappy with the policy changes that were made without notice. This has been going on for too long.,Other
+The glass item I ordered was shattered inside the packaging. Please resolve this urgently.,Product Defect
+Complaint: My account shows a duplicate payment that was not refunded.,Billing Issue
+This is unacceptable. The phone I purchased has a manufacturing defect in the camera.,Product Defect
+My data was shared with a third party without my explicit consent.,Other
+I was charged twice for the same transaction on my account. I demand an immediate response.,Billing Issue
+My new mobile phone has a ghost touch issue on the screen. This has been going on for too long.,Product Defect
+My order was split into three deliveries but only one arrived. This has been going on for too long.,Delivery Problem
+Complaint: I was charged in a foreign currency without any prior notice.,Billing Issue
+I want to report that i have a feedback that I want to formally register as a complaint.,Other
+The package was marked as delivered but I never received it. Please resolve this urgently.,Delivery Problem
+The package box was completely crushed when I received it. This has been going on for too long.,Delivery Problem
+Complaint: I have a complaint but it does not fall into any specific category.,Other
+Complaint: I received a generic response that did not address my specific complaint.,Customer Support
+My follow-up emails are being ignored by the support department. This has been going on for too long.,Customer Support
+I want to report that the SLA guarantees 99 percent uptime but I have had 20 percent downtime.,Service Quality
+I received an overdue notice for an invoice the system never sent me. This has been going on for too long.,Billing Issue
+I cannot make calls through the VOIP service I subscribed to.,Service Quality
+I was billed for a service I cancelled three months ago. I demand an immediate response.,Billing Issue
+A refund was promised but the credit never appeared on my statement. Please resolve this urgently.,Billing Issue
+This is unacceptable. The electrical appliance I bought sparks and is unsafe to use.,Product Defect
+Complaint: The item has rust and corrosion signs indicating it is not new.,Product Defect
+I was not given a delivery time slot and missed the delivery.,Delivery Problem
+Complaint: I received only part of my order and the rest is missing.,Delivery Problem
+I want to report that the product arrived with a broken screen and cracks on the frame.,Product Defect
+This is unacceptable. I asked to speak to a manager but was refused without reason.,Customer Support
+I have concerns about the accessibility features of the service. I demand an immediate response.,Other
+This is unacceptable. I am unable to delete my account despite multiple requests.,Other
+The support agent disconnected the call while I was explaining my problem.,Customer Support
+I want to report that i would like to request information about my personal data being used.,Other
+My order shows out for delivery for three days but nothing arrived. This has been going on for too long.,Delivery Problem
+The live chat support takes over 30 minutes just to connect to an agent.,Customer Support
+Complaint: The electrical appliance I bought sparks and is unsafe to use.,Product Defect
+This is unacceptable. I was given wrong information by the customer support team.,Customer Support
+The resolution provided by support does not solve my actual problem. I demand an immediate response.,Customer Support
+My package was held at the post office and I never got the collection notice. This has been going on for too long.,Delivery Problem
+The cloud storage service deleted my files without any warning. This has been going on for too long.,Service Quality
+Complaint: I am being harassed by repeated automated calls from this company.,Other
+This is unacceptable. My subscription plan was downgraded without my permission.,Service Quality
+I want to report that i was charged a cancellation fee even though I cancelled within the window.,Billing Issue
+My new mobile phone has a ghost touch issue on the screen.,Product Defect
+The same order was delivered twice and I am being asked to return one at my cost. This has been going on for too long.,Delivery Problem
+The product I ordered is out of stock but I was not informed before delivery.,Delivery Problem
+I have concerns about the accessibility features of the service.,Other
+I want to report that the support agent was rude and dismissive about my issue.,Customer Support
+I subscribed for monthly service but it expired after just two weeks.,Service Quality
+The software on my device has bugs and crashes frequently. Please resolve this urgently.,Product Defect
+I have concerns about the environmental practices of this company. This has been going on for too long.,Other
+The support agent was rude and dismissive about my issue. This has been going on for too long.,Customer Support
+Complaint: My international shipment has been held at customs for 30 days.,Delivery Problem
+I want to report that my watch stopped working within a week of purchase.,Product Defect
+This is unacceptable. A refund was promised but the credit never appeared on my statement.,Billing Issue
+This is unacceptable. I have concerns about the accessibility features of the service.,Other
+A refund was promised but the credit never appeared on my statement. I demand an immediate response.,Billing Issue
+This is unacceptable. My follow-up emails are being ignored by the support department.,Customer Support
+My TV channels keep disappearing from the subscription package.,Service Quality
+I want to report that i asked to speak to a manager but was refused without reason.,Customer Support
+The software on my device has bugs and crashes frequently.,Product Defect
+Complaint: My order was returned to sender without any notification to me.,Delivery Problem
+The courier left my package in the wrong location. Please resolve this urgently.,Delivery Problem
+Complaint: I upgraded my plan but the new features are not accessible to me.,Service Quality
+I want to report that my account was suspended without any violation on my part.,Other
+This is unacceptable. My printer cartridge was empty when it arrived as a new product.,Product Defect
+This is unacceptable. I received an overdue notice for an invoice the system never sent me.,Billing Issue
+Complaint: The loyalty program points I earned were deleted without explanation.,Other
+I was told my issue would be resolved in 24 hours but it has been a week. Please resolve this urgently.,Customer Support
+I want to report that i was charged in a foreign currency without any prior notice.,Billing Issue
+I want to report that the service maintenance schedule was not communicated to subscribers.,Service Quality
+I received a legal notice that seems to be sent in error to my address. Please resolve this urgently.,Other
+I want to report that the chatbot keeps sending me in circles and never resolves my issue.,Customer Support
+My order was returned to sender without any notification to me. This has been going on for too long.,Delivery Problem
+I received someone else order instead of my own. This has been going on for too long.,Delivery Problem
+My account balance does not match the payment I submitted. Please resolve this urgently.,Billing Issue
+This is unacceptable. My heavy furniture order was left outside instead of being brought inside.,Delivery Problem
+The loyalty program points I earned were deleted without explanation.,Other
+I was asked to provide the same documents three times for one request. Please resolve this urgently.,Customer Support
+Complaint: The agent I spoke to made commitments that have not been honored.,Customer Support
+I want to report that i upgraded my plan but the new features are not accessible to me.,Service Quality
+Complaint: I want to report misleading advertising claims made by the company.,Other
+My shoes have stitching defects and started coming apart immediately. I demand an immediate response.,Product Defect
+I want to escalate an unresolved issue from a previous complaint. I demand an immediate response.,Other
+The support agent was rude and dismissive about my issue. Please resolve this urgently.,Customer Support
+Complaint: The chatbot keeps sending me in circles and never resolves my issue.,Customer Support
+This is unacceptable. The streaming service buffers endlessly on my high-speed connection.,Service Quality
+The chatbot keeps sending me in circles and never resolves my issue. Please resolve this urgently.,Customer Support
+The mobile network signal in my area is extremely weak all the time. Please resolve this urgently.,Service Quality
+The agent I spoke to made commitments that have not been honored. I demand an immediate response.,Customer Support
+I want to report that i want to escalate an unresolved issue from a previous complaint.,Other
+I want to report that the support team closed my ticket without resolving the issue.,Customer Support
+Complaint: The product I received has scratches and looks like a used item.,Product Defect
+I am being harassed by repeated automated calls from this company. This has been going on for too long.,Other
+The electrical appliance I bought sparks and is unsafe to use. Please resolve this urgently.,Product Defect
+The color of the product is completely different from the image shown. Please resolve this urgently.,Product Defect
+Complaint: The jacket has an irreparable tear in the fabric from day one.,Product Defect
+I am being charged for a service that has been non-functional for weeks. I demand an immediate response.,Service Quality
+My account access was blocked and support refuses to restore it.,Customer Support
+I want to report that i have a complaint but it does not fall into any specific category.,Other
+My complaint was marked as resolved without contacting me. I demand an immediate response.,Customer Support
+Complaint: My printer cartridge was empty when it arrived as a new product.,Product Defect
+I want to report that i want to report misleading advertising claims made by the company.,Other
+The delivery driver did not attempt delivery and left no notice.,Delivery Problem
+Complaint: The software on my device has bugs and crashes frequently.,Product Defect
+Support said they would send an email but I never received it. Please resolve this urgently.,Customer Support
+The platform keeps logging me out and I cannot access my account.,Service Quality
+The phone support has a very long wait time and often disconnects. Please resolve this urgently.,Customer Support
+My business email service has been down affecting my daily operations. This has been going on for too long.,Service Quality
+I want to report that i was transferred to five different agents and had to repeat my issue each time.,Customer Support
+Complaint: The item I ordered stopped working after just two days of use.,Product Defect
+Complaint: My new mobile phone has a ghost touch issue on the screen.,Product Defect
+The service outage has been going on for three days with no update.,Service Quality
+I upgraded my plan but the new features are not accessible to me. I demand an immediate response.,Service Quality
+Complaint: I received spam from this company after opting out of communications.,Other
+The color of the product is completely different from the image shown. This has been going on for too long.,Product Defect
+Complaint: I am paying for premium service but am getting basic service features.,Service Quality
+The support system does not allow me to attach evidence to my ticket. Please resolve this urgently.,Customer Support
+I subscribed for monthly service but it expired after just two weeks. Please resolve this urgently.,Service Quality
+I upgraded my plan but the new features are not accessible to me. Please resolve this urgently.,Service Quality
+My order was split into three deliveries but only one arrived. I demand an immediate response.,Delivery Problem
+This is unacceptable. I upgraded my plan but the new features are not accessible to me.,Service Quality
+This is unacceptable. The tool I ordered broke on first use which indicates poor quality.,Product Defect
+The fabric of the clothing item I ordered has a visible defect.,Product Defect
+The electrical appliance I bought sparks and is unsafe to use. I demand an immediate response.,Product Defect
+The survey I was asked to complete contained misleading questions. I demand an immediate response.,Other
+Complaint: The promised installation date was missed and no rescheduling was offered.,Service Quality
+I want to report that i want to formally withdraw my consent for data processing.,Other
+I am paying for premium service but am getting basic service features. I demand an immediate response.,Service Quality
+Complaint: My statement has errors and shows charges I do not recognize.,Billing Issue
+I want to escalate an unresolved issue from a previous complaint. Please resolve this urgently.,Other
+Complaint: The product I received is a counterfeit and not genuine.,Product Defect
+This is unacceptable. The package was marked as delivered but I never received it.,Delivery Problem
+I received a generic response that did not address my specific complaint. I demand an immediate response.,Customer Support
+I want to report that support said they would send an email but I never received it.,Customer Support
+My delivery appointment was cancelled without informing me. This has been going on for too long.,Delivery Problem
+My new mobile phone has a ghost touch issue on the screen. Please resolve this urgently.,Product Defect
+I am paying for premium service but am getting basic service features.,Service Quality
+The item I ordered stopped working after just two days of use. This has been going on for too long.,Product Defect
+I am being harassed by repeated automated calls from this company. Please resolve this urgently.,Other
+My account merge request has been pending for over two months. Please resolve this urgently.,Other
+I want to report that my delivery appointment was cancelled without informing me.,Delivery Problem
+This is unacceptable. I want to report a technical vulnerability I found in your service.,Other
+This is unacceptable. My shoes have stitching defects and started coming apart immediately.,Product Defect
+An incorrect tax amount was applied to my recent purchase. This has been going on for too long.,Billing Issue
+My smart home service disconnects every few hours and needs manual reset.,Service Quality
+The agent I spoke to made commitments that have not been honored. Please resolve this urgently.,Customer Support
+My delivery appointment was cancelled without informing me.,Delivery Problem
+The agent promised a resolution but stopped responding after one reply. I demand an immediate response.,Customer Support
+Complaint: My furniture arrived with a broken leg and cannot be assembled.,Product Defect
+Complaint: The delivery confirmation email shows the wrong item was sent.,Delivery Problem
+I received a legal notice that seems to be sent in error to my address.,Other
+The agent I spoke to made commitments that have not been honored. This has been going on for too long.,Customer Support
+I want to report that the delivery estimate keeps changing and no one explains why.,Delivery Problem
+The refund I requested 30 days ago has not been processed. This has been going on for too long.,Billing Issue
+My order was supposed to arrive three days ago and has not been delivered. I demand an immediate response.,Delivery Problem
+This is unacceptable. The product I received is a counterfeit and not genuine.,Product Defect
+The internet service I am paying for has been down for five days.,Service Quality
+The chatbot keeps sending me in circles and never resolves my issue.,Customer Support
+This is unacceptable. The product packaging was tampered and the seal was already broken.,Product Defect
+The tool I ordered broke on first use which indicates poor quality.,Product Defect
+Complaint: There is an unauthorized charge on my credit card statement.,Billing Issue
+I want to report that the app I use for the service crashes constantly on my device.,Service Quality
+I need a formal acknowledgment letter for a complaint I filed earlier. I demand an immediate response.,Other
+This is unacceptable. An unknown subscription charge appeared on my account.,Billing Issue
+The agent promised a resolution but stopped responding after one reply.,Customer Support
+This is unacceptable. The food product I ordered was expired when it arrived.,Product Defect
+The warehouse shows my item as shipped but tracking shows no movement. Please resolve this urgently.,Delivery Problem
+The size of the item delivered is wrong despite correct order placement. This has been going on for too long.,Product Defect
+The IVR system does not have an option for my specific problem. Please resolve this urgently.,Customer Support
+My data was shared with a third party without my explicit consent. I demand an immediate response.,Other
+I have a general concern about the terms of service I agreed to. I demand an immediate response.,Other
+I have been charged a service fee that was not in the terms.,Billing Issue
+The product arrived with a broken screen and cracks on the frame.,Product Defect
+I want to formally withdraw my consent for data processing. This has been going on for too long.,Other
+The product I received has scratches and looks like a used item. Please resolve this urgently.,Product Defect
+Complaint: I need a formal acknowledgment letter for a complaint I filed earlier.,Other
+The support system does not allow me to attach evidence to my ticket.,Customer Support
+My new mobile phone has a ghost touch issue on the screen. I demand an immediate response.,Product Defect
+This is unacceptable. I received spam from this company after opting out of communications.,Other
+The product packaging was tampered and the seal was already broken.,Product Defect
+An incorrect tax amount was applied to my recent purchase.,Billing Issue
+I am being charged for a service that has been non-functional for weeks.,Service Quality
+I want to report that my EMI deduction is higher than what was agreed in the contract.,Billing Issue
+I received a damaged box and the item inside was missing.,Delivery Problem
+The cloud storage service deleted my files without any warning.,Service Quality
+Complaint: I was given wrong information by the customer support team.,Customer Support
+I am paying for premium service but am getting basic service features. This has been going on for too long.,Service Quality
+Complaint: The SLA guarantees 99 percent uptime but I have had 20 percent downtime.,Service Quality
+This is unacceptable. My internet speed is consistently below the minimum guaranteed in the plan.,Service Quality
+Complaint: My order shows out for delivery for three days but nothing arrived.,Delivery Problem
+I want to report that i was charged twice for the same transaction on my account.,Billing Issue
+An incorrect tax amount was applied to my recent purchase. I demand an immediate response.,Billing Issue
+I want to report that my heavy furniture order was left outside instead of being brought inside.,Delivery Problem
+My account shows active but none of the services are working. I demand an immediate response.,Service Quality
+My bill shows an extra fee that I never agreed to. Please resolve this urgently.,Billing Issue
+Complaint: My appliance overheats and shuts down automatically.,Product Defect
+I have been waiting on hold for over two hours with no answer. Please resolve this urgently.,Customer Support
+This is unacceptable. I want to report misleading advertising claims made by the company.,Other
+I need a formal acknowledgment letter for a complaint I filed earlier. Please resolve this urgently.,Other
+This is unacceptable. My furniture arrived with a broken leg and cannot be assembled.,Product Defect
+The payment I made online shows as failed but my bank confirms it went through.,Billing Issue
+The delivery confirmation email shows the wrong item was sent. Please resolve this urgently.,Delivery Problem
+Complaint: I have been charged a service fee that was not in the terms.,Billing Issue
+This is unacceptable. The loyalty program points I earned were deleted without explanation.,Other
+I want to report that i am unable to delete my account despite multiple requests.,Other
+This is unacceptable. I am being harassed by repeated automated calls from this company.,Other
+This is unacceptable. The scheduled maintenance keeps happening during my working hours.,Service Quality
+Complaint: I want to report suspicious activity on my account.,Other
+The size of the item delivered is wrong despite correct order placement. I demand an immediate response.,Product Defect
+My delivery appointment was cancelled without informing me. I demand an immediate response.,Delivery Problem
+I want to report that my order was split into three deliveries but only one arrived.,Delivery Problem
+I want to report that the product packaging was tampered and the seal was already broken.,Product Defect
+I have been charged a service fee that was not in the terms. This has been going on for too long.,Billing Issue
+The phone I purchased has a manufacturing defect in the camera. This has been going on for too long.,Product Defect
+Complaint: The tool I ordered broke on first use which indicates poor quality.,Product Defect
+The platform keeps logging me out and I cannot access my account. I demand an immediate response.,Service Quality
+The account verification process is overly complicated and unfair. I demand an immediate response.,Other
+The phone support has a very long wait time and often disconnects.,Customer Support
+Complaint: The agent promised a resolution but stopped responding after one reply.,Customer Support
+Complaint: The delivery driver did not attempt delivery and left no notice.,Delivery Problem
+I see foreign transaction fees on purchases made locally. Please resolve this urgently.,Billing Issue
+This is unacceptable. The referral bonus I was promised was never credited to my account.,Other
+I want to report that the color of the product is completely different from the image shown.,Product Defect
+This is unacceptable. The courier left my package in the wrong location.,Delivery Problem
+This is unacceptable. I requested a callback but no one has called back after three days.,Customer Support
+This is unacceptable. The live chat support takes over 30 minutes just to connect to an agent.,Customer Support
+The SLA guarantees 99 percent uptime but I have had 20 percent downtime. Please resolve this urgently.,Service Quality
+The loyalty program points I earned were deleted without explanation. I demand an immediate response.,Other
+Complaint: The service maintenance schedule was not communicated to subscribers.,Service Quality
+I submitted a complaint online but received no confirmation or response.,Customer Support
+I want to report that i received a legal notice that seems to be sent in error to my address.,Other
+My loyalty points were deducted but the discount was never applied to the bill. This has been going on for too long.,Billing Issue
+Complaint: I see foreign transaction fees on purchases made locally.,Billing Issue
+My subscription box was not delivered this month without any notice. Please resolve this urgently.,Delivery Problem
+The server keeps timing out when I try to use the online service. I demand an immediate response.,Service Quality
+The product I ordered is out of stock but I was not informed before delivery. Please resolve this urgently.,Delivery Problem
+I was told my issue would be resolved in 24 hours but it has been a week. This has been going on for too long.,Customer Support
+This is unacceptable. The support agent disconnected the call while I was explaining my problem.,Customer Support
+I want to report that my TV channels keep disappearing from the subscription package.,Service Quality
+I am being billed for a premium plan but I only subscribed to the basic plan. Please resolve this urgently.,Billing Issue
+This is unacceptable. The resolution provided by support does not solve my actual problem.,Customer Support
+I received only part of my order and the rest is missing. I demand an immediate response.,Delivery Problem
+This is unacceptable. I was billed for a service I cancelled three months ago.,Billing Issue
+I want to report that i am being harassed by repeated automated calls from this company.,Other
+Complaint: The package was marked as delivered but I never received it.,Delivery Problem
+My subscription plan was downgraded without my permission.,Service Quality
+This is unacceptable. The promised installation date was missed and no rescheduling was offered.,Service Quality
+I need a formal acknowledgment letter for a complaint I filed earlier. This has been going on for too long.,Other
+My shipment has been stuck at the warehouse for two weeks. Please resolve this urgently.,Delivery Problem
+I submitted a complaint online but received no confirmation or response. I demand an immediate response.,Customer Support
+I have been waiting on hold for over two hours with no answer. I demand an immediate response.,Customer Support
+Complaint: I received an overdue notice for an invoice the system never sent me.,Billing Issue
+I am being charged late fees even though I paid on time.,Billing Issue
+The payment I made online shows as failed but my bank confirms it went through. I demand an immediate response.,Billing Issue
+I want to report that the tracking number provided does not show any updates.,Delivery Problem
+The package box was completely crushed when I received it. Please resolve this urgently.,Delivery Problem
+The wrong size was delivered and I need the correct item urgently. This has been going on for too long.,Delivery Problem
+I received an incorrect invoice with wrong amounts. Please resolve this urgently.,Billing Issue
+I was told to visit a store but the store could not help with my online order. I demand an immediate response.,Customer Support
+I want to report that the service outage has been going on for three days with no update.,Service Quality
+The delivery confirmation email shows the wrong item was sent. I demand an immediate response.,Delivery Problem

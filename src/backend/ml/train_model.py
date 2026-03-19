@@ -34,7 +34,7 @@ from preprocessing.text_cleaner import clean_text
 logger = logging.getLogger(__name__)
 
 #: Maximum vocabulary size for TF-IDF feature extraction.
-TFIDF_MAX_FEATURES = 5000
+TFIDF_MAX_FEATURES = 10000
 
 
 def train_model() -> None:
@@ -93,18 +93,30 @@ def train_model() -> None:
     logger.info("Preprocessing text...")
     df["cleaned_text"] = df["complaint_text"].apply(clean_text)
 
-    # 3. Feature Extraction (TF-IDF)
+    # 3. Feature Extraction (TF-IDF with bigrams for better context)
     logger.info("Vectorizing text...")
-    vectorizer = TfidfVectorizer(max_features=TFIDF_MAX_FEATURES)
+    vectorizer = TfidfVectorizer(
+        max_features=TFIDF_MAX_FEATURES,
+        ngram_range=(1, 2),   # unigrams + bigrams capture phrases like "not delivered"
+        sublinear_tf=True,    # apply log normalization to reduce impact of very common terms
+        min_df=2,             # ignore terms that appear in fewer than 2 documents
+        max_df=0.95,          # ignore terms that appear in more than 95% of documents
+    )
     X = vectorizer.fit_transform(df["cleaned_text"])
     y = df["category"]
 
     # 4. Train-Test Split
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # 5. Model Training (Logistic Regression)
+    # 5. Model Training (Logistic Regression with tuned regularisation)
     logger.info("Training model...")
-    model = LogisticRegression(solver="lbfgs", max_iter=1000)
+    model = LogisticRegression(
+        solver="lbfgs",
+        max_iter=2000,
+        C=5.0,       # higher C = less regularisation = fits data more tightly
+        class_weight="balanced",  # handles any remaining class imbalance
+        multi_class="multinomial",
+    )
     model.fit(X_train, y_train)
 
     # 6. Evaluation

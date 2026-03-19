@@ -1,5 +1,6 @@
 import logging
 import re
+from datetime import datetime, timezone
 from functools import wraps
 from pathlib import Path
 
@@ -20,9 +21,12 @@ from werkzeug.security import check_password_hash, generate_password_hash
 
 from config import Config
 from database.db import db, init_db
+from genai.email_sender import send_response_email
 from genai.explanation import generate_explanation
 from genai.response_drafter import draft_response as draft_response_fn
+from ml.decision_engine import make_decision
 from ml.predictor import predict_complaint
+from ml.severity_detector import detect_severity
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
@@ -246,29 +250,100 @@ def classify_complaint_endpoint():
 
     _identity = get_jwt_identity()
     user_id = int(_identity) if _identity is not None else None  # None for unauthenticated guests
+    complaint_id = None
 
     try:
-        # 1. Save Complaint (Optional, or can be done after classification)
-        complaint_id = db.save_complaint(user_id, text)
-
-        # 2. Predict Category
+        # 1. Predict Category
         prediction = predict_complaint(text)
         category = prediction["category"]
         confidence = prediction["confidence"]
 
-        # 3. Save Classification Result
-        if complaint_id is not None:
-            db.save_classification(complaint_id, category, confidence)
+        # 2. Severity Detection
+        severity_info = detect_severity(text)
+        severity = severity_info["severity"]
+        priority = severity_info["priority"]
+        severity_reason = severity_info["severity_reason"]
 
-        # 4. Generate Explanation
-        explanation = generate_explanation(text, category)
+        # 3. Decision Engine — routing action
+        decision = make_decision(confidence, severity)
 
-        # 5. Save Explanation
-        if complaint_id is not None:
-            db.save_explanation(complaint_id, explanation)
+        # 4. Generate Explanation (fallback keeps classify successful when GenAI is unavailable)
+        try:
+            explanation = generate_explanation(text, category)
+        except Exception as genai_error:
+            logger.warning("Falling back to default explanation due to GenAI error: %s", genai_error)
+            explanation = (
+                f"This complaint was classified as {category} by the ML model. "
+                "Detailed explanation is temporarily unavailable."
+            )
+
+        # 5. Persist complaint only after classification pipeline succeeds.
+        complaint_id = db.save_complaint(user_id, text)
+        if complaint_id is None:
+            raise RuntimeError("Failed to save complaint")
+
+        # 6. Persist classification and fail fast if write did not succeed.
+        saved_classification = db.save_classification(
+            complaint_id,
+            category,
+            confidence,
+            severity=severity,
+            priority=priority,
+            recommended_action=decision.recommended_action,
+            response_status=("escalated" if decision.recommended_action == "escalate" else "pending"),
+        )
+        if not saved_classification:
+            db.delete_complaint(complaint_id)
+            raise RuntimeError("Failed to save classification")
+
+        # 7. Persist explanation if possible (non-blocking).
+        if not db.save_explanation(complaint_id, explanation):
+            logger.warning("Explanation persistence failed for complaint %s", complaint_id)
+
+        auto_response_sent = False
+        delivery_mode = "pending"
+        response_status = "pending"
+
+        # 8. Auto-send high-confidence replies for registered users with email addresses.
+        if complaint_id is not None and decision.auto_send_eligible and user_id is not None:
+            complaint_record = db.get_complaint_by_id(complaint_id)
+            recipient_email = complaint_record.get("user_email") if complaint_record else None
+            if recipient_email:
+                draft_response = draft_response_fn(text, category, float(confidence))
+                subject = f"Response to your complaint #{complaint_id}"
+                delivery = send_response_email(recipient_email, subject, draft_response)
+                auto_response_sent = bool(delivery["success"])
+                delivery_mode = str(delivery["delivery_mode"])
+                response_status = "auto_sent" if auto_response_sent else "pending"
+                db.update_response_workflow(
+                    complaint_id,
+                    response_status=response_status,
+                    draft_response_text=draft_response,
+                    final_response_text=draft_response,
+                    sent_to_email=recipient_email,
+                    delivery_mode=delivery_mode,
+                    auto_sent_at=datetime.now(timezone.utc),
+                )
+        elif decision.recommended_action == "escalate":
+            response_status = "escalated"
 
         return jsonify(
-            {"complaint_id": complaint_id, "category": category, "confidence": confidence, "explanation": explanation}
+            {
+                "complaint_id": complaint_id,
+                "category": category,
+                "confidence": confidence,
+                "explanation": explanation,
+                # Advanced intelligence fields
+                "severity": severity,
+                "priority": priority,
+                "severity_reason": severity_reason,
+                "recommended_action": decision.recommended_action,
+                "auto_send_eligible": decision.auto_send_eligible,
+                "routing_reason": decision.routing_reason,
+                "response_status": response_status,
+                "auto_response_sent": auto_response_sent,
+                "delivery_mode": delivery_mode,
+            }
         )
 
     except Exception as e:
@@ -306,7 +381,7 @@ def get_user_complaints():
 
     Returns:
         JSON with ``complaints`` list; each item has id, complaint_text,
-        category, confidence, and created_at.
+        category, confidence, response workflow fields, and created_at.
     """
     current_user_id = int(get_jwt_identity())
     rows = db.get_complaints_by_user(current_user_id)
@@ -319,6 +394,9 @@ def get_user_complaints():
             "complaint_text": r["complaint_text"],
             "category": r.get("category"),
             "confidence": float(r["confidence"]) if r.get("confidence") is not None else None,
+            "response_status": r.get("response_status"),
+            "sent_to_email": r.get("sent_to_email"),
+            "delivery_mode": r.get("delivery_mode"),
             "created_at": r["created_at"].isoformat() if r.get("created_at") else None,
         }
         for r in rows
@@ -343,9 +421,19 @@ def get_complaint_by_id_endpoint(complaint_id):
         {
             "id": record["id"],
             "complaint_text": record["complaint_text"],
+            "user_email": record.get("user_email"),
             "category": record.get("category"),
             "confidence": record.get("confidence"),
             "explanation": record.get("explanation"),
+            "severity": record.get("severity"),
+            "priority": record.get("priority"),
+            "recommended_action": record.get("recommended_action"),
+            "response_status": record.get("response_status"),
+            "draft_response_text": record.get("draft_response_text"),
+            "final_response_text": record.get("final_response_text"),
+            "sent_to_email": record.get("sent_to_email"),
+            "delivery_mode": record.get("delivery_mode"),
+            "auto_sent_at": record["auto_sent_at"].isoformat() if record.get("auto_sent_at") else None,
             "created_at": record["created_at"].isoformat() if record.get("created_at") else None,
             "classified_at": record["classified_at"].isoformat() if record.get("classified_at") else None,
         }
@@ -412,6 +500,51 @@ def admin_required(f):
     return decorated
 
 
+@app.route("/api/admin/complaints/<int:complaint_id>/reply", methods=["POST"])
+@admin_required
+def admin_send_reply_endpoint(complaint_id):
+    data = request.get_json(silent=True) or {}
+    message = data.get("message")
+
+    if not isinstance(message, str) or not message.strip():
+        return jsonify({"error": "message must be a non-empty string"}), 400
+
+    record = db.get_complaint_by_id(complaint_id)
+    if not record:
+        return jsonify({"error": "Complaint not found"}), 404
+
+    recipient_email = record.get("user_email")
+    if not recipient_email:
+        return jsonify({"error": "No recipient email available for this complaint"}), 400
+
+    subject = f"Reviewed response to your complaint #{complaint_id}"
+    delivery = send_response_email(recipient_email, subject, message.strip())
+    if not delivery["success"]:
+        return jsonify({"error": str(delivery["message"])}), 502
+
+    admin_id = int(get_jwt_identity())
+    existing_draft = record.get("draft_response_text")
+    response_status = "approved" if existing_draft and existing_draft.strip() == message.strip() else "overridden"
+    db.update_response_workflow(
+        complaint_id,
+        response_status=response_status,
+        final_response_text=message.strip(),
+        sent_to_email=recipient_email,
+        delivery_mode=str(delivery["delivery_mode"]),
+        override_by_user_id=admin_id,
+        override_at=datetime.now(timezone.utc),
+    )
+
+    return jsonify(
+        {
+            "message": "Reply sent successfully",
+            "response_status": response_status,
+            "delivery_mode": delivery["delivery_mode"],
+            "sent_to_email": recipient_email,
+        }
+    )
+
+
 @app.route("/api/admin/complaints", methods=["GET"])
 @admin_required
 def admin_list_complaints():
@@ -424,10 +557,19 @@ def admin_list_complaints():
         category = request.args.get("category")
         min_conf = request.args.get("min_confidence")
         min_confidence = float(min_conf) if min_conf is not None else None
+        status_filter = request.args.get("status")
+        if status_filter not in (None, "all", "active", "resolved"):
+            raise ValueError
     except (ValueError, TypeError):
         return jsonify({"error": "Invalid query parameters"}), 400
 
-    rows, total = db.get_admin_complaints(page, limit, category=category, min_confidence=min_confidence)
+    rows, total = db.get_admin_complaints(
+        page,
+        limit,
+        category=category,
+        min_confidence=min_confidence,
+        status_filter=(None if status_filter in (None, "all") else status_filter),
+    )
     if rows is None:
         return jsonify({"error": "Database error"}), 500
 
@@ -439,6 +581,12 @@ def admin_list_complaints():
             "complaint_text": r["complaint_text"],
             "category": r.get("category"),
             "confidence": float(r["confidence"]) if r.get("confidence") is not None else None,
+            "severity": r.get("severity"),
+            "priority": r.get("priority"),
+            "recommended_action": r.get("recommended_action"),
+            "response_status": r.get("response_status"),
+            "sent_to_email": r.get("sent_to_email"),
+            "delivery_mode": r.get("delivery_mode"),
             "created_at": r["created_at"].isoformat() if r.get("created_at") else None,
         }
         for r in rows

@@ -12,17 +12,35 @@ load_dotenv(dotenv_path=_env_dir / ".env")
 _log = logging.getLogger(__name__)
 
 
+def _resolve_backend_path(path_value: str) -> str:
+    """Resolve relative backend paths against src/backend for stable runtime lookup."""
+    candidate = Path(path_value)
+    if candidate.is_absolute():
+        return str(candidate)
+    return str((_env_dir / candidate).resolve())
+
+
 class Config:
     # Database Configuration
     DATABASE_URL = os.environ.get("DATABASE_URL") or "postgresql://postgres:postgres@localhost:5432/consumer_complaints"
+
+    # Email Delivery Configuration
+    EMAIL_DELIVERY_MODE = os.environ.get("EMAIL_DELIVERY_MODE", "simulate").lower()
+    SMTP_HOST = os.environ.get("SMTP_HOST")
+    SMTP_PORT = int(os.environ.get("SMTP_PORT", "587"))
+    SMTP_USERNAME = os.environ.get("SMTP_USERNAME")
+    SMTP_PASSWORD = os.environ.get("SMTP_PASSWORD")
+    SMTP_USE_TLS = os.environ.get("SMTP_USE_TLS", "true").lower() == "true"
+    SMTP_FROM_EMAIL = os.environ.get("SMTP_FROM_EMAIL") or "noreply@consumer-complaints.local"
+    SMTP_FROM_NAME = os.environ.get("SMTP_FROM_NAME") or "Consumer Complaints AI"
 
     # GenAI Configuration
     GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
     GEMINI_MODEL = os.environ.get("GEMINI_MODEL") or "gemini-1.5-flash"
 
     # ML Model Configuration
-    ML_MODEL_PATH = os.environ.get("ML_MODEL_PATH") or "models/complaint_classifier.pkl"
-    VECTORIZER_PATH = os.environ.get("VECTORIZER_PATH") or "models/tfidf_vectorizer.pkl"
+    ML_MODEL_PATH = _resolve_backend_path(os.environ.get("ML_MODEL_PATH") or "models/complaint_classifier.pkl")
+    VECTORIZER_PATH = _resolve_backend_path(os.environ.get("VECTORIZER_PATH") or "models/tfidf_vectorizer.pkl")
     USE_TRANSFORMER_MODEL: bool = os.environ.get("USE_TRANSFORMER_MODEL", "false").lower() == "true"
 
     # Application Configuration

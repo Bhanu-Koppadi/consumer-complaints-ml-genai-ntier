@@ -39,7 +39,7 @@ function AppContent() {
         <Route
           path="/submit"
           element={
-            <PrivateRoute>
+            <PrivateRoute allowAdmin={false}>
               <Layout>
                 <SubmitComplaintPage />
               </Layout>
@@ -69,7 +69,7 @@ function AppContent() {
         <Route
           path="/history"
           element={
-            <PrivateRoute>
+            <PrivateRoute allowAdmin={false}>
               <Layout>
                 <HistoryPage />
               </Layout>

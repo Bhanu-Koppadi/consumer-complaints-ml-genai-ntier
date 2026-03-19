@@ -14,6 +14,7 @@ import type {
   LoginResponse,
   RegisterRequest,
   RegisterResponse,
+  SendReplyResponse,
   SubmitComplaintRequest,
   SubmitComplaintResponse,
   UserProfile,
@@ -143,15 +144,28 @@ export async function draftResponse(
   return response.data;
 }
 
+export async function sendAdminReply(
+  complaintId: number,
+  message: string,
+): Promise<SendReplyResponse> {
+  const response = await apiClient.post<SendReplyResponse>(
+    `/api/admin/complaints/${complaintId}/reply`,
+    { message },
+  );
+  return response.data;
+}
+
 export async function getAdminComplaints(
   page: number,
   limit: number,
   category?: string | null,
-  min_confidence?: number | null
+  min_confidence?: number | null,
+  status?: 'all' | 'active' | 'resolved',
 ): Promise<AdminComplaintsResponse> {
   const params = new URLSearchParams({ page: String(page), limit: String(limit) });
   if (category != null && category !== '') params.set('category', category);
   if (min_confidence != null) params.set('min_confidence', String(min_confidence));
+  if (status != null) params.set('status', status);
   const response = await apiClient.get<AdminComplaintsResponse>(
     `/api/admin/complaints?${params.toString()}`
   );

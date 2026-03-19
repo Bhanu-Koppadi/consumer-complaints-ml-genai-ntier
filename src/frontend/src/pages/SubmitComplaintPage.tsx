@@ -18,6 +18,26 @@ const EXAMPLE_COMPLAINTS: { title: string; text: string }[] = [
     title: 'Debt collection harassment',
     text: 'A debt collection agency has been calling me more than five times per day including on weekends and holidays. They refuse to provide written verification of the alleged debt and continue contacting me despite my written request to cease communication.',
   },
+  {
+    title: 'Delivery delay issue',
+    text: 'My order was promised for delivery in 3 days, but it has been 12 days and there is still no update from the courier. The tracking status has not changed and customer support keeps giving the same generic response. I need immediate action and a clear delivery date.',
+  },
+  {
+    title: 'Product defect complaint',
+    text: 'The mixer grinder I received stopped working within one week of use and started emitting a burning smell. I followed all usage instructions, but the product appears defective. I want a replacement or full refund under warranty as soon as possible.',
+  },
+  {
+    title: 'Service quality complaint',
+    text: 'My broadband internet speed has been far below the promised plan for the last two weeks, especially during working hours. I raised multiple tickets but no technician has resolved the issue. This poor service quality is affecting my work and I need urgent resolution.',
+  },
+  {
+    title: 'Customer support behavior issue',
+    text: 'I contacted support regarding an incorrect charge, but the representative was rude and disconnected the call before understanding my issue. I called again and was kept on hold for a long time without resolution. I request a proper response from a senior support manager.',
+  },
+  {
+    title: 'Other general grievance',
+    text: 'I have submitted feedback and complaints through email and app chat, but I have not received any meaningful acknowledgment for over a month. My issue does not clearly fit billing, delivery, or product categories, but I need this complaint to be formally recorded and resolved.',
+  },
 ]
 
 export default function SubmitComplaintPage() {

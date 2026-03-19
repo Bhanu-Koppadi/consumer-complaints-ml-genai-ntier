@@ -182,8 +182,8 @@ def test_classify_happy_path(client):
         patch("database.db.db.save_complaint", return_value=42),
         patch("app.predict_complaint", return_value={"category": "Billing Issue", "confidence": 0.92}),
         patch("app.generate_explanation", return_value="Classified as Billing Issue."),
-        patch("database.db.db.save_classification", return_value=None),
-        patch("database.db.db.save_explanation", return_value=None),
+        patch("database.db.db.save_classification", return_value=True),
+        patch("database.db.db.save_explanation", return_value=True),
     ):
         response = client.post(
             "/api/classify",
@@ -211,6 +211,24 @@ def test_classify_exception_returns_500(client):
     assert response.status_code == 500
     data = response.get_json()
     assert "error" in data
+
+
+def test_classify_delete_orphan_when_classification_save_fails(client):
+    with (
+        patch("database.db.db.save_complaint", return_value=99),
+        patch("app.predict_complaint", return_value={"category": "Billing Issue", "confidence": 0.92}),
+        patch("app.generate_explanation", return_value="Classified as Billing Issue."),
+        patch("database.db.db.save_classification", return_value=False),
+        patch("database.db.db.delete_complaint", return_value=True) as delete_mock,
+    ):
+        response = client.post(
+            "/api/classify",
+            json={"complaint_text": "I was charged twice"},
+            content_type="application/json",
+        )
+
+    assert response.status_code == 500
+    delete_mock.assert_called_once_with(99)
 
 
 # ---------------------------------------------------------------------------
@@ -435,8 +453,8 @@ def test_classify_at_max_length_is_accepted(client):
         patch("database.db.db.save_complaint", return_value=1),
         patch("app.predict_complaint", return_value={"category": "Other", "confidence": 0.5}),
         patch("app.generate_explanation", return_value="Mock explanation."),
-        patch("database.db.db.save_classification", return_value=None),
-        patch("database.db.db.save_explanation", return_value=None),
+        patch("database.db.db.save_classification", return_value=True),
+        patch("database.db.db.save_explanation", return_value=True),
     ):
         response = client.post(
             "/api/classify",

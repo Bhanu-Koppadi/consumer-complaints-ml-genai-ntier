@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
+import axios from 'axios'
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 import ConfidenceBar from '../components/ConfidenceBar'
 import { LoadingSpinner } from '../components/LoadingSpinner'
 import {
   draftResponse as draftResponseApi,
   getComplaintById,
+  sendAdminReply,
   type ClassificationResult,
 } from '../api/client'
 import { useAppSelector } from '../store/hooks'
@@ -27,11 +29,26 @@ function isResultLocationState(value: unknown): value is ResultLocationState {
 
 /** Unified display shape for both state and fetch-by-id. */
 interface ResultDisplayData {
+  complaintId?: number
   complaintText: string
   category: string
   confidence: number
   explanation: string
   formattedDate: string | null
+  // Advanced intelligence fields (optional — absent when loaded via complaint ID)
+  severity?: 'High' | 'Medium' | 'Low'
+  priority?: 'P1' | 'P2' | 'P3'
+  severity_reason?: string
+  recommended_action?: 'auto_send' | 'review_required' | 'escalate'
+  auto_send_eligible?: boolean
+  routing_reason?: string
+  response_status?: 'pending' | 'auto_sent' | 'approved' | 'escalated' | 'overridden'
+  auto_response_sent?: boolean
+  delivery_mode?: 'pending' | 'simulate' | 'smtp'
+  draft_response_text?: string | null
+  final_response_text?: string | null
+  sent_to_email?: string | null
+  user_email?: string | null
 }
 
 function ResultContent({
@@ -46,6 +63,11 @@ function ResultContent({
   const [draftLoading, setDraftLoading] = useState(false)
   const [draftText, setDraftText] = useState<string | null>(null)
   const [draftError, setDraftError] = useState<string | null>(null)
+  const [sendLoading, setSendLoading] = useState(false)
+  const [sendFeedback, setSendFeedback] = useState<string | null>(null)
+  const [workflowStatus, setWorkflowStatus] = useState(data.response_status)
+  const [workflowDeliveryMode, setWorkflowDeliveryMode] = useState(data.delivery_mode)
+  const [workflowRecipient, setWorkflowRecipient] = useState(data.sent_to_email)
   const [copied, setCopied] = useState(false)
   const userRole = useAppSelector((state) => state.auth.user?.role ?? '')
 
@@ -54,6 +76,30 @@ function ResultContent({
   const confidence = data.confidence
   const explanation = data.explanation
   const formattedDate = data.formattedDate
+  const severity = data.severity
+  const priority = data.priority
+  const recommendedAction = data.recommended_action
+  const autoSendEligible = data.auto_send_eligible
+  const routingReason = data.routing_reason
+  const complaintId = data.complaintId
+  const responseStatus = workflowStatus
+  const deliveryMode = workflowDeliveryMode
+  const sentToEmail = workflowRecipient
+  const userEmail = data.user_email
+  const effectiveRecipient = sentToEmail ?? userEmail
+  const isResolved = responseStatus === 'approved' || responseStatus === 'overridden' || responseStatus === 'auto_sent'
+  const sentMessage = data.final_response_text ?? data.draft_response_text
+
+  useEffect(() => {
+    const existing = data.final_response_text ?? data.draft_response_text ?? null
+    setDraftText(existing)
+  }, [data.final_response_text, data.draft_response_text])
+
+  useEffect(() => {
+    setWorkflowStatus(data.response_status)
+    setWorkflowDeliveryMode(data.delivery_mode)
+    setWorkflowRecipient(data.sent_to_email)
+  }, [data.response_status, data.delivery_mode, data.sent_to_email])
 
   async function handleDraftResponse() {
     if (draftOpen) {
@@ -61,9 +107,12 @@ function ResultContent({
       return
     }
     setDraftError(null)
-    setDraftText(null)
+    setSendFeedback(null)
     setCopied(false)
     setDraftOpen(true)
+    if (draftText && draftText.trim().length > 0) {
+      return
+    }
     setDraftLoading(true)
     try {
       const res = await draftResponseApi(complaintText, category, confidence)
@@ -72,6 +121,35 @@ function ResultContent({
       setDraftError(err instanceof Error ? err.message : 'Failed to generate draft')
     } finally {
       setDraftLoading(false)
+    }
+  }
+
+  async function handleSendReply() {
+    if (!complaintId || !draftText?.trim()) return
+    if (!userEmail) {
+      setDraftError('No recipient email linked to this complaint user.')
+      return
+    }
+    setSendLoading(true)
+    setDraftError(null)
+    setSendFeedback(null)
+    try {
+      const res = await sendAdminReply(complaintId, draftText.trim())
+      setWorkflowStatus(res.response_status)
+      setWorkflowDeliveryMode(res.delivery_mode)
+      setWorkflowRecipient(res.sent_to_email)
+      setSendFeedback(
+        `Reply sent to ${res.sent_to_email} via ${res.delivery_mode === 'smtp' ? 'SMTP' : 'simulation'} (${res.response_status}).`,
+      )
+    } catch (err) {
+      if (axios.isAxiosError(err)) {
+        const apiError = err.response?.data?.error
+        setDraftError(typeof apiError === 'string' ? apiError : err.message)
+      } else {
+        setDraftError(err instanceof Error ? err.message : 'Failed to send reply')
+      }
+    } finally {
+      setSendLoading(false)
     }
   }
 
@@ -149,17 +227,115 @@ function ResultContent({
               )}
             </div>
 
+            {/* Decision Intelligence panel — shown when v2 fields are present */}
+            {severity && recommendedAction && (
+              <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 mb-6">
+                <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">
+                  Decision Intelligence
+                </p>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-4">
+                  {/* Severity badge */}
+                  <div>
+                    <p className="text-xs text-gray-500 mb-1">Severity</p>
+                    <span
+                      className={`inline-block px-3 py-1 rounded-full text-xs font-bold tracking-wide ${
+                        severity === 'High'
+                          ? 'bg-red-100 text-red-700'
+                          : severity === 'Medium'
+                          ? 'bg-amber-100 text-amber-700'
+                          : 'bg-green-100 text-green-700'
+                      }`}
+                    >
+                      {severity}
+                    </span>
+                  </div>
+                  {/* Priority badge */}
+                  <div>
+                    <p className="text-xs text-gray-500 mb-1">Priority</p>
+                    <span
+                      className={`inline-block px-3 py-1 rounded-full text-xs font-bold tracking-wide ${
+                        priority === 'P1'
+                          ? 'bg-red-100 text-red-700'
+                          : priority === 'P2'
+                          ? 'bg-amber-100 text-amber-700'
+                          : 'bg-blue-100 text-blue-700'
+                      }`}
+                    >
+                      {priority}
+                    </span>
+                  </div>
+                  {/* Routing action badge */}
+                  <div>
+                    <p className="text-xs text-gray-500 mb-1">Routing Action</p>
+                    <span
+                      className={`inline-block px-3 py-1 rounded-full text-xs font-bold tracking-wide ${
+                        recommendedAction === 'auto_send'
+                          ? 'bg-green-100 text-green-700'
+                          : recommendedAction === 'escalate'
+                          ? 'bg-red-100 text-red-700'
+                          : 'bg-amber-100 text-amber-700'
+                      }`}
+                    >
+                      {recommendedAction === 'auto_send'
+                        ? 'Auto Send'
+                        : recommendedAction === 'escalate'
+                        ? 'Escalate'
+                        : 'Review Required'}
+                    </span>
+                  </div>
+                </div>
+                {routingReason && (
+                  <p className="text-xs text-gray-600 leading-relaxed bg-gray-50 rounded-lg px-4 py-3">
+                    {routingReason}
+                  </p>
+                )}
+                {responseStatus && (
+                  <p className="mt-3 text-xs font-medium text-gray-700">
+                    Workflow status: <strong>{responseStatus.replace('_', ' ')}</strong>
+                    {sentToEmail ? ` · Recipient: ${sentToEmail}` : ''}
+                    {deliveryMode && deliveryMode !== 'pending' ? ` · Mode: ${deliveryMode}` : ''}
+                  </p>
+                )}
+                {userEmail && (
+                  <p className="mt-1 text-xs text-gray-600">
+                    Complaint user email: <strong>{userEmail}</strong>
+                  </p>
+                )}
+                {autoSendEligible && (
+                  <p className="mt-3 text-xs font-semibold text-green-700 flex items-center gap-1">
+                    ✓ Response eligible for automated dispatch
+                  </p>
+                )}
+              </div>
+            )}
+
             {/* Draft response — Admin only */}
           </>
         ) : (
           <>
             <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 mb-6">
-              <p className="text-base text-gray-700 mb-4">
-                We&apos;ve received your complaint and will respond.
-              </p>
+              {responseStatus === 'auto_sent' || responseStatus === 'approved' || responseStatus === 'overridden' ? (
+                <p className="text-base text-green-700 mb-4 font-medium">
+                  Response sent successfully{effectiveRecipient ? ` to ${effectiveRecipient}` : ''}.
+                </p>
+              ) : responseStatus === 'escalated' ? (
+                <p className="text-base text-amber-700 mb-4 font-medium">
+                  Your complaint is escalated for specialist review. A response will follow shortly.
+                </p>
+              ) : (
+                <p className="text-base text-gray-700 mb-4">
+                  We&apos;ve received your complaint and will respond.
+                </p>
+              )}
               <p className="text-sm text-gray-600">
                 Your complaint has been categorized as: <strong>{category}</strong>.
               </p>
+              {responseStatus && (
+                <p className="mt-3 text-xs text-gray-500">
+                  Status: <strong>{responseStatus.replace('_', ' ')}</strong>
+                  {deliveryMode && deliveryMode !== 'pending' ? ` · Mode: ${deliveryMode}` : ''}
+                </p>
+              )}
             </div>
 
             <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 mb-6">
@@ -174,7 +350,7 @@ function ResultContent({
         )}
 
         {/* Draft response — Admin only */}
-        {isAdmin && (
+        {isAdmin && !isResolved && (
           <div className="bg-white rounded-xl border border-gray-200 shadow-sm mb-8">
             <button
               type="button"
@@ -198,22 +374,63 @@ function ResultContent({
                 {draftText && (
                   <>
                     <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-2">
-                      Draft email
+                      Reply email
                     </p>
-                    <pre className="text-sm text-gray-700 whitespace-pre-wrap font-sans leading-relaxed bg-gray-50 p-3 rounded-lg">
-                      {draftText}
-                    </pre>
-                    <button
-                      type="button"
-                      onClick={handleCopy}
-                      className="mt-3 px-4 py-1.5 rounded-lg bg-gray-100 text-gray-700 text-xs font-medium hover:bg-gray-200 transition-colors"
-                    >
-                      {copied ? '✓ Copied!' : 'Copy to clipboard'}
-                    </button>
+                    <textarea
+                      value={draftText}
+                      onChange={(event) => setDraftText(event.target.value)}
+                      rows={12}
+                      className="w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-700 leading-relaxed focus:outline-none focus:ring-2 focus:ring-primary-300"
+                    />
+                    <div className="mt-3 flex flex-wrap items-center gap-3">
+                      <button
+                        type="button"
+                        onClick={handleCopy}
+                        className="px-4 py-1.5 rounded-lg bg-gray-100 text-gray-700 text-xs font-medium hover:bg-gray-200 transition-colors"
+                      >
+                        {copied ? '✓ Copied!' : 'Copy to clipboard'}
+                      </button>
+                      {complaintId != null && (
+                        <button
+                          type="button"
+                          onClick={handleSendReply}
+                          disabled={sendLoading || draftText.trim().length === 0 || !userEmail}
+                          className="px-4 py-1.5 rounded-lg bg-primary-600 text-white text-xs font-semibold hover:bg-primary-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                        >
+                          {sendLoading ? 'Sending…' : 'Send Reply'}
+                        </button>
+                      )}
+                    </div>
+                    {!userEmail && (
+                      <p className="mt-2 text-xs text-amber-700">
+                        This complaint is not linked to a user email, so reply sending is unavailable.
+                      </p>
+                    )}
+                    {sendFeedback && (
+                      <p className="mt-3 text-xs text-green-700 font-medium">{sendFeedback}</p>
+                    )}
                   </>
                 )}
               </div>
             )}
+          </div>
+        )}
+
+        {/* Read-only sent response view for resolved complaints */}
+        {isAdmin && isResolved && sentMessage && (
+          <div className="bg-white rounded-xl border border-green-200 shadow-sm mb-8">
+            <div className="px-6 py-4 border-b border-green-100 bg-green-50 rounded-t-xl">
+              <p className="text-sm font-semibold text-green-800">Resolved Response (Read-only)</p>
+              <p className="text-xs text-green-700 mt-1">
+                Already sent to {effectiveRecipient ?? 'customer'}
+                {deliveryMode ? ` via ${deliveryMode}` : ''}. Drafting is disabled to avoid duplicate replies.
+              </p>
+            </div>
+            <div className="px-6 py-4">
+              <pre className="text-sm text-gray-700 whitespace-pre-wrap font-sans leading-relaxed bg-gray-50 p-3 rounded-lg">
+                {sentMessage}
+              </pre>
+            </div>
           </div>
         )}
 
@@ -280,11 +497,21 @@ export default function ResultPage() {
       .then((detail) => {
         if (cancelled) return
         const data: ResultDisplayData = {
+          complaintId: detail.id,
           complaintText: detail.complaint_text ?? '',
           category: detail.category ?? 'Unclassified',
           confidence: typeof detail.confidence === 'number' ? detail.confidence : 0,
           explanation: detail.explanation ?? 'No explanation available.',
           formattedDate: formatDate(detail.classified_at ?? detail.created_at),
+          severity: detail.severity ?? undefined,
+          priority: detail.priority ?? undefined,
+          recommended_action: detail.recommended_action ?? undefined,
+          response_status: detail.response_status ?? undefined,
+          draft_response_text: detail.draft_response_text ?? null,
+          final_response_text: detail.final_response_text ?? null,
+          sent_to_email: detail.sent_to_email ?? null,
+          user_email: detail.user_email ?? null,
+          delivery_mode: detail.delivery_mode ?? undefined,
         }
         setFetchState({ status: 'ready', data })
       })
@@ -310,11 +537,21 @@ export default function ResultPage() {
     const { result, complaintText, submittedAt } = location.state as ResultLocationState
     const { category, confidence, explanation } = result
     const data: ResultDisplayData = {
+      complaintId: result.complaint_id ?? undefined,
       complaintText,
       category,
       confidence,
       explanation,
       formattedDate: formatDate(submittedAt ?? null),
+      severity: result.severity,
+      priority: result.priority,
+      severity_reason: result.severity_reason,
+      recommended_action: result.recommended_action,
+      auto_send_eligible: result.auto_send_eligible,
+      routing_reason: result.routing_reason,
+      response_status: result.response_status,
+      auto_response_sent: result.auto_response_sent,
+      delivery_mode: result.delivery_mode,
     }
     return (
       <ResultContent

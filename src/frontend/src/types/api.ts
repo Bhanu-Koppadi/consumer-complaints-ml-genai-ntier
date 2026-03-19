@@ -8,14 +8,34 @@ export interface ClassifyResponse {
   category: string;
   confidence: number;
   explanation: string;
+  // Advanced intelligence fields (v2)
+  severity: 'High' | 'Medium' | 'Low';
+  priority: 'P1' | 'P2' | 'P3';
+  severity_reason: string;
+  recommended_action: 'auto_send' | 'review_required' | 'escalate';
+  auto_send_eligible: boolean;
+  routing_reason: string;
+  response_status: 'pending' | 'auto_sent' | 'approved' | 'escalated' | 'overridden';
+  auto_response_sent: boolean;
+  delivery_mode: 'pending' | 'simulate' | 'smtp';
 }
 
 export interface ComplaintDetail {
   id: number;
   complaint_text: string;
+  user_email?: string | null;
   category: string | null;
   confidence: number | null;
   explanation: string | null;
+  severity?: 'High' | 'Medium' | 'Low' | null;
+  priority?: 'P1' | 'P2' | 'P3' | null;
+  recommended_action?: 'auto_send' | 'review_required' | 'escalate' | null;
+  response_status?: 'pending' | 'auto_sent' | 'approved' | 'escalated' | 'overridden' | null;
+  draft_response_text?: string | null;
+  final_response_text?: string | null;
+  sent_to_email?: string | null;
+  delivery_mode?: 'pending' | 'simulate' | 'smtp' | null;
+  auto_sent_at?: string | null;
   created_at: string | null;
   classified_at: string | null;
 }
@@ -41,6 +61,9 @@ export interface ComplaintHistoryItem {
   complaint_text: string;
   category: string | null;
   confidence: number | null;
+  response_status?: 'pending' | 'auto_sent' | 'approved' | 'escalated' | 'overridden' | null;
+  sent_to_email?: string | null;
+  delivery_mode?: 'pending' | 'simulate' | 'smtp' | null;
   created_at: string | null;
 }
 
@@ -86,6 +109,17 @@ export interface DraftResponseResponse {
   draft_response: string;
 }
 
+export interface SendReplyRequest {
+  message: string;
+}
+
+export interface SendReplyResponse {
+  message: string;
+  response_status: 'approved' | 'overridden';
+  delivery_mode: 'simulate' | 'smtp';
+  sent_to_email: string;
+}
+
 // Admin (all users' complaints)
 export interface AdminComplaintItem {
   id: number;
@@ -95,6 +129,13 @@ export interface AdminComplaintItem {
   category: string | null;
   confidence: number | null;
   created_at: string | null;
+  // Advanced intelligence fields (v2 — may be absent on older records)
+  severity?: 'High' | 'Medium' | 'Low' | null;
+  priority?: 'P1' | 'P2' | 'P3' | null;
+  recommended_action?: 'auto_send' | 'review_required' | 'escalate' | null;
+  response_status?: 'pending' | 'auto_sent' | 'approved' | 'escalated' | 'overridden' | null;
+  sent_to_email?: string | null;
+  delivery_mode?: 'pending' | 'simulate' | 'smtp' | null;
 }
 
 export interface AdminComplaintsResponse {
@@ -110,4 +151,11 @@ export interface AdminStatisticsResponse {
   average_confidence: number;
   low_confidence_count: number;
   date_range: { start: string | null; end: string | null };
+  // Advanced intelligence KPIs (v2)
+  high_severity_count: number;
+  medium_severity_count: number;
+  low_severity_count: number;
+  auto_send_count: number;
+  review_required_count: number;
+  escalated_count: number;
 }

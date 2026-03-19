@@ -33,6 +33,9 @@ function ComplaintCard({ item }: { item: ComplaintHistoryItem }) {
       ? `${item.complaint_text.slice(0, 120)}…`
       : item.complaint_text
 
+  const status = item.response_status
+  const isResolved = status === 'approved' || status === 'overridden' || status === 'auto_sent'
+
   return (
     <Link
       to={`/result/${item.id}`}
@@ -47,6 +50,12 @@ function ComplaintCard({ item }: { item: ComplaintHistoryItem }) {
           {formatHistoryDate(item.created_at)}
         </span>
       </div>
+      {status && (
+        <p className={`mb-3 text-xs font-medium ${isResolved ? 'text-green-700' : 'text-amber-700'}`}>
+          {isResolved ? 'Response sent' : status === 'escalated' ? 'Escalated for manual handling' : 'Awaiting response'}
+          {item.sent_to_email ? ` · ${item.sent_to_email}` : ''}
+        </p>
+      )}
       {item.confidence !== null && (
         <div className="mb-3">
           <ConfidenceBar confidence={item.confidence} />
