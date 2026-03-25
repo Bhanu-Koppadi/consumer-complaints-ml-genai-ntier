@@ -434,9 +434,12 @@ class Database:
                         COALESCE(SUM(CASE WHEN cr.severity = 'High'   THEN 1 ELSE 0 END), 0) AS high_severity_count,
                         COALESCE(SUM(CASE WHEN cr.severity = 'Medium' THEN 1 ELSE 0 END), 0) AS medium_severity_count,
                         COALESCE(SUM(CASE WHEN cr.severity = 'Low'    THEN 1 ELSE 0 END), 0) AS low_severity_count,
-                        COALESCE(SUM(CASE WHEN cr.recommended_action = 'auto_send'        THEN 1 ELSE 0 END), 0) AS auto_send_count,
-                        COALESCE(SUM(CASE WHEN cr.recommended_action = 'review_required'  THEN 1 ELSE 0 END), 0) AS review_required_count,
-                        COALESCE(SUM(CASE WHEN cr.recommended_action = 'escalate'         THEN 1 ELSE 0 END), 0) AS escalated_count
+                        COALESCE(SUM(CASE WHEN cr.recommended_action = 'auto_send' THEN 1 ELSE 0 END), 0)
+                        AS auto_send_count,
+                        COALESCE(SUM(CASE WHEN cr.recommended_action = 'review_required' THEN 1 ELSE 0 END), 0)
+                        AS review_required_count,
+                        COALESCE(SUM(CASE WHEN cr.recommended_action = 'escalate' THEN 1 ELSE 0 END), 0)
+                        AS escalated_count
                     FROM complaints c
                     LEFT JOIN LATERAL (
                         SELECT severity, recommended_action

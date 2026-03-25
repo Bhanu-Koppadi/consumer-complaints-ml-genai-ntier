@@ -235,6 +235,38 @@ def auth_refresh():
     return jsonify({"access_token": access_token, "token_type": "Bearer", "expires_in": expires_in})
 
 
+def _process_auto_send(user_id, complaint_id, decision, text, category, confidence):
+    """Encapsulates auto-send business logic to keep endpoint complexity low."""
+    auto_response_sent = False
+    delivery_mode = "pending"
+    response_status = "pending"
+
+    if decision.recommended_action == "escalate":
+        response_status = "escalated"
+        return auto_response_sent, delivery_mode, response_status
+
+    if complaint_id is not None and decision.auto_send_eligible and user_id is not None:
+        complaint_record = db.get_complaint_by_id(complaint_id)
+        recipient_email = complaint_record.get("user_email") if complaint_record else None
+        if recipient_email:
+            draft_response = draft_response_fn(text, category, float(confidence))
+            subject = f"Response to your complaint #{complaint_id}"
+            delivery = send_response_email(recipient_email, subject, draft_response)
+            auto_response_sent = bool(delivery["success"])
+            delivery_mode = str(delivery["delivery_mode"])
+            response_status = "auto_sent" if auto_response_sent else "pending"
+            db.update_response_workflow(
+                complaint_id,
+                response_status=response_status,
+                draft_response_text=draft_response,
+                final_response_text=draft_response,
+                sent_to_email=recipient_email,
+                delivery_mode=delivery_mode,
+                auto_sent_at=datetime.now(timezone.utc),
+            )
+    return auto_response_sent, delivery_mode, response_status
+
+
 @app.route("/api/classify", methods=["POST"])
 @limiter.limit("5/minute")
 @jwt_required(optional=True)
@@ -300,32 +332,10 @@ def classify_complaint_endpoint():
         if not db.save_explanation(complaint_id, explanation):
             logger.warning("Explanation persistence failed for complaint %s", complaint_id)
 
-        auto_response_sent = False
-        delivery_mode = "pending"
-        response_status = "pending"
-
         # 8. Auto-send high-confidence replies for registered users with email addresses.
-        if complaint_id is not None and decision.auto_send_eligible and user_id is not None:
-            complaint_record = db.get_complaint_by_id(complaint_id)
-            recipient_email = complaint_record.get("user_email") if complaint_record else None
-            if recipient_email:
-                draft_response = draft_response_fn(text, category, float(confidence))
-                subject = f"Response to your complaint #{complaint_id}"
-                delivery = send_response_email(recipient_email, subject, draft_response)
-                auto_response_sent = bool(delivery["success"])
-                delivery_mode = str(delivery["delivery_mode"])
-                response_status = "auto_sent" if auto_response_sent else "pending"
-                db.update_response_workflow(
-                    complaint_id,
-                    response_status=response_status,
-                    draft_response_text=draft_response,
-                    final_response_text=draft_response,
-                    sent_to_email=recipient_email,
-                    delivery_mode=delivery_mode,
-                    auto_sent_at=datetime.now(timezone.utc),
-                )
-        elif decision.recommended_action == "escalate":
-            response_status = "escalated"
+        auto_response_sent, delivery_mode, response_status = _process_auto_send(
+            user_id, complaint_id, decision, text, category, confidence
+        )
 
         return jsonify(
             {

@@ -15,7 +15,6 @@ import os
 import sys
 from unittest.mock import MagicMock
 
-import pytest
 
 # Ensure backend root is on sys.path when tests run from repo root
 _backend = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

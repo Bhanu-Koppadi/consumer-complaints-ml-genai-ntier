@@ -72,7 +72,6 @@ def detect_severity(complaint_text: str) -> dict[str, str]:
 
     # Remove punctuation for cleaner matching
     cleaned = re.sub(r"[^\w\s]", " ", lowered)
-    tokens: set[str] = set(cleaned.split())
 
     # Also check raw lowered text for multi-word phrases
     matched_high = [kw for kw in _HIGH_KEYWORDS if kw in lowered]

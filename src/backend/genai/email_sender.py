@@ -62,4 +62,4 @@ def send_response_email(recipient_email: str, subject: str, body: str) -> dict[s
             "success": False,
             "delivery_mode": "smtp",
             "message": "Email delivery failed.",
-        }
+        }

@@ -139,7 +139,7 @@ def test_admin_complaints_pagination_params(client, admin_token):
             headers={"Authorization": f"Bearer {admin_token}"},
         )
     assert response.status_code == 200
-    mock_fn.assert_called_once_with(2, 5, category="Billing Issue", min_confidence=0.8)
+    mock_fn.assert_called_once_with(2, 5, category="Billing Issue", min_confidence=0.8, status_filter=None)
 
 
 def test_admin_complaints_invalid_params_returns_400(client, admin_token):

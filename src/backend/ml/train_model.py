@@ -95,11 +95,14 @@ def train_model() -> None:
 
     # 3. Feature Extraction (TF-IDF with bigrams for better context)
     logger.info("Vectorizing text...")
+    # Dynamically lower min_df if training dataset is very small (e.g. during testing)
+    min_df_val = 2 if len(df) > 10 else 1
+
     vectorizer = TfidfVectorizer(
         max_features=TFIDF_MAX_FEATURES,
         ngram_range=(1, 2),   # unigrams + bigrams capture phrases like "not delivered"
         sublinear_tf=True,    # apply log normalization to reduce impact of very common terms
-        min_df=2,             # ignore terms that appear in fewer than 2 documents
+        min_df=min_df_val,    # ignore terms that appear in fewer than min_df documents
         max_df=0.95,          # ignore terms that appear in more than 95% of documents
     )
     X = vectorizer.fit_transform(df["cleaned_text"])
