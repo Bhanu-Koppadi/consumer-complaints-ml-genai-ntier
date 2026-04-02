@@ -91,56 +91,7 @@ This project solves this by combining **deterministic ML classification** for sp
 
 ### Hybrid System Architecture (with Decision Engine & GenAI)
 
-```mermaid
-graph TD
-    %% Presentation Layer
-    subgraph Presentation Layer
-        UI[Consumer / Admin UI <br/> React + TypeScript]
-    end
-
-    %% Application Layer
-    subgraph Application Layer
-        API[Flask REST API Gateway]
-        Auth[Authentication <br/> JWT + RBAC]
-    end
-
-    %% Hybrid Intelligence Layer
-    subgraph Hybrid AI / Intelligence Layer
-        direction LR
-        NLP[Text Preprocessing NLP]
-        ML[Predictive Model <br/> TF-IDF + Logistic Regression]
-        Sev[Rule-Based <br/> Severity Assessment]
-        Dec[Decision Engine Matrix]
-        GenAI[Generative AI Service <br/> Google Gemini]
-        AutoSend[Auto-Email Drafter & Dispatcher]
-    end
-
-    %% Data Layer
-    subgraph Data Access & Persistence Layer
-        ORM[SQLAlchemy ORM]
-        DB[(PostgreSQL Database)]
-    end
-
-    %% Connections
-    UI -- "Submit Complaint \n (JWT Secured)" --> API
-    API <--> Auth
-    
-    API -- "Raw Text" --> NLP
-    NLP -- "Cleaned Tokens" --> ML
-    ML -- "Category + Confidence" --> Dec
-    API -- "Raw Text" --> Sev
-    Sev -- "Priority (P1, P2, P3)" --> Dec
-    Dec -- "Action (Auto-Send, Review, Escalate)" --> API
-    
-    API -- "Context" --> GenAI
-    GenAI -- "Explainable Rationale" --> API
-    GenAI -- "Drafted Response" --> AutoSend
-    API -- "Trigger Auto-Response" --> AutoSend
-    AutoSend -. "Emails Resolution directly" .-> UI
-    
-    API <--> ORM
-    ORM <--> DB
-```
+![Hybrid System Architecture](docs/images/system_Architecture.png)
 
 ---
 
