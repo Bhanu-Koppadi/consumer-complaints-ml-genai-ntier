@@ -1,4 +1,4 @@
-# AI-Based Consumer Complaints Classification System
+# AI-Driven Consumer Complaint Intelligence System
 
 [![License](https://img.shields.io/badge/License-MIT-purple)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Complete-success)](https://github.com/Bhanu-Koppadi/consumer-complaints-ml-genai-ntier)
@@ -31,7 +31,7 @@ An intelligent `N-Tier enterprise application` that automatically classifies con
 
 ## 📌 Abstract
 
-Consumer-facing organizations receive massive volumes of textual complaints through digital platforms. Manual classification of these complaints is inefficient, inconsistent, and hard to scale. This project presents an **AI-Based Consumer Complaints Classification System** that leverages **Machine Learning (ML)** and **Natural Language Processing (NLP)** to automatically categorize complaints into classes like Billing, Service, or Delivery.
+Consumer-facing organizations receive massive volumes of textual complaints through digital platforms. Manual classification of these complaints is inefficient, inconsistent, and hard to scale. This project presents an **AI-Driven Consumer Complaint Intelligence System** that leverages **Machine Learning (ML)** and **Natural Language Processing (NLP)** to automatically categorize complaints into classes like Billing, Service, or Delivery.
 
 Uniquely, a **Generative AI module (Google Gemini)** is integrated as a post-classification layer to generate human-readable explanations for the model's decisions, improving transparency and trust ("Explainable AI"). The system implements a robust **Enterprise N-Tier Architecture** ensuring scalability and maintainability.
 
@@ -56,7 +56,9 @@ This project solves this by combining **deterministic ML classification** for sp
 
 - ✨ **Hybrid AI Engine**
   - **Deterministic ML**: Scikit-learn (Logistic Regression/SVM) for high-speed, consistent classification.
-  - **Generative AI**: Google Gemini for natural language explanations.
+  - **Decision Engine Routing**: Uses ML confidence scores to determine Auto-Send, Review Required, or Escalate pathways.
+  - **Severity Assessment**: Deterministic rule-based engine assigns zero-latency priority levels (P1 Emergency, P2 Operational, P3 General).
+  - **Generative AI Responses**: Google Gemini autonomously drafts professional email responses.
   - **NLP Pipeline**: Production-grade cleaning, tokenization, and TF-IDF vectorization.
 
 - 🧱 **Enterprise-Grade N-Tier Architecture**
@@ -71,9 +73,10 @@ This project solves this by combining **deterministic ML classification** for sp
   - Ensures predictions are not just labels, but *insights*.
   - Prompt Engineering strategy optimized for factual grounding.
 
-- 🔐 **Secure & Scalable**
+- 🔐 **Secure, Role-Based & Scalable**
+  - Strong **JWT Authentication** and **Role-Based Access Control (RBAC)** separating Consumers and Administrators.
   - Environment-based configuration.
-- SQL-injection safe (parameterized queries).
+  - SQL-injection safe (parameterized queries).
   - Modular design allows replacing the ML model without breaking the API.
 
 - 📊 **Data & Analytics Ready**

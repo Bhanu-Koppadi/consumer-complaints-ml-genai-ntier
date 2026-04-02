@@ -3,7 +3,7 @@
 ## Project Synopsis: Consumer Complaints ML + GenAI System
 
 ### 🏷️ Project Title
-**AI-Based Consumer Complaints Classification System using Machine Learning and Generative AI**
+**AI-Driven Consumer Complaint Intelligence System using Machine Learning and Generative AI**
 
 ---
 

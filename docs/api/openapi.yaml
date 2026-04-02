@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
   title: Consumer Complaints ML + GenAI API
-  description: API for the AI-Based Consumer Complaints Classification System. Handles complaint submission, ML classification, and GenAI explanations.
+  description: API for the AI-Driven Consumer Complaint Intelligence System. Handles complaint submission, ML classification, and GenAI explanations.
   version: 1.0.0
 servers:
   - url: /

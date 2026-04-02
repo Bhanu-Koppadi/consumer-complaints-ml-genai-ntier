@@ -1,8 +1,8 @@
-# AI-Based Consumer Complaints Classification System - Presentation Outline
+# AI-Driven Consumer Complaint Intelligence System - Presentation Outline
 
 ## Slide 1: Title Slide
 
-**Title:** AI-Based Consumer Complaints Classification System
+**Title:** AI-Driven Consumer Complaint Intelligence System
 **Subtitle:** Using Machine Learning and Generative AI with N-Tier Architecture
 **Presented by:** [Your Name/Team Name]
 **Date:** January 29, 2026

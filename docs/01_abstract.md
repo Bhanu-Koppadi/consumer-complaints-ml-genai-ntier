@@ -2,7 +2,7 @@
 
 ## Abstract
 
-Consumer-facing organizations receive large volumes of textual complaints through digital platforms such as web portals, emails, and customer support systems. Manual classification of these complaints is inefficient, inconsistent, and difficult to scale as data volume increases. This project presents an **AI-Based Consumer Complaints Classification System** that leverages **Machine Learning (ML)** and **Natural Language Processing (NLP)** to automatically categorize consumer complaints into predefined classes such as billing issues, service quality, delivery problems, and product defects.
+Consumer-facing organizations receive large volumes of textual complaints through digital platforms such as web portals, emails, and customer support systems. Manual classification of these complaints is inefficient, inconsistent, and difficult to scale as data volume increases. This project presents an **AI-Driven Consumer Complaint Intelligence System** that leverages **Machine Learning (ML)** and **Natural Language Processing (NLP)** to automatically categorize consumer complaints into predefined classes such as billing issues, service quality, delivery problems, and product defects.
 
 A **Generative Artificial Intelligence (GenAI)** module, powered by **Google Gemini**, is integrated as a post-classification layer to generate **human-readable explanations and summaries**. This hybrid approach ensures that while the core classification remains deterministic and traceable, the output is enhanced for transparency and interpretability, bridging the gap between numerical model decisions and human understanding.
 
