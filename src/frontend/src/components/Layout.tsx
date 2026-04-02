@@ -1,159 +1,106 @@
 import type { ReactNode } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { Brain, LogOut, LayoutDashboard, FileText, History, ShieldCheck } from 'lucide-react';
 import { logout } from '../store/authSlice';
 import { useAppDispatch, useAppSelector } from '../store/hooks';
 
-interface LayoutProps {
-  children: ReactNode;
-}
-
-const activeNavClass =
-  'bg-primary-50 text-primary-700 rounded-md px-3 py-2 text-sm font-medium';
-const inactiveNavClass =
-  'text-slate-600 hover:bg-slate-100 rounded-md px-3 py-2 text-sm font-medium';
-
-const activeMobileNavClass =
-  'bg-primary-50 text-primary-700 rounded text-sm px-3 py-1';
-const inactiveMobileNavClass =
-  'text-slate-600 hover:bg-slate-100 rounded text-sm px-3 py-1';
+interface LayoutProps { children: ReactNode }
 
 export function Layout({ children }: LayoutProps) {
-  const dispatch = useAppDispatch();
-  const navigate = useNavigate();
-  const { user, isAuthenticated } = useAppSelector((state) => state.auth);
+  const dispatch   = useAppDispatch();
+  const navigate   = useNavigate();
+  const { user, isAuthenticated } = useAppSelector((s) => s.auth);
+  const isAdmin    = user?.role === 'ADMIN';
+  const initial    = user?.username?.charAt(0).toUpperCase() ?? '?';
 
-  function handleLogout() {
-    dispatch(logout());
-    navigate('/');
-  }
+  function handleLogout() { dispatch(logout()); navigate('/'); }
 
-  const isAdmin = user?.role === 'ADMIN';
-  const avatarInitial = user?.username ? user.username.charAt(0).toUpperCase() : '?';
+  const activeLink = ({ isActive }: { isActive: boolean }) =>
+    `flex items-center gap-2 px-3.5 py-2 rounded-lg text-sm font-medium transition-all duration-150 ${
+      isActive
+        ? 'bg-teal-50 text-teal-700 font-semibold'
+        : 'text-slate-500 hover:bg-slate-100 hover:text-slate-800'
+    }`;
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col">
-      {/* Sticky header + mobile nav */}
-      <div className="sticky top-0 z-50 bg-white shadow-sm border-b border-slate-200">
-      <header>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          {/* Left: Logo + Desktop nav */}
+    <div className="min-h-screen bg-[#f5f5f0] flex flex-col" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
+
+      {/* ── Header ─────────────────────────────────────────────────────── */}
+      <header className="sticky top-0 z-50 bg-white border-b border-slate-200" style={{ boxShadow: '0 1px 0 rgba(0,0,0,0.04)' }}>
+        <div className="max-w-6xl mx-auto px-5 h-14 flex items-center justify-between">
+
+          {/* Logo + Nav */}
           <div className="flex items-center gap-6">
-            {/* Logo */}
-            <Link to="/" className="flex items-center gap-2 shrink-0">
-              <span className="w-8 h-8 rounded-md bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center text-white text-xs font-bold select-none">
+            <Link to="/" className="flex items-center gap-2.5 group">
+              <div
+                className="w-8 h-8 rounded-xl flex items-center justify-center text-white text-xs font-bold transition-opacity group-hover:opacity-90"
+                style={{ background: 'linear-gradient(135deg, #0d9488, #0f766e)' }}
+              >
                 CC
-              </span>
-              <span className="text-slate-800 font-semibold text-sm leading-tight hidden sm:block">
-                Consumer Complaints AI
+              </div>
+              <span className="font-bold text-slate-800 text-sm hidden sm:block tracking-tight">
+                Consumer Complaints&nbsp;<span style={{ color: '#0d9488' }}>AI</span>
               </span>
             </Link>
 
-            {/* Desktop nav links: Submit/History for users; Admin only for admins (management-only nav for admin) */}
-            <nav aria-label="Main navigation" className="hidden md:flex items-center gap-1">
+            <nav className="flex items-center gap-1">
               {!isAdmin && (
                 <>
-                  <NavLink
-                    to="/submit"
-                    className={({ isActive }) =>
-                      isActive ? activeNavClass : inactiveNavClass
-                    }
-                  >
-                    Submit
+                  <NavLink to="/submit"  className={activeLink}>
+                    <FileText size={14} /> Submit
                   </NavLink>
-                  <NavLink
-                    to="/history"
-                    className={({ isActive }) =>
-                      isActive ? activeNavClass : inactiveNavClass
-                    }
-                  >
-                    History
+                  <NavLink to="/history" className={activeLink}>
+                    <History size={14} /> History
                   </NavLink>
                 </>
               )}
               {isAdmin && (
-                <NavLink
-                  to="/admin"
-                  className={({ isActive }) =>
-                    isActive ? activeNavClass : inactiveNavClass
-                  }
-                >
-                  Admin
+                <NavLink to="/admin" className={activeLink}>
+                  <LayoutDashboard size={14} /> Admin Dashboard
                 </NavLink>
               )}
             </nav>
           </div>
 
-          {/* Right: User avatar + name + Logout */}
-          {isAuthenticated && (
-            <div className="flex items-center gap-3">
-              <span className="w-8 h-8 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-white text-sm font-semibold select-none">
-                {avatarInitial}
-              </span>
-              <span className="text-sm text-slate-700 font-medium hidden sm:block">
-                {user?.username}
-              </span>
+              {isAuthenticated && (
+            <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-50 border border-slate-200">
+                <div
+                  className="w-6 h-6 rounded-full flex items-center justify-center text-white text-xs font-bold"
+                  style={{ background: 'linear-gradient(135deg, #0d9488, #115e59)' }}
+                >
+                  {initial}
+                </div>
+                <span className="text-sm text-slate-700 font-medium hidden sm:block">{user?.username}</span>
+                {isAdmin && (
+                  <ShieldCheck size={13} style={{ color: '#0d9488' }} className="ml-0.5" />
+                )}
+              </div>
               <button
                 type="button"
                 onClick={handleLogout}
-                className="text-sm text-slate-600 hover:text-red-600 transition-colors"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-500 hover:text-red-600 hover:bg-red-50 border border-slate-200 hover:border-red-200 transition-all duration-150"
+                aria-label="Logout"
               >
-                Logout
+                <LogOut size={13} /> Logout
               </button>
             </div>
           )}
         </div>
       </header>
 
-      {/* Mobile nav strip */}
-      <div className="md:hidden border-b border-slate-200">
-        <nav aria-label="Mobile navigation" className="max-w-7xl mx-auto px-4 flex gap-2 py-2 overflow-x-auto">
-          {!isAdmin && (
-            <>
-              <NavLink
-                to="/submit"
-                className={({ isActive }) =>
-                  isActive ? activeMobileNavClass : inactiveMobileNavClass
-                }
-              >
-                Submit
-              </NavLink>
-              <NavLink
-                to="/history"
-                className={({ isActive }) =>
-                  isActive ? activeMobileNavClass : inactiveMobileNavClass
-                }
-              >
-                History
-              </NavLink>
-            </>
-          )}
-          {isAdmin && (
-            <NavLink
-              to="/admin"
-              className={({ isActive }) =>
-                isActive ? activeMobileNavClass : inactiveMobileNavClass
-              }
-            >
-              Admin
-            </NavLink>
-          )}
-        </nav>
-      </div>
-      </div>
-
-      {/* Main content */}
-      <main
-        id="main-content"
-        className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full"
-      >
+      {/* ── Main ───────────────────────────────────────────────────────── */}
+      <main id="main-content" className="flex-1 max-w-6xl mx-auto w-full px-5 py-8">
         {children}
       </main>
 
-      {/* Footer */}
-      <footer className="bg-slate-700 text-slate-300 text-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-          <span>Consumer Complaints ML + GenAI System</span>
-          <span>&copy; 2026 Srivari SSPL</span>
+      {/* ── Footer ─────────────────────────────────────────────────────── */}
+      <footer className="border-t border-slate-200 bg-white">
+        <div className="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Brain size={14} style={{ color: '#0d9488' }} />
+            <span className="text-xs text-slate-500 font-medium">Consumer Complaints ML + GenAI System</span>
+          </div>
         </div>
       </footer>
     </div>
