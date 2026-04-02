@@ -4,6 +4,8 @@
 [![Status](https://img.shields.io/badge/Status-Complete-success)](https://github.com/Bhanu-Koppadi/consumer-complaints-ml-genai-ntier)
 [![Architecture](https://img.shields.io/badge/Architecture-N--Tier-FF6B35)](#system-architecture)
 [![Python](https://img.shields.io/badge/Python-3.12%2B-ABCDEF?logo=python&logoColor=white)](https://www.python.org/)
+[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Scikit-Learn](https://img.shields.io/badge/sklearn-1.3%2B-orange?logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
 [![Flask](https://img.shields.io/badge/Flask-3.x-green?logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-13%2B-brown?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
@@ -21,6 +23,7 @@ An intelligent `N-Tier enterprise application` that automatically classifies con
 - [Key Features](#key-features)
 - [System Architecture](#system-architecture)
 - [Technology Stack](#technology-stack)
+- [Local Setup & Quickstart](#local-setup--quickstart)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 
@@ -57,7 +60,7 @@ This project solves this by combining **deterministic ML classification** for sp
   - **NLP Pipeline**: Production-grade cleaning, tokenization, and TF-IDF vectorization.
 
 - 🧱 **Enterprise-Grade N-Tier Architecture**
-  - **Presentation**: RESTful API endpoints (JSON).
+  - **Presentation**: Modern React SPA with Tailwind CSS, built with TypeScript and Vite.
   - **Application**: Flask orchestrating logic and security.
   - **Domain/ML**: Dedicated modules for Inference and Explanation.
 - **Data Access**: Parameterized SQL via `psycopg2` (ORM planned).
@@ -90,7 +93,7 @@ This project solves this by combining **deterministic ML classification** for sp
 ```text
 ┌───────────────────────────┐
 │      Presentation Layer   │
-│   REST Clients / UI Apps  │
+│ React SPA (TS) / Vite UI  │
 └──────────────┬────────────┘
          │
 ┌──────────────▼────────────┐
@@ -124,18 +127,55 @@ This project solves this by combining **deterministic ML classification** for sp
 
 | Layer | Technology |
 | :--- | :--- |
-| **API / Backend** | Python 3.12, Flask |
+| **Frontend UI** | React 18, TypeScript, Tailwind CSS, Vite |
+| **API / Backend** | Python 3.12, Flask, JWT Authentication |
 | **Machine Learning** | Scikit-learn, TF-IDF Vectorizer |
-| **Generative AI** | Google Gemini API |
-| **Database** | PostgreSQL / MySQL |
-| **Container** | Docker / Podman (Optional) |
-| **Architecture** | N-Tier (5 Layers) |
+| **Generative AI** | Google Gemini API (Explanation generation) |
+| **Database** | PostgreSQL |
+| **Containerization** | Docker Compose |
 
 ---
 
----
+## 🚀 Local Setup & Quickstart
 
----
+### Prerequisites
+- Docker Desktop (for Database)
+- Node.js 20+ (for Frontend)
+- Python 3.12+ (for Backend)
+
+### 1. Database Setup
+```bash
+cd infra
+docker-compose up -d
+```
+
+### 2. Backend Setup
+```bash
+cd src/backend
+# Copy environment variables and insert your Gemini API key:
+cp .env.example .env
+
+# Create virtual environment and install dependencies:
+python -m venv .venv
+# Activate venv: ".venv\Scripts\activate" (Windows) or "source .venv/bin/activate" (Mac/Linux)
+pip install -r requirements.txt
+
+# Run the Flask API Server:
+python app.py
+```
+
+### 3. Frontend Setup
+```bash
+cd src/frontend
+
+# Install node modules:
+npm install
+
+# Start the Vite development server:
+npm run dev
+```
+
+Visit `http://localhost:5173` to access the application!
 
 ## 📜 License
 
