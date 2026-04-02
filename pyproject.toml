@@ -6,7 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 license = {text = "MIT"}
 authors = [
-    {name = "Srivari Hema Software Solutions Pvt Ltd"}
+    {name = "Bhanu Koppadi"}
 ]
 keywords = [
     "consumer-complaints",

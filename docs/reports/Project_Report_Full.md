@@ -72,7 +72,7 @@ We express our sincere gratitude to **Dr. B. Suri Babu, PhD**, Associate Profess
 
 We thank the **Head of Department** for providing us with the necessary infrastructure and resources to complete this work. Our gratitude also extends to the entire faculty of the Department of AI & ML for their constant support and motivation.
 
-We are deeply thankful to **Viswanatha Swamy P K** of Swamy's Tech Skills Academy / Srivari Software Solutions for establishing the foundational architectural baseline of this project, upon which our intelligent extensions were developed and integrated.
+We are deeply thankful to our mentors and peers for establishing the foundational architectural baseline of this project, upon which our intelligent extensions were developed and integrated.
 
 Finally, we acknowledge the open-source communities behind **Scikit-learn**, **Flask**, **PostgreSQL**, **React**, and **Google DeepMind** for developing the tools that made this system possible.
 
@@ -334,7 +334,7 @@ Requirements were gathered through:
 - Analysis of the CFPB public complaint dataset structure
 - Review of enterprise CRM complaint workflows
 - Study of existing academic literature on complaint classification
-- Technical mentor consultations with Viswanatha Swamy P K
+- Technical mentor consultations
 - Iterative prototype testing and user story refinement
 
 ## 3.2 Functional Requirements
