@@ -50,7 +50,7 @@ Processing consumer feedback effectively is critical for business retention, but
 - **Lack of Explanation**: Traditional "Black Box" ML models give a label (e.g., "Billing") without explaining *why*, reducing trust.
 - **Architecture Gaps**: Many academic AI projects lack structure, making them unusable in real-world enterprise scenarios.
 
-This project solves this by combining **deterministic ML classification** for speed with **Generative AI** for clarity, wrapped in a professional N-Tier structure.
+This project solves this by combining **deterministic ML classification** for speed with **Generative AI** for clarity and **Priority Routing** for automated severity workflows, all scaled within a professional Enterprise N-Tier structure.
 
 ---
 
@@ -89,41 +89,57 @@ This project solves this by combining **deterministic ML classification** for sp
 
 ## 🏗️ System Architecture
 
-### Diagram
+### Hybrid System Architecture (with Decision Engine & GenAI)
 
-![System Architecture](docs/diagrams/system-architecture.png)
+```mermaid
+graph TD
+    %% Presentation Layer
+    subgraph Presentation Layer
+        UI[Consumer / Admin UI <br/> React + TypeScript]
+    end
 
-### ASCII Diagram
+    %% Application Layer
+    subgraph Application Layer
+        API[Flask REST API Gateway]
+        Auth[Authentication <br/> JWT + RBAC]
+    end
 
-```text
-┌───────────────────────────┐
-│      Presentation Layer   │
-│ React SPA (TS) / Vite UI  │
-└──────────────┬────────────┘
-         │
-┌──────────────▼────────────┐
-│      Application Layer    │
-│        Flask API          │
-│  Routing • Validation     │
-└───────┬──────────┬────────┘
-  │          │
-┌───────▼───────┐  │  ┌───────────────────┐
-│   ML Layer    │  │  │   GenAI Layer     │
-│ Preprocess →  │  │  │ Explanation       │
-│ TF-IDF →      │  │  │ (Gemini API)      │
-│ Classifier    │  │  └───────────────────┘
-└───────┬───────┘  │
-  │          │
-┌───────▼──────────▼────────┐
-│       Data Access Layer   │
-│   Parameterized SQL (DB)  │
-└──────────────┬────────────┘
-         │
-┌──────────────▼────────────┐
-│         Data Layer        │
-│ PostgreSQL / MySQL        │
-│ complaints • results      │
-└───────────────────────────┘
+    %% Hybrid Intelligence Layer
+    subgraph Hybrid AI / Intelligence Layer
+        direction LR
+        NLP[Text Preprocessing NLP]
+        ML[Predictive Model <br/> TF-IDF + Logistic Regression]
+        Sev[Rule-Based <br/> Severity Assessment]
+        Dec[Decision Engine Matrix]
+        GenAI[Generative AI Service <br/> Google Gemini]
+        AutoSend[Auto-Email Drafter & Dispatcher]
+    end
+
+    %% Data Layer
+    subgraph Data Access & Persistence Layer
+        ORM[SQLAlchemy ORM]
+        DB[(PostgreSQL Database)]
+    end
+
+    %% Connections
+    UI -- "Submit Complaint \n (JWT Secured)" --> API
+    API <--> Auth
+    
+    API -- "Raw Text" --> NLP
+    NLP -- "Cleaned Tokens" --> ML
+    ML -- "Category + Confidence" --> Dec
+    API -- "Raw Text" --> Sev
+    Sev -- "Priority (P1, P2, P3)" --> Dec
+    Dec -- "Action (Auto-Send, Review, Escalate)" --> API
+    
+    API -- "Context" --> GenAI
+    GenAI -- "Explainable Rationale" --> API
+    GenAI -- "Drafted Response" --> AutoSend
+    API -- "Trigger Auto-Response" --> AutoSend
+    AutoSend -. "Emails Resolution directly" .-> UI
+    
+    API <--> ORM
+    ORM <--> DB
 ```
 
 ---
